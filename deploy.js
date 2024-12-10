@@ -16,7 +16,12 @@ async function uploadFiles() {
 
         await client.ensureDir('/public_html'); // Ensure the target directory exists
         await client.clearWorkingDir(); // Optional: Clear the working directory
-        await client.uploadFromDir(path.join(__dirname, 'docs', '.vitepress', 'dist')); // Upload the dist folder
+        
+        // Upload the dist folder
+        await client.uploadFromDir(path.join(__dirname, 'docs', '.vitepress', 'dist'));
+        
+        // Upload the public folder
+        await client.uploadFromDir(path.join(__dirname, 'public')); // Upload the public folder
 
         console.log('Upload complete!');
     } catch (err) {

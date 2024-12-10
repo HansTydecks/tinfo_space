@@ -7,11 +7,11 @@ hero:
   text: "Digitaler Klassenzimmerhelfer"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Lernende
+      link: /lernende
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Lehrende
+      link: /lehrende
 
 features:
   - title: Englisch
@@ -21,7 +21,4 @@ features:
   - title: Deutsch als Zweitsprache
     details: Vokabeln, Grammatik und praktische Übungen.
 ---
-::: info
-This is an info box.
-:::
-:computer:
+[Contact Us](./about/contact)

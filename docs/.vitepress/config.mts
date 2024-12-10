@@ -11,6 +11,12 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '512x512', href: '/favicon-512x512.png' }]
   ],
   themeConfig: {
+    
+      footer: {
+        message: 'Released under the MIT License.',
+        copyright: 'Copyright © 2019-present Evan You'
+      },
+    
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' }
@@ -27,5 +33,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
-  }
+  },
+  
 })
