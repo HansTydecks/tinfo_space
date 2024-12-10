@@ -12,10 +12,17 @@ export default defineConfig({
   ],
   themeConfig: {
     
-      footer: {
-        message: 'Released under the MIT License.',
-        copyright: 'Copyright © 2019-present Evan You'
-      },
+    footer: {
+      message: `
+        <nav>
+          <a href="/about">About Us</a> |
+          <a href="/privacy">Privacy Policy</a> |
+          <a href="/contact">Contact</a>
+        </nav>
+        <p>Released under the MIT License.</p>
+      `,
+      copyright: 'Unless stated otherwise, all content is public domain or open for educational use. '
+    },
     
     nav: [
       { text: 'Home', link: '/' },
@@ -31,7 +38,7 @@ export default defineConfig({
       }
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/HansTydecks/vitepress_tinf' }
     ]
   },
   
