@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zahlenraten Spiel</title>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    input {
+      font-size: 16px;
+      padding: 5px;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Zahlenraten Spiel</h1>
+  <p>Wähle einen Zahlenbereich:</p>
+  <div>
+    <button onclick="startGame(10)">0-10</button>
+    <button onclick="startGame(20)">0-20</button>
+    <button onclick="startGame(100)">0-100</button>
+    <button onclick="startGame(1000)">0-1000</button>
+    <button onclick="startGame(10000)">0-10000</button>
+    <button onclick="startGame(1000000)">0-1000000</button>
+    <button onclick="startGame(10000000)">0-10000000</button>
+  </div>
+
+  <p id="gameArea" style="margin-top: 20px;"></p>
+</body>
+</html>
