@@ -5,9 +5,6 @@ layout: home
 hero:
   name: "Tinfo Space"
   text: "Digitaler Klassenzimmerhelfer"
-  image:
-    src: /logo.png
-    alt: Tinfo.space
   actions:
     - theme: brand
       text: Lernende

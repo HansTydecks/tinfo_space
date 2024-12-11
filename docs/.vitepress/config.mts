@@ -11,7 +11,6 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '512x512', href: '/favicon-512x512.png' }]
   ],
   themeConfig: {
-    
     footer: {
       message: `
         <nav>
@@ -19,27 +18,65 @@ export default defineConfig({
           <a href="/privacy">Privacy Policy</a> |
           <a href="/contact">Contact</a>
         </nav>
-        <p>Released under the MIT License.</p>
       `,
-      copyright: 'Unless stated otherwise, all content is public domain or open for educational use. '
+      copyright: 'Unless stated otherwise, all content is public domain or open for educational use.'
     },
     
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'English', link: '/english/index' },
+      { text: 'Informatik', link: '/informatik/index' },
+      { text: 'Deutsch a.Z.', link: '/daz/index' },
     ],
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+
+    // Define sidebars for different sections
+    sidebar: {
+      '/informatik/': [
+        {
+          text: 'Informatik',
+          items: [
+            { text: 'Informatikunterricht', link: '/informatik/index' },
+            { text: 'Topic 1', link: '/informatik/topic1' },
+            { text: 'Topic 2', link: '/informatik/topic2' }
+          ]
+        }
+      ],
+      '/english/': [
+        {
+          text: 'English',
+          items: [
+            { text: 'Englischunterricht', link: '/english/index' },
+            { text: 'Grammar', link: '/english/grammar' },
+            { text: 'Vocabulary', link: '/english/vocabulary' }
+          ]
+        }
+      ],
+      '/daz/': [
+        {
+          text: 'Deutsch als Zweitsprache im Klassenzimmer',
+          items: [
+            { text: 'Deutsch als Zweitsprache', link: '/daz/index' },
+            { text: 'Grammatik', link: '/daz/grammar/index' },
+            { text: 'Vocabulary', link: '/daz/vocabulary/index' },
+            { text: 'Numbergame', link: '/daz/number_game/game_intro' }
+          ]
+        }
+      ],
+      // Default sidebar for pages not in specified paths
+      '/': [
+        {
+          text: 'Hauptseiten',
+          items: [
+            { text: 'Englischunterricht', link: '/english/index' },
+            { text: 'Informatikunterricht', link: '/informatik/index' },
+            { text: 'Deutsch als Zweitsprache im Klassenzimmer', link: '/daz/index' }
+          ]
+        }
+      ]
+    },
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/HansTydecks/vitepress_tinf' }
     ]
-  },
-  
+  }
 })
