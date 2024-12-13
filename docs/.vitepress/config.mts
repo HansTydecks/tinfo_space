@@ -3,6 +3,8 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Tinfo.space",
   description: "Ressourcen mit Struktur",
+  lastUpdated: true,
+  
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
@@ -11,6 +13,9 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '512x512', href: '/favicon-512x512.png' }]
   ],
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
     footer: {
       message: `
         <nav>
@@ -21,6 +26,8 @@ export default defineConfig({
       `,
       copyright: 'Unless stated otherwise, all content is public domain or open for educational use.'
     },
+
+    
     
     nav: [
       { text: 'Home', link: '/' },
@@ -56,7 +63,14 @@ export default defineConfig({
           text: 'Deutsch als Zweitsprache im Klassenzimmer',
           items: [
             { text: 'Deutsch als Zweitsprache', link: '/students/daz/index' },
-            { text: 'Grammatik', link: '/students/daz/grammar/index' },
+            { 
+              text: 'Grammatik', 
+              items: [
+                { text: 'Präpositionen', link: '/students/daz/grammar/daz_prepositions' },
+                { text: 'xxx', link: '/students/daz/grammar/nouns' },
+                { text: 'xxx', link: '/students/daz/grammar/verbs' }
+              ]
+            },
             { text: 'Vocabulary', link: '/students/daz/vocabulary/index' },
             { text: 'Numbergame', link: '/students/daz/number_game/game_intro' }
           ]
