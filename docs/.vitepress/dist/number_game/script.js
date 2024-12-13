@@ -1,36 +1,38 @@
-let targetNumber;
+let randomNumber;
+let minRange = 0;
+let maxRange = 10;
 
-function startGame(max) {
-  // Generate a random number
-  targetNumber = Math.floor(Math.random() * (max + 1));
+// Zahlenbereich auswählen
+document.querySelectorAll('.range-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        minRange = parseInt(this.dataset.min);
+        maxRange = parseInt(this.dataset.max);
+        document.getElementById('generateBtn').disabled = false;
+        document.getElementById('feedback').textContent = `Bereich ausgewählt: ${minRange} - ${maxRange}`;
+    });
+});
 
-  // Use Text-to-Speech to read the number aloud in German
-  const utterance = new SpeechSynthesisUtterance(targetNumber.toString());
-  utterance.lang = 'de-DE'; // Set language to German
-  speechSynthesis.speak(utterance);
+// Zufallszahl generieren
+document.getElementById('generateBtn').addEventListener('click', function() {
+    randomNumber = Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange;
+    document.getElementById('numberDisplay').textContent = "Zahl generiert.";
 
-  // Update the game area in the HTML
-  const gameArea = document.getElementById('gameArea');
-  gameArea.innerHTML = `
-    <p>Ich habe eine Zahl gewählt. Gib deine Vermutung ein:</p>
-    <input type="text" id="guessInput" placeholder="Zahl eingeben">
-    <button onclick="checkGuess(${max})">Raten</button>
-    <p id="result"></p>
-  `;
-}
+    // TTS zur Vorlesung der Zahl
+    const utterance = new SpeechSynthesisUtterance(randomNumber.toString());
+    utterance.lang = "de-DE";
+    speechSynthesis.speak(utterance);
+});
 
-function checkGuess(max) {
-  const input = document.getElementById('guessInput').value.trim();
-  const guess = parseInt(input, 10);
-  const resultElement = document.getElementById('result');
+// Zahl überprüfen
+document.getElementById('checkBtn').addEventListener('click', function() {
+    const userGuess = parseInt(document.getElementById('guessInput').value);
+    const feedback = document.getElementById('feedback');
 
-  if (isNaN(guess) || guess < 0 || guess > max) {
-    resultElement.textContent = `Bitte eine gültige Zahl zwischen 0 und ${max} eingeben.`;
-  } else if (guess === targetNumber) {
-    resultElement.textContent = 'Gratuliere! Du hast die richtige Zahl erraten!';
-  } else if (guess < targetNumber) {
-    resultElement.textContent = 'Zu niedrig. Versuch es nochmal!';
-  } else {
-    resultElement.textContent = 'Zu hoch. Versuch es nochmal!';
-  }
-}
+    if (userGuess === randomNumber) {
+        feedback.textContent = 'Richtig! Gut gemacht!';
+    } else if (userGuess > randomNumber) {
+        feedback.textContent = 'Leider falsch. Die Zahl ist zu hoch.';
+    } else {
+        feedback.textContent = 'Leider falsch. Die Zahl ist zu niedrig.';
+    }
+});

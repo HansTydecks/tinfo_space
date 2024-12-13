@@ -24,41 +24,41 @@ export default defineConfig({
     
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'English', link: '/english/index' },
-      { text: 'Informatik', link: '/informatik/index' },
-      { text: 'Deutsch a.Z.', link: '/daz/index' },
+      { text: 'English', link: '/students/english/index' },
+      { text: 'Informatik', link: '/students/informatik/index' },
+      { text: 'Deutsch a.Z.', link: '/students/daz/index' },
     ],
 
     // Define sidebars for different sections
     sidebar: {
-      '/informatik/': [
+      '/students/informatik/': [
         {
           text: 'Informatik',
           items: [
-            { text: 'Informatikunterricht', link: '/informatik/index' },
-            { text: 'Topic 1', link: '/informatik/topic1' },
-            { text: 'Topic 2', link: '/informatik/topic2' }
+            { text: 'Informatikunterricht', link: '/students/informatik/index' },
+            { text: 'Topic 1', link: '/students/informatik/topic1' },
+            { text: 'Topic 2', link: '/students/informatik/topic2' }
           ]
         }
       ],
-      '/english/': [
+      '/students/english/': [
         {
           text: 'English',
           items: [
-            { text: 'Englischunterricht', link: '/english/index' },
-            { text: 'Grammar', link: '/english/grammar' },
-            { text: 'Vocabulary', link: '/english/vocabulary' }
+            { text: 'Englischunterricht', link: '/students/english/index' },
+            { text: 'Grammar', link: '/students/english/grammar' },
+            { text: 'Vocabulary', link: '/students/english/vocabulary' }
           ]
         }
       ],
-      '/daz/': [
+      '/students/daz/': [
         {
           text: 'Deutsch als Zweitsprache im Klassenzimmer',
           items: [
-            { text: 'Deutsch als Zweitsprache', link: '/daz/index' },
-            { text: 'Grammatik', link: '/daz/grammar/index' },
-            { text: 'Vocabulary', link: '/daz/vocabulary/index' },
-            { text: 'Numbergame', link: '/daz/number_game/game_intro' }
+            { text: 'Deutsch als Zweitsprache', link: '/students/daz/index' },
+            { text: 'Grammatik', link: '/students/daz/grammar/index' },
+            { text: 'Vocabulary', link: '/students/daz/vocabulary/index' },
+            { text: 'Numbergame', link: '/students/daz/number_game/game_intro' }
           ]
         }
       ],
@@ -67,9 +67,9 @@ export default defineConfig({
         {
           text: 'Hauptseiten',
           items: [
-            { text: 'Englischunterricht', link: '/english/index' },
-            { text: 'Informatikunterricht', link: '/informatik/index' },
-            { text: 'Deutsch als Zweitsprache im Klassenzimmer', link: '/daz/index' }
+            { text: 'Englischunterricht', link: '/students/english/index' },
+            { text: 'Informatikunterricht', link: '/students/informatik/index' },
+            { text: 'Deutsch als Zweitsprache im Klassenzimmer', link: '/students/daz/index' }
           ]
         }
       ]

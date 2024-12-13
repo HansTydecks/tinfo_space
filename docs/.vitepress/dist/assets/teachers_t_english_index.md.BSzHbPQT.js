@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.p2VkXzrt.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"teachers/t_english/index.md","filePath":"teachers/t_english/index.md"}'),n={name:"teachers/t_english/index.md"};function s(r,c,i,o,d,_){return a(),t("div")}const l=e(n,[["render",s]]);export{h as __pageData,l as default};

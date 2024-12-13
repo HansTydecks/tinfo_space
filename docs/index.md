@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: Lernende
-      link: /lernende
+      link: /students/index
     - theme: alt
       text: Lehrende
-      link: /lehrende
+      link: /teachers/index
 
 features:
   - icon:
@@ -21,7 +21,7 @@ features:
       height: "64px"
     title: English
     details: Find useful information, content, and exercises.
-    link: /english/index
+    link: /students/english/index
   - icon:
       src: /informatik.png
       alt: "Computer Icon"
@@ -29,7 +29,7 @@ features:
       height: "64px"
     title: Informatik
     details: Inhalte zur Erarbeitung informatischer Themen.
-    link: /informatik/index
+    link: /students/informatik/index
   - icon:
       src: /daz.png
       alt: "Globe Icon"
@@ -37,5 +37,5 @@ features:
       height: "64px"
     title: Deutsch als Zweitsprache
     details: Vokabeln, Grammatik und praktische Übungen.
-    link: /daz/index
+    link: /students/daz/index
 ---
