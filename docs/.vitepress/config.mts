@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "Tinfo.space",
+  title: "Tinfo.Space",
   description: "Ressourcen mit Struktur",
   lastUpdated: true,
   
@@ -12,7 +12,20 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '256x256', href: '/favicon-256x256.png' }],
     ['link', { rel: 'apple-touch-icon', sizes: '512x512', href: '/favicon-512x512.png' }]
   ],
+  locales: {
+    root: {
+      label: 'Deutsch',
+      lang: 'de'
+    },
+    en: {
+      label: 'English',
+      lang: 'en', // optional, will be added  as `lang` attribute on `html` tag
+      link: '/en/' // default /fr/ -- shows on navbar translations menu, can be external
+    }
+  },
   themeConfig: {
+    logo: '/favicon.ico',
+    siteTitle: 'Tinfo.Space',
     search: {
       provider: 'local'
     },

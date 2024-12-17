@@ -19,7 +19,9 @@ Wir wollen uns zwei Kategorien von Präpositionen genauer anschauen:
 - **Temporalpräpositionen**, Präpositionen der *Zeit*
 
 ### Lokalpräpositionen
-Das Wort *Lokal-* kommt vom lateinischen *locus*, was so viel wie Ort, Platz oder Stelle bedeutet. So kannst Du dir den Fachbegriff auch gut merken, denn es geht bei diesen Präpositionen darum *wie Dinge im Raum zueinander stehen*.
+Das Wort *Lokal-* kommt vom lateinischen *locus*, was so viel wie Ort, Raum oder Stelle bedeutet. So kannst Du dir den Fachbegriff auch gut merken, denn es geht bei diesen Präpositionen darum *wie Dinge im Raum zueinander stehen*.
+
+![Lokalpräpositionen](./image.png)
 
 ### Temporalpräpositionen
 
