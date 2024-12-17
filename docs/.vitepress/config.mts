@@ -16,6 +16,10 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
+    editLink: {
+      pattern: 'https://github.com/HansTydecks/vitepress_tinf/docs/:path',
+      text: 'Click here to make to this a better page'
+    },
     footer: {
       message: `
         <nav>
@@ -67,12 +71,12 @@ export default defineConfig({
               text: 'Grammatik', 
               items: [
                 { text: 'Präpositionen', link: '/students/daz/grammar/daz_prepositions' },
-                { text: 'xxx', link: '/students/daz/grammar/nouns' },
-                { text: 'xxx', link: '/students/daz/grammar/verbs' }
-              ]
+                { text: 'Fragewörter', link: '/students/daz/grammar/daz_w_questions' },
+                { text: 'Modalverben', link: '/students/daz/grammar/daz_modals' }
+              ] 
             },
-            { text: 'Vocabulary', link: '/students/daz/vocabulary/index' },
-            { text: 'Numbergame', link: '/students/daz/number_game/game_intro' }
+            { text: 'Vokabeln', link: '/students/daz/vocabulary/index' },
+            { text: 'Nummernübung', link: '/students/daz/number_game/game_intro' }
           ]
         }
       ],

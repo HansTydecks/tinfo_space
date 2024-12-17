@@ -6,9 +6,11 @@ Nicht jede Sprache kennt Fragewörter, wie sie im Deutschen benutzt werden. Im C
 :::
 
 ## Einsteiger
+### Erste W-Fragen
+
 Wir möchten mit einigen W-Fragen beginnen. Viele davon kennst und benutzt du sicher schon. Wenn du in die Stadt fährst kannst du fragen: "**Wo** finde ich den Supermarkt?" oder "**Wann** kommt mein Bus?" Diese Fragen kommen dir sicher aus deiner eigenen Sprache oder aus einer anderen Fremdsprache bekannt vor. Grundsätzlich handelt es sich bei W-Fragen um *offene* Fragen, also solche, die NICHT mit „ja“ oder „nein“ beantwortet werden können.
 
-|| **W-Frage** | **Thema** | **Frage** | **Antwort** | **Hinweis**
+|| **W-Frage** | **Thema** | **Frage** | **Antwort** | **Hinweis**|
 |---|---|---|---|---|---|
 |:mag:| Wo? | Ort  | "*Wo* ist das Buch?"  | "Das Buch ist auf dem Tisch" |   |
 |:hourglass:| Wann? | Zeit  | "*Wann* sehen wir uns?"  | "Wir sehen uns am Dienstag."  |   |
@@ -20,7 +22,11 @@ Wir möchten mit einigen W-Fragen beginnen. Viele davon kennst und benutzt du si
 Vergleiche mit den Fragewörter deiner Erstsprache. **Übersetze** die Fragewörter in deine eigene Sprache. :ear: Höre in Gesprächen auf die Fragewörter und :pencil2: notiere, welche Fragen du oft hörst.
 :::
 
-Stellt man auf Deutsch eine Frage, so wird die Stimme :lips::microphone: am Ende des Satzes höher :arrow_upper_right:.
+Stellt man auf Deutsch eine Frage, so wird die Stimme :lips::microphone: am Ende des Satzes höher :arrow_upper_right:. Höre dir diese drei Beispiele an und achte dabei auf die steigende Tonhöhe.
+
+### Weitere wichtige W-Fragen
+Hier noch einige weitere W-Fragen, die du häufig im Alltag hörst.
+
 ## Fortgeschrittene
 
 ## Profis
