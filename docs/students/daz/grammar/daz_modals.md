@@ -10,7 +10,28 @@ Schau dir die bilden genau an und versuch zu erkennen, **wie** die Menschen auf 
 :::
 
 ### etwas dürfen
-Das kennen die meisten Menschen
+Das kennen die meisten Menschen, jung und alt:
+- "Du **darfst** das nicht!"
+- "Papa hat gesagt, dass ich das nicht **darf**."
+- "Ich **durfte** früher nicht viel Cola trinken."
+  
+Etwas zu **dürfen** bedeutet, dass eine andere Person *nicht* verboten hat, dass etwas getan werden darf. Oder andersherum: wenn man etwas *nicht* darf, dann hat eine andere Person die verboten, etwas zu tun.
+
+|| Verbot? | Darf ich? |
+|---|--------------------------|-------------------|
+|:thumbsup:| kein Verbot | *du darfst*       |
+|:no_entry_sign:| Verbot    | *du darfst nicht* |
+
+:::info Aufgabe 2
+Überlege dir für die Schule (oder die Arbeit), welche Regeln es gibt. Gibt es Dinge, die du **nicht** tun darfst? Liste 3 solcher Dinge auf.
+:::details Beispiel
+- "Ich darf im Unterricht auf die Toilette gehen."
+- "Ich darf nicht vor Ende der Arbeitszeit nach Hause gehen."
+:::
+
+
+
+
 
 ## Fortgeschrittene
 
