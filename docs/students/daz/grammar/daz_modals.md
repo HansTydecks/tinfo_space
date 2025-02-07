@@ -29,9 +29,37 @@ Etwas zu **dürfen** bedeutet, dass eine andere Person *nicht* verboten hat, das
 - "Ich darf nicht vor Ende der Arbeitszeit nach Hause gehen."
 :::
 
+#### Konjugationstabellen "dürfen"
 
+|Präsens|Person|**dürfen**|
+|-|-|-|
+|Singular|1|ich darf|
+||2|du darfst|
+||3|sie darf|
+|Plural|1|wir dürfen|
+||2|ihr dürft|
+||3|sie dürfen|
 
+|Präteritum|Person|**dürfen**|
+|-|-|-|
+|Singular|1|ich durfte|
+||2|du durftest|
+||3|sie durfte|
+|Plural|1|wir durften|
+||2|ihr durftet|
+||3|sie durften|
 
+### etwas können
+Viele Menschen können unterschiedliche Sachen. Manche Menschen **können** gut schwimmen, andere **können** gut klettern, wieder andere **können** gut Schach spielen und meine Mutter **kann** gut kochen. Du kannst sicher auch viele Sachen sehr gut.
+Etwas zu können kann zwei Dinge bedeuten:
+1. Eine andere Person hat mir *erlaubt* etwas zu tun: "Ich kann auf die Toilette gehen." (ähnlich wie *dürfen*)
+2. Ich habe die Fähigkeit oder Möglichkeit etwas zu tun: "Ich kann Fahrrad fahren."
+
+:::info Aufgabe 2
+Motiviere dich selbst und schreibe fünf Fähigkeiten auf, die du gut **kannst**. 
+:::details Beispiel
+- 1. Ich kann sehr gut tanzen.
+:::
 
 ## Fortgeschrittene
 
