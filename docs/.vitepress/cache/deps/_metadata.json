@@ -1,52 +1,52 @@
 {
-  "hash": "990c19b7",
-  "configHash": "c98bf49e",
-  "lockfileHash": "63f2c40f",
-  "browserHash": "3d6aded4",
+  "hash": "dedf2cfe",
+  "configHash": "364c4e83",
+  "lockfileHash": "ccf5741a",
+  "browserHash": "a7e8b03b",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "69152bda",
+      "fileHash": "3c7723e3",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "0e3633ec",
+      "fileHash": "b1c7f755",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "53f1675c",
+      "fileHash": "016e4f1f",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "49bf24c2",
+      "fileHash": "3ec2fcc6",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "4c7f4ecc",
+      "fileHash": "d9544f9f",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "3b970c7f",
+      "fileHash": "818c479e",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-YJ6QP2VR": {
-      "file": "chunk-YJ6QP2VR.js"
+    "chunk-R2523JEZ": {
+      "file": "chunk-R2523JEZ.js"
     },
-    "chunk-LW4I4DCF": {
-      "file": "chunk-LW4I4DCF.js"
+    "chunk-LS57BFBI": {
+      "file": "chunk-LS57BFBI.js"
     }
   }
 }
