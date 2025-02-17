@@ -60,8 +60,46 @@ export default defineConfig({
           text: 'Informatik',
           items: [
             { text: 'Informatikunterricht', link: '/students/informatik/index' },
-            { text: 'Topic 1', link: '/students/informatik/topic1' },
-            { text: 'Topic 2', link: '/students/informatik/topic2' }
+            {
+              text: 'Klasse 8',
+              link: '/students/informatik/inf_klasse_8/index',
+              items: [
+                {
+                  text: 'Themenbereich 1',
+                  items: [
+                    { text: 'Unterthema 1.1', link: '/students/informatik/inf_klasse_8/themenbereich_1/unterthema_1_1' },
+                    { text: 'Unterthema 1.2', link: '/students/informatik/inf_klasse_8/themenbereich_1/unterthema_1_2' }
+                  ]
+                },
+                {
+                  text: 'Themenbereich 2',
+                  items: [
+                    { text: 'Unterthema 2.1', link: '/students/informatik/inf_klasse_8/themenbereich_2/unterthema_2_1' },
+                    { text: 'Unterthema 2.2', link: '/students/informatik/inf_klasse_8/themenbereich_2/unterthema_2_2' }
+                  ]
+                }
+              ]
+            },
+            {
+              text: 'Klasse 9',
+              link: '/students/informatik/inf_klasse_9/index',
+              items: [
+                {
+                  text: 'Themenbereich 1',
+                  items: [
+                    { text: 'Unterthema 1.1', link: '/students/informatik/inf_klasse_9/themenbereich_1/unterthema_1_1' },
+                    { text: 'Unterthema 1.2', link: '/students/informatik/inf_klasse_9/themenbereich_1/unterthema_1_2' }
+                  ]
+                },
+                {
+                  text: 'Themenbereich 2',
+                  items: [
+                    { text: 'Unterthema 2.1', link: '/students/informatik/inf_klasse_9/themenbereich_2/unterthema_2_1' },
+                    { text: 'Unterthema 2.2', link: '/students/informatik/inf_klasse_9/themenbereich_2/unterthema_2_2' }
+                  ]
+                }
+              ]
+            }
           ]
         }
       ],
@@ -80,13 +118,13 @@ export default defineConfig({
           text: 'Deutsch als Zweitsprache im Klassenzimmer',
           items: [
             { text: 'Deutsch als Zweitsprache', link: '/students/daz/index' },
-            { 
-              text: 'Grammatik', 
+            {
+              text: 'Grammatik',
               items: [
                 { text: 'Präpositionen', link: '/students/daz/grammar/daz_prepositions' },
                 { text: 'Fragewörter', link: '/students/daz/grammar/daz_w_questions' },
                 { text: 'Modalverben', link: '/students/daz/grammar/daz_modals' }
-              ] 
+              ]
             },
             { text: 'Vokabeln', link: '/students/daz/vocabulary/index' },
             { text: 'Nummernübung', link: '/students/daz/number_game/game_intro' }
@@ -105,6 +143,7 @@ export default defineConfig({
         }
       ]
     },
+    
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/HansTydecks/vitepress_tinf' }
