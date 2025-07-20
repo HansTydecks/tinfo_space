@@ -9,13 +9,14 @@ Viele Modalverben kennst du bereits. "Ich **muss** mich beeilen" oder "Du **darf
 Schau dir die bilden genau an und versuch zu erkennen, **wie** die Menschen auf den Bildern etwas tun. Denke daran, dass Modalverben die Art und Weise wie etwas passiert, näher beschreiben.
 :::
 
-### etwas dürfen
+### dürfen
 Das kennen die meisten Menschen, jung und alt:
 - "Du **darfst** das nicht!"
 - "Papa hat gesagt, dass ich das nicht **darf**."
 - "Ich **durfte** früher nicht viel Cola trinken."
   
-Etwas zu **dürfen** bedeutet, dass eine andere Person *nicht* verboten hat, dass etwas getan werden darf. Oder andersherum: wenn man etwas *nicht* darf, dann hat eine andere Person die verboten, etwas zu tun.
+Etwas zu **dürfen** bedeutet, dass eine andere Person *nicht* verboten hat, dass etwas getan werden darf. Oder andersherum: wenn man etwas *nicht* darf, dann hat eine andere Person dir verboten, etwas zu tun.
+Etwas zu dürfen oder nicht zu dürfen bedeutet also, dass man es mit einem **Verbot** oder einer **Erlaubnis** zu tun hat.
 
 || Verbot? | Darf ich? |
 |---|--------------------------|-------------------|
@@ -29,8 +30,21 @@ Etwas zu **dürfen** bedeutet, dass eine andere Person *nicht* verboten hat, das
 - "Ich darf nicht vor Ende der Arbeitszeit nach Hause gehen."
 :::
 
+### müssen
+Etwas **tun müssen** ist, nach Erlaubnissen oder Verboten, vermutlich eines der ersten Wörter, die wir in der Schule verinnerlichen. Plötzlich muss man still sein oder man muss ruhig sitzen. Man muss mehr im Haushalt helfen. Man muss wertvolle Spielzeit für Hausaufgaben aufgeben. Umso älter man wird, desto mehr **Pflichten** kommen auf einen zu. Während man als Kind jedoch viele **Verbote** bekommt, ist man als Erwachsener oft viel freier. **Verbote** treten dann in ganz anderer Form auf. Man muss nicht mehr früh ins Bett, dafür muss man morgens früh zur Arbeit.
 
+|| Verbot? | Darf ich? |
+|---|--------------------------|-------------------|
+|:thumbsup:| kein Verbot | *du darfst*       |
+|:no_entry_sign:| Verbot    | *du darfst nicht* |
 
+### können
+
+### sollen
+
+### wollen
+
+### möchten
 
 
 ## Fortgeschrittene
