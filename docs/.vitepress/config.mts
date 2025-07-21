@@ -99,6 +99,27 @@ export default defineConfig({
                   ]
                 }
               ]
+            },
+            {
+              text: 'Klasse 10',
+              link: '/students/informatik/inf_klasse_10/index',
+              items: [
+                {
+                  text: 'Algorithmen und Programmieren',
+                  items: [
+                    { text: 'Erster Block', link: '/students/informatik/inf_klasse_10/Programmieren/block1' },
+                    { text: 'Zweiter Block', link: '/students/informatik/inf_klasse_10/Programmieren/block2' },
+                    { text: 'Dritter Block', link: '/students/informatik/inf_klasse_10/Programmieren/block3' }
+                  ]
+                },
+                {
+                  text: 'Sprachen und Automaten',
+                  items: [
+                    { text: 'Sprachen', link: '/students/informatik/inf_klasse_10/Sprachen_Automaten' },
+                    { text: 'Syntax und Semantik', link: '/students/informatik/inf_klasse_10/Sprachen_Automaten' }
+                  ]
+                }
+              ]
             }
           ]
         }
