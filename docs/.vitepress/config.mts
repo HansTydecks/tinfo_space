@@ -12,6 +12,9 @@ export default defineConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '256x256', href: '/favicon-256x256.png' }],
     ['link', { rel: 'apple-touch-icon', sizes: '512x512', href: '/favicon-512x512.png' }]
   ],
+  markdown: {
+    lineNumbers: true
+  },
   locales: {
     root: {
       label: 'Deutsch',
@@ -29,6 +32,7 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
+
     editLink: {
       pattern: 'https://github.com/HansTydecks/vitepress_tinf/docs/:path',
       text: 'Click here to make to this a better page'

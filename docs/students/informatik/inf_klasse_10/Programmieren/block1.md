@@ -70,7 +70,7 @@ Nun können wir Tobi (`t.`) herumkommandieren. Wir geben ihm erst eine Geschwind
 
 ![Ausführen](press_play.gif)
 
-Es gibt noch weitere Befehle, die sich als sehr nützlich erweisen: mit `t.right(180)` und `t.left(90)` dreht sich Tobi um den jeweiligen Grad (man denke an einen Kreis mit 360 Grad), `t.circle(10)` zeichnet einen Kreis der Größe 10, `t.penup()` und `t.pendown` heben bzw. senken den Stift und `t.goto(x, y)` teleportieren Tobi an die Koordinate, die du für x und y eingbist.
+Es gibt noch weitere Befehle, die sich als sehr nützlich erweisen: mit `t.right(180)` und `t.left(90)` dreht sich Tobi um den jeweiligen Grad (man denke an einen Kreis mit 360 Grad), `t.circle(10)` zeichnet einen Kreis der Größe 10, `t.penup()` und `t.pendown` heben bzw. senken den Stift und `t.goto(x, y)` teleportieren Tobi an die Koordinate, die du für x und y eingibst.
 
 :::info Aufgabe
 Schreibe ein Programm, das den ersten Buchstaben deines Nachnamens zeichnet. Schon fertig? Zeichne die Zahl 9 hinter deinen Buchstaben.
@@ -79,70 +79,112 @@ Schreibe ein Programm, das den ersten Buchstaben deines Nachnamens zeichnet. Sch
 :::warning Speichern
 Speichere dein Programm oder lade es herunter. Es wird eine Datei im .py Format heruntergeladen. Das ist das Kürzel für Python-Dateien.
 ![Speichern](./Screenshot%202025-07-20%20124954.png)
+
 ![Python-Datei im Downloadordner](Screenshot%202025-07-20%20124507.png)
 :::
-## 📦 **3) Was ist eine Variable?**
 
-Eine Variable ist wie eine **Schachtel**, in der wir etwas aufbewahren.
+## Variablen
 
-Beispiel:
+Den Begriff der Variable kennst du bereits aus dem Mathematikunterricht. Für den Informatikunterricht ist es wichtig, dass Du dein Vorwissen beiseite legst und das Konzept der Variable in der Informatik neu lernst. Wir können uns **Variablen als Behälter für einen Wert** vorstellen, aus dem man etwas herausnehmen und hineinlegen kann. In Python können wir Variablen "erschaffen", indem wir folgenden Ausdruck in unseren Code schreiben: `variablenname = wert` oder `schuhgroeße = 39`.
+
+::: info Hinweis
+Variablennamen werden per Konvention klein geschrieben und sollten möglichst selbsterklärend sein. Namen wie `gfpr_123juhu` oder `dasistdiewichtigevariabledenkdaran` sind möglich, aber sehr ungern gesehen.
+:::
+
+::: details Detailliertere Erklärung, Begriffe
+In Python ist `x = 10` ein einfacher Zuweisungsausdruck, der gleichzeitig folgendes leistet:
+- Erstellt die Variable x, falls sie noch nicht existiert (**Definition**).
+- Weist x den Wert 10 zu (**Zuweisung**).
+- Da x damit ihren ersten Wert bekommt, kann man zugleich sagen, dass x damit **initialisiert** wird.
+:::
+
+Was wir mit solchen Behältern anstellen können wird in den folgenden Beispielen deutlich. Überlegt euch zu zweit, welches Ergebnis ihr am Bildschrim seht **bevor** ihr das Programm ausführt.
+
+#### Beispiel 1 
+```python
+import turtle
+t = turtle.Turtle()
+
+zahl = 5
+t.write(zahl)
+
+t.forward(50)  # Platz schaffen für die nächste Zahl
+
+zahl = 10
+t.write(zahl)
+```
+:::details Erklärung Beispiel 1
+Die Variable `zahl` wird in Zeile 4 definiert und ihr wird gleichzeitig der Wert 5 zugewiesen. Dies geschieht mit dem Zuweisungsoperator `=`. Anschließend wird der Wert der Variable `Zahl` mit `t.write(zahl)` auf dem Bildschrim ausgegeben.
+In Zeile 9 wird der Wert von `zahl` neu zugewiesen. Der alte Wert verfällt und dem Behälter wird der neue Wert 10 zugewiesen. Nun schreibt die Schildkröte den neuen Wert 10 auf den Bildschirm.
+:::
+#### Beispiel 2 
+```python
+import turtle
+t = turtle.Turtle()
+
+a = 7
+b = 3
+summe = a + b
+
+t.write("Summe: ")
+t.forward(50)
+t.write(summe)
+```
+:::details Erklärung Beispiel 2
+Jetzt wird gerechnet! Zeilen 4 und 5 sind dir bekannt. In Zeile 6 wird eine Variable `summe` definiert und ihr wird der Inhalt rechts von dem Zuweisungsoperator `=` zugewiesen. Der Wert ist in diesem Fall die Summe aus a und b, leicht erkennbar durch das `+`. Nun trägt die Variable `summe` den Wert 10. 
+:::
+
+#### Beispiel 3 
+```python
+import turtle
+t = turtle.Turtle()
+
+zahl = 5
+zahl = zahl + 2 
+
+t.write(zahl))
+```
+:::details Erklärung Beispiel 3
+Hier wird sehr deutlich, wie das `=` als Zuweisungsoperator funktioniert. `zahl = zahl + 2` ist im mathematischen Sinne natürlich Humbug. In der Informatik ergibt diese Zeile aber Sinn. Der Variable `zahl` wird mit `=` der Wert der rechten Seite zugewiesen der Operation zugewiesen. Dieser rechte Teil ist die Summe aus dem ehemaligen Wert der Variable `zahl`, sprich 5, und 2. `zahl` ist trägt den Wert 7.
+:::
+
+## 🛠️ Aufgaben
+
+Löse die folgenden Aufgaben selbstständig oder mit einem Partner oder Partnerin.
+
+### Aufgabe 1: Korrigieren
 
 ```python
-seite = 100
-tina.forward(seite)
-tina.left(90)
+import turtle
+tobi = turtle.Turtle()
+
+8 = zahl
+t.write(zahl)
 ```
 
-Hier merken wir uns in `seite` die Länge der Linie.
+### Aufgabe 2: Rechnen
+Erstelle ein Python-Programm mit Turtle, das zwei Zahlen in Variablen speichert (z. B. a und b). Berechne sowohl ihre Summe als auch ihre Differenz (a - b) und ihr Produkt (a * b). Gib alle drei Ergebnisse mit Turtle aus, jeweils mit einem passenden Text davor, z. B.:
 
----
-
-## 🛠️ **4) Erste Aufgaben**
-
-> Nutze Variablen und probiere selbst!
-
-### 🐢 Aufgabe 1: Quadrat mit Variablen
-- Lege eine Variable `seite` fest.
-- Die Schildkröte soll ein Quadrat zeichnen.
-
-**Tipp:**
-```python
-seite = 100
-for i in range(4):
-    tina.forward(seite)
-    tina.left(90)
+```
+Summe: 13
+Differenz: 7
+Produkt: 30
 ```
 
+### Aufgabe 3: Kreise
 
+Schreibe ein Python-Programm mit Turtle, das drei Kreise nebeneinander zeichnet.
+- Der erste Kreis soll einen Radius von 50 haben.
+- Nach jedem Kreis soll der Radius um 10 größer werden.
+- Verwende dafür nur eine einzige Variable, z. B. radius.
 
----
+Achte darauf, dass die Kreise nebeneinander stehen.
+:::details Tipp
+Setze `radius = 50` am Anfang.
+Nach jedem Kreis: `radius = radius + 10`.
+Zum Bewegen kannst du penup(), forward(...) und pendown() verwenden.
+:::
+### Aufgabe 4: Korrigieren
 
-### ✏️ Aufgabe 2: Name schreiben
-- Speichere deinen Namen in einer Variable `name`.
-- Lass die Schildkröte den Namen schreiben.
+Erstelle zwei Varaiblen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Ergebnis aus.
 
-**Tipp:**
-```python
-name = "DeinName"
-tina.write(name)
-```
-
----
-
-### 🎨 Aufgabe 3: Farbe als Variable
-- Speichere eine Farbe (z. B. `"blue"`) in einer Variable `farbe`.
-- Nutze `tina.pencolor(farbe)`.
-
----
-
-## ✅ **5) Zusammenfassung**
-- PyTurtle ist wie Karol, aber viel mächtiger.
-- Variablen speichern Zahlen, Texte oder Wahrheitswerte.
-- Mit Variablen wird dein Code flexibler.
-
----
-
-## 🧪 **6) Extra: Spiel doch mal mit…**
-- Ändere `seite` auf 50 oder 200 – was passiert?
-- Ändere die Farbe.
-- Schreibe verschiedene Namen.
