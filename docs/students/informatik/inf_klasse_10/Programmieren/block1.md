@@ -1,17 +1,23 @@
 ---
-title: " RobotKarol zu PyTurtle & Variablen"
+title: "RobotKarol zu PyTurtle & Variablen"
 description: "Einstieg in PyTurtle, erste Schritte mit Variablen und Aufgaben für den Einstieg."
 ---
-# Algorithmen
+## Algorithmen
 
 Vor einiger Zeit hast Du dich schon ganz intensiv mit Algorithmen hier im Informatikunterricht beschäftigt. Hier noch einmal eine Definition, auf die wir uns einigen.
-:::info Definition
-
+:::info Definition: Algorithmus
+Ein Algorithmus ist eine Handlungsanweisung zum Lösen einer Aufgabe bzw. einer Menge von Aufgaben.
+:::details Eigenschaften
+- **Ausführbarkeit**: Der Algorithmus sollte fehlerfrei ausführbar sein.
+- **Endlichkeit**: Der Algorithmus hat endliche Länge.
+- **Wiederholbarkeit**: Bei jeder Wiederholung erhält man für gleiche Eingaben gleiche Ausgaben.
+- **Eindeutigkeit**: Für jeden Schritt gibt es genau einen festgelegten Folgeschritt.
 :::
 
 
 
-# 🤖 Von RobotKarol zu PyTurtle 🐢
+
+## 🤖 Von RobotKarol zu PyTurtle 🐢
 Den Roboter Karol kennst du bereits. In der Vergangenheit hast Du ihr genau gesagt, was sie zu tun hatte.
 
 ::: info Aufgabe
@@ -31,7 +37,7 @@ Karol hat leider ein kleines Problem. Obwohl sie sich sehr gut in ihrer Umgebung
 
 
 
-## 🎯 Was erarbeitest du dir auf dieser Seite?
+## Ziele
 - Wie du mit PyTurtle arbeitest
 - Wie Befehle aus Karol in Python aussehen
 - Was Variablen sind und
@@ -39,7 +45,7 @@ Karol hat leider ein kleines Problem. Obwohl sie sich sehr gut in ihrer Umgebung
 
 
 
-##  PyTurtle: Kontext
+## PyTurtle: Kontext
 
 "**Python** ([ˈpʰaɪθn̩] oder [ˈpʰyːtɔn]) ist eine universell nutzbare [...] *Programmiersprache*. Sie hat den Anspruch, einen gut lesbaren, knappen Programmierstil zu fördern." (offizielle Python [Website](https://www.python.org/doc/essays/blurb/)) Mit Hilfe Pythons werden wir unsere Fähigkeiten und unser Wissen rund um Algorithmen erweitern und vertiefen. Nun gut, aber war nicht gerade noch die Rede von einer Schildkröte?
 PyTurtle erweitert die Programmiersprache Python um einige Funktionen. Neben unserem Code wird ein Bildschirm angezeigt, der eine kleine "Schildkröte" wandern und zeichnen lässt. Das ist praktisch, denn so können wir den ausgeführten Code wudnerbar visualisieren.
@@ -100,7 +106,7 @@ In Python ist `x = 10` ein einfacher Zuweisungsausdruck, der gleichzeitig folgen
 
 Was wir mit solchen Behältern anstellen können wird in den folgenden Beispielen deutlich. Überlegt euch zu zweit, welches Ergebnis ihr am Bildschrim seht **bevor** ihr das Programm ausführt.
 
-#### Beispiel 1 
+### Beispiel 1 
 ```python
 import turtle
 t = turtle.Turtle()
@@ -117,7 +123,7 @@ t.write(zahl)
 Die Variable `zahl` wird in Zeile 4 definiert und ihr wird gleichzeitig der Wert 5 zugewiesen. Dies geschieht mit dem Zuweisungsoperator `=`. Anschließend wird der Wert der Variable `Zahl` mit `t.write(zahl)` auf dem Bildschrim ausgegeben.
 In Zeile 9 wird der Wert von `zahl` neu zugewiesen. Der alte Wert verfällt und dem Behälter wird der neue Wert 10 zugewiesen. Nun schreibt die Schildkröte den neuen Wert 10 auf den Bildschirm.
 :::
-#### Beispiel 2 
+### Beispiel 2 
 ```python
 import turtle
 t = turtle.Turtle()
@@ -134,7 +140,7 @@ t.write(summe)
 Jetzt wird gerechnet! Zeilen 4 und 5 sind dir bekannt. In Zeile 6 wird eine Variable `summe` definiert und ihr wird der Inhalt rechts von dem Zuweisungsoperator `=` zugewiesen. Der Wert ist in diesem Fall die Summe aus a und b, leicht erkennbar durch das `+`. Nun trägt die Variable `summe` den Wert 10. 
 :::
 
-#### Beispiel 3 
+### Beispiel 3 
 ```python
 import turtle
 t = turtle.Turtle()
@@ -142,13 +148,26 @@ t = turtle.Turtle()
 zahl = 5
 zahl = zahl + 2 
 
-t.write(zahl))
+t.write(zahl)
 ```
 :::details Erklärung Beispiel 3
 Hier wird sehr deutlich, wie das `=` als Zuweisungsoperator funktioniert. `zahl = zahl + 2` ist im mathematischen Sinne natürlich Humbug. In der Informatik ergibt diese Zeile aber Sinn. Der Variable `zahl` wird mit `=` der Wert der rechten Seite zugewiesen der Operation zugewiesen. Dieser rechte Teil ist die Summe aus dem ehemaligen Wert der Variable `zahl`, sprich 5, und 2. `zahl` ist trägt den Wert 7.
 :::
 
-## 🛠️ Aufgaben
+### Rechenzeichen
+Hier alle arithmetischen Operatoren auf einen Blick
+
+| Operator | Name                    |
+|:-------:|--------------------------|
+| `+`     | Addition                 |
+| `-`     | Subtraktion              |
+| `*`     | Multiplikation           |
+| `/`     | Division (float)         |
+| `//`    | Ganzzahlige Division     |
+| `%`     | Modulo (Rest)            |
+| `**`    | Potenzierung             |
+
+## Aufgaben
 
 Löse die folgenden Aufgaben selbstständig oder mit einem Partner oder Partnerin.
 
@@ -188,3 +207,58 @@ Zum Bewegen kannst du penup(), forward(...) und pendown() verwenden.
 
 Erstelle zwei Varaiblen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Ergebnis aus.
 
+## Aufgaben vor dem folgenden Block
+:::info 
+1. Lies Dir die Definition und die Eigenschaften von Algorithmen erneut durch
+2. Schaue Dir das folgende Video bis Minute 2:30 an und halte die Fehlvorstellungen zu Variablen in einem für die verständlichen Heftaufschrieb fest.
+3. Erarbeite dir selbstständig das Kapitel "Datentypen von Variablen" unterhalb des Videos. Notiere Fragen für die nächste Stunde.
+:::
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uqTvW5ZhxPc?si=xKEMdUOWaZvX63Rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Datentypen von Variablen
+Im letzten Block hast du gelernt wie man mit Variablen umgeht, bedeutet, du kannst Variablen nun *initiieren*, ihnen einen *Wert zuweisen* und mit ihnen *rechnen*. Nach dem Behältermodell scheinen also Variablen immer Zahlen zu halten. In der Realität können von uns definierte Variablen noch Werte ganz unterschiedlicher Art, also andere Werte als Zahlen, halten.
+Dieses Prinzip kennst du bereits von den Datenbanken. Wirf einen Blick in deinen Hefter, um dich an das Konzept der Datentypen zu erinnern.
+
+| Name des Datentyps | Was Python erwartet        | Beispiel in Python                      |
+|--------------------|----------------------------|-----------------------------------------|
+| Integer `(int)`    | ganze Zahl                 | `x = 3`, `zahl = -5`                    |
+| Float `(float)`    | Gleitkommazahl             | `height = 163.5`, `speed = 4.52`        |
+| String `(str)`     | Text                       | `name = "Thomas"`, `msg = "Hallo Welt"` |
+| Boolean `(bool)`   | Wahrheitswert (true/false) | `win = TRUE`, `win = false`             |
+
+Die gute Nachricht: Python kümmert sich um die Verwaltung häufig selbstständig. Wollen wir z.B. mit ganzen und Kommazahlen gleichzeitig rechnen, so ist das überhaupt kein Problem. 
+
+```python
+import turtle
+t = turtle.Turtle()
+
+i = 10 # [!code focus]
+f = 3.6 # [!code focus]
+t.write(i - f) # [!code focus]
+```
+
+Versucht man jedoch einfach mit einem String von Buchstaben zu rechnen, so wird das nicht funktionieren.
+```python
+# Dieser Code funktioniert nicht
+import turtle
+t = turtle.Turtle()
+
+i = 10 # [!code focus]
+msg = "Ich bin ein String" # [!code focus]
+t.write(i - msg) # [!code focus]
+```
+Das leigt daran, dass Python nicht weiß, wie die `-` Operation bei einer ganzen Zahl und einem Text funktionieren soll. Im Matheunterricht fragt ja auch niemand wie man von der Zahl 10 ein Kuchenrezept subtrahieren kann.
+
+Hier eine gute Zusammenfassung des Besprochenen.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1WqFJ5wsA4o?si=2kRjkxJNG9SSbmtO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Nun passiert es aber ab und an, dass man sich eine Zahl in Kombination mit einem Text ausgeben lassen möchte. Hierfür lässt sich der Datentyp der ganzen Zahl von Integer zu String "casten". Hier ein Beispiel, wie das Problem gelöst werden kann.
+
+```python
+import turtle
+t = turtle.Turtle()
+
+i = 1 # [!code focus]
+msg = "Ich bin" # [!code focus]
+t.write(msg + str(i) + " String!") # [!code focus]
+```
