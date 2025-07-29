@@ -65,21 +65,48 @@ export default defineConfig({
           items: [
             { text: 'Informatikunterricht', link: '/students/informatik/index' },
             {
+              text: 'Klasse 7',
+              link: '/students/informatik/inf_klasse_7/index',
+              items: [
+                {
+                  text: 'Informationen und Daten',
+                  items: [
+                    { text: 'Digitale Medien', link: '/students/informatik/inf_klasse_7/Informationen_Daten/Digitale_Medien' },
+                    { text: 'Informationen & Daten', link: '/students/informatik/inf_klasse_7/Informationen_Daten/Informationen_Daten' }
+                  ]
+                },
+                {
+                  text: 'Informatiksysteme',
+                  items: [
+                    { text: 'Hardware', link: '/students/informatik/inf_klasse_7/Informatiksysteme/Hardware' },
+                    { text: 'Software', link: '/students/informatik/inf_klasse_7/Informatiksysteme/Software' }
+                  ]
+                },
+                {
+                  text: 'Algorithmen',
+                  link: '/students/informatik/inf_klasse_7/Algorithmen/index'
+                }
+              ]
+            },
+            {
               text: 'Klasse 8',
               link: '/students/informatik/inf_klasse_8/index',
               items: [
                 {
-                  text: 'Themenbereich 1',
+                  text: 'Algorithmen',
                   items: [
-                    { text: 'Unterthema 1.1', link: '/students/informatik/inf_klasse_8/themenbereich_1/unterthema_1_1' },
-                    { text: 'Unterthema 1.2', link: '/students/informatik/inf_klasse_8/themenbereich_1/unterthema_1_2' }
+                    { text: 'Einführung', link: '/students/informatik/inf_klasse_8/Algorithmen/alg_Einfuehrung' },
+                    { text: 'Algorithmen im Alltag', link: '/students/informatik/inf_klasse_8/Algorithmen/alg_im_Alltag' },
+                    { text: 'Eigenschaften v. Algorithmen', link: '/students/informatik/inf_klasse_8/Algorithmen/alg_Eigenschaften' },
+                    { text: 'Programmieren', link: '/students/informatik/inf_klasse_8/Algorithmen/Programmieren' }
                   ]
                 },
                 {
-                  text: 'Themenbereich 2',
+                  text: 'Vernetzte Systeme',
                   items: [
-                    { text: 'Unterthema 2.1', link: '/students/informatik/inf_klasse_8/themenbereich_2/unterthema_2_1' },
-                    { text: 'Unterthema 2.2', link: '/students/informatik/inf_klasse_8/themenbereich_2/unterthema_2_2' }
+                    { text: 'Kooperation & Kollaboration', link: '/students/informatik/inf_klasse_8/Vernetzte_Systeme/kooperation_Kollaboration' },
+                    { text: 'Datenschutz & Datensicherheit', link: '/students/informatik/inf_klasse_8/Vernetzte_Systeme/Datenschutz_Datensicherheit' },
+                    { text: 'Gesellschaft', link: '/students/informatik/inf_klasse_8/Vernetzte_Systeme/Gesellschaft' }
                   ]
                 }
               ]
@@ -89,19 +116,32 @@ export default defineConfig({
               link: '/students/informatik/inf_klasse_9/index',
               items: [
                 {
-                  text: 'Themenbereich 1',
+                  text: 'Datenbanken',
                   items: [
-                    { text: 'Unterthema 1.1', link: '/students/informatik/inf_klasse_9/themenbereich_1/unterthema_1_1' },
-                    { text: 'Unterthema 1.2', link: '/students/informatik/inf_klasse_9/themenbereich_1/unterthema_1_2' }
+                    { text: 'Aufbau v. Datenbanken', link: '/students/informatik/inf_klasse_9/Datenbanken/Aufbau_Datenbanken' },
+                    { text: 'Datenbanken_Entwickeln', link: '/students/informatik/inf_klasse_9/Datenbanken/Datenbanken_Entwickeln' },
+                    { text: 'Operationen_Datenbanken', link: '/students/informatik/inf_klasse_9/Datenbanken/Operationen_Datenbanken' },
+                    { text: 'Massenspeichern und Gesellschaft', link: '/students/informatik/inf_klasse_9/Datenbanken/Gesellschaft' }
                   ]
                 },
                 {
-                  text: 'Themenbereich 2',
+                  text: 'Netzwerke',
                   items: [
-                    { text: 'Unterthema 2.1', link: '/students/informatik/inf_klasse_9/themenbereich_2/unterthema_2_1' },
-                    { text: 'Unterthema 2.2', link: '/students/informatik/inf_klasse_9/themenbereich_2/unterthema_2_2' }
+                    { text: 'Grundlagen', link: '/students/informatik/inf_klasse_9/Netzwerke/Grundlagen' },
+                    { text: 'Datenschutz & Datensicherheit', link: '/students/informatik/inf_klasse_9/Netzwerke/Datenschutz_Datensicherheit' },
+                    { text: 'Verschlüsselung', link: '/students/informatik/inf_klasse_9/Netzwerke/Verschluesselung' },
+                    { text: 'Gesellschaft', link: '/students/informatik/inf_klasse_9/Netzwerke/Gesellschaft' }
                   ]
-                }
+                },
+                {
+                  text: 'Künstliche Intelligenz',
+                  items: [
+                    { text: 'Einführung', link: '/students/informatik/inf_klasse_9/KI/Einfuehrung_KI' },
+                    { text: 'Bestärkendes Lernen', link: '/students/informatik/inf_klasse_9/KI/bestarkendes_Lernen' },
+                    { text: 'Überwachtes Lernen', link: '/students/informatik/inf_klasse_9/KI/ueberwachtes_Lernen' },
+                    { text: 'Unüberwachtes Lernen', link: '/students/informatik/inf_klasse_9/KI/unueberwachtes_Lernen' }
+                  ]
+                },
               ]
             },
             {
@@ -113,7 +153,8 @@ export default defineConfig({
                   items: [
                     { text: 'Erster Block', link: '/students/informatik/inf_klasse_10/Programmieren/block1' },
                     { text: 'Zweiter Block', link: '/students/informatik/inf_klasse_10/Programmieren/block2' },
-                    { text: 'Dritter Block', link: '/students/informatik/inf_klasse_10/Programmieren/block3' }
+                    { text: 'Dritter Block', link: '/students/informatik/inf_klasse_10/Programmieren/block3' },
+                    { text: 'Wiki', link: '/students/informatik/inf_klasse_10/Programmieren/pyturtle_wiki' },
                   ]
                 },
                 {

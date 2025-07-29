@@ -177,18 +177,15 @@ Tipp: Nutze t.forward() und t.penup() / t.pendown(), damit Tobi zwischendurch sp
 :::
 ### Aufgabe 2: Treppenstufen
 
-Zeichne eine Treppe mit 6 Stufen, jede Stufe z.B. 30 Schritte hoch und 30 Schritte breit.
+Zeichne eine Treppe mit 6 Stufen, jede Stufe z.B. 10 Schritte hoch und 10 Schritte breit.
 Überlege dir gut, wie viele Drehungen Tobi pro Stufe braucht und wie du sie in der Schleife formulierst.
 
-### Aufgabe 3: Haus mit Tür
 
-Zeichne mit Tobi ein einfaches Haus: ein Quadrat als Wand und darüber ein Dach (gleichschenkliges Dreieck).
-Ergänze anschließend noch eine Tür (ein kleines Rechteck an einer Seite der Wand).
-Tipp: Teile den Code in Abschnitte auf (Wand, Dach, Tür).
-Aufgabe 4: Abwechselnde Farben – Zickzackweg
+### Aufgabe 3: Abwechselnde Farben – Zickzackweg
 
 Lass Tobi einen Zickzackweg zeichnen, bei dem er bei jedem Schritt die Farbe ändert (z.B. t.color("red"), t.color("blue")).
 Der Weg soll aus 10 Linien bestehen, die abwechselnd nach oben rechts und unten rechts führen.
 Nutze dafür eine Schleife mit verknüpfter Bedingung oder eine einfache for-Schleife, die prüft, ob der Schritt gerade oder ungerade ist.
 
 ## Aufgaben vor dem folgenden Block
+
