@@ -1,21 +1,24 @@
 ---
-title: "RobotKarol zu PyTurtle & Variablen"
-description: "Einstieg in PyTurtle, erste Schritte mit Variablen und Aufgaben für den Einstieg."
+title: "Algorithmen-Eigenschaften, Variablen & maschinelle Entscheidungen"
+description: "Einstieg in PyTurtle, Algorithmus-Eigenschaften, erste Schritte mit Variablen und deren Anwendung in maschinellen Entscheidungsprozessen."
 ---
+
 ## Algorithmen
 
 Vor einiger Zeit hast Du dich schon intensiv mit Algorithmen hier im Informatikunterricht beschäftigt. Hier noch einmal eine Definition, auf die wir uns einigen.
 :::info Definition: Algorithmus
 Ein Algorithmus ist eine Handlungsanweisung zum Lösen einer Aufgabe bzw. einer Menge von Aufgaben.
+:::
+
+### Eigenschaften von Algorithmen
+Nicht jede Handlungsanweisung ist ein Algorithmus. Damit wir von einem Algorithmus sprechen können, muss die Handlungsanweisung folgende Eigenschaften erfüllen:
+
 :::details Eigenschaften
 - **Ausführbarkeit**: Der Algorithmus sollte fehlerfrei ausführbar sein.
 - **Endlichkeit**: Der Algorithmus hat endliche Länge.
 - **Wiederholbarkeit**: Bei jeder Wiederholung erhält man für gleiche Eingaben gleiche Ausgaben.
 - **Eindeutigkeit**: Für jeden Schritt gibt es genau einen festgelegten Folgeschritt.
 :::
-
-
-
 
 ## 🤖 Von RobotKarol zu PyTurtle 🐢
 Den Roboter Karol kennst du bereits. In der Vergangenheit hast Du ihr genau gesagt, was sie zu tun hatte.
@@ -32,10 +35,7 @@ endewiederhole
 ```
 :::
 
-
 Karol hat leider ein kleines Problem. Obwohl sie sich sehr gut in ihrer Umgebung zurechtfinden, hat sie große Schwierigkeiten, sich Dinge zu merken. Um größere und komplexere Probleme zu lösen, müssen wir uns jedoch verschiedenste Daten merken und abrufen können. Ein Glück, dass Karol einen guten Freund hat: **Tobi die Schildkröte**, der sich so manches merken kann 🐢
-
-
 
 ## Ziele
 - Wie du mit PyTurtle arbeitest
@@ -43,12 +43,11 @@ Karol hat leider ein kleines Problem. Obwohl sie sich sehr gut in ihrer Umgebung
 - Was Variablen sind und
 - Wozu man Variablen in der Informatik (und PyTurtle) verwendet
 
-
-
 ## PyTurtle: Kontext
 
 "**Python** ([ˈpʰaɪθn̩] oder [ˈpʰyːtɔn]) ist eine universell nutzbare [...] *Programmiersprache*. Sie hat den Anspruch, einen gut lesbaren, knappen Programmierstil zu fördern." (offizielle Python [Website](https://www.python.org/doc/essays/blurb/)) Mit Hilfe Pythons werden wir unsere Fähigkeiten und unser Wissen rund um Algorithmen erweitern und vertiefen. Nun gut, aber war nicht gerade noch die Rede von einer Schildkröte?
-PyTurtle erweitert die Programmiersprache Python um einige Funktionen. Neben unserem Code wird ein Bildschirm angezeigt, der eine kleine "Schildkröte" wandern und zeichnen lässt. Das ist praktisch, denn so können wir den ausgeführten Code wudnerbar visualisieren.
+
+PyTurtle erweitert die Programmiersprache Python um einige Funktionen. Neben unserem Code wird ein Bildschirm angezeigt, der eine kleine "Schildkröte" wandern und zeichnen lässt. Das ist praktisch, denn so können wir den ausgeführten Code wunderbar visualisieren.
 
 <img src="./python-logo-only.png" alt="Python Logo" width="80" />
 
@@ -210,8 +209,8 @@ Erstelle zwei Varaiblen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Erge
 ## Aufgaben vor dem folgenden Block
 :::info 
 1. Lies Dir die Definition und die Eigenschaften von Algorithmen erneut durch
-2. Schaue Dir das folgende Video bis Minute 2:30 an und halte die Fehlvorstellungen zu Variablen in einem für die verständlichen Heftaufschrieb fest.
-3. Erarbeite dir selbstständig das Kapitel "Datentypen von Variablen" unterhalb des Videos. Notiere Fragen für die nächste Stunde.
+2. Schaue Dir das folgende Video bis Minute 2:30 an und halte die Fehlvorstellungen zu Variablen fest
+3. Erarbeite dir selbstständig das Kapitel "Datentypen von Variablen" für den nächsten Block
 :::
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uqTvW5ZhxPc?si=xKEMdUOWaZvX63Rc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

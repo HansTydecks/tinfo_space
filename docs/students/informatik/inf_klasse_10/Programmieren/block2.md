@@ -1,22 +1,54 @@
 ---
-title: "Kontrollstrukturen: Schleifen und verknüpfte Bedingungen"
-description: ""
+title: "Datentypen und einfache Verzweigungen"
+description: "Verschiedene Datentypen verstehen und einfache Entscheidungen mit if-Anweisungen programmieren."
 ---
 
-:::info Definition: Kontrollstrukturen
-Kontrollstrukturen verändern den Verlauf eines Programmes. Sie verändern die Reihenfolge der Abarbeitung von Anweisungen.
+## Ziele
+- Verschiedene Datentypen unterscheiden und anwenden
+- Einfache Bedingungen mit if-else formulieren
+- Vergleichsoperatoren korrekt verwenden
+
+## Datentypen von Variablen
+
+Im letzten Block hast du gelernt wie man mit Variablen umgeht, bedeutet, du kannst Variablen nun *initiieren*, ihnen einen *Wert zuweisen* und mit ihnen *rechnen*. Nach dem Behältermodell scheinen also Variablen immer Zahlen zu halten. In der Realität können von uns definierte Variablen noch Werte ganz unterschiedlicher Art, also andere Werte als Zahlen, halten.
+
+| Name des Datentyps | Was Python erwartet        | Beispiel in Python                      |
+|--------------------|----------------------------|-----------------------------------------|
+| Integer `(int)`    | ganze Zahl                 | `x = 3`, `zahl = -5`                    |
+| Float `(float)`    | Gleitkommazahl             | `height = 163.5`, `speed = 4.52`        |
+| String `(str)`     | Text                       | `name = "Thomas"`, `msg = "Hallo Welt"` |
+| Boolean `(bool)`   | Wahrheitswert (true/false) | `win = True`, `verloren = False`        |
+
+Die gute Nachricht: Python kümmert sich um die Verwaltung häufig selbstständig. Wollen wir z.B. mit ganzen und Kommazahlen gleichzeitig rechnen, so ist das überhaupt kein Problem.
+
+```python
+import turtle
+t = turtle.Turtle()
+
+i = 10 # [!code focus]
+f = 3.6 # [!code focus]
+t.write(i - f) # [!code focus]
+```
+
+Versucht man jedoch einfach mit einem String von Buchstaben zu rechnen, so wird das nicht funktionieren.
+
+```python
+import turtle
+t = turtle.Turtle()
+
+text = "Hallo"
+t.write(10 + text)
+```
+
+:::detail Erklärung
+Hier kommt es zu einem Fehler, da Python nicht weiß, wie es eine Zahl mit einem Text zusammenzählen soll.
 :::
 
-## Ziele
-- Bedingungen mit Variablen formulieren
-- Logische Operatoren zur Verknüpfung von Bedingungen nutzen
-- Bedingte und zählende Schleifen zur Bewältigung kleiner Probleme nutzen
-
-## Bedingungen
+## Einfache Verzweigungen
 
 ### Einfache Bedingungen
 
-Bedingungen kennst du bereits von Karol. Manchmal musste man mit `IstWand` prüfen, ob Karol vor einer Wand steht und anhand dieser Bedingung entscheiden, ob sie einen Schritt nach vorne machen sollte. Bedingungen sind also entscheidend für den Verlauf deines Programmes und werden besonders interessant, wenn wir sie mit Variablen selbst gestalten können. Schau dir das Beispiel an und stelle eine Vermutung auf, was Tobi wohl schreiben wird.
+Bedingungen kennst du bereits von Karol. Manchmal musste man mit `IstWand` prüfen, ob Karol vor einer Wand steht und anhand dieser Bedingung entscheiden, ob sie einen Schritt nach vorne machen sollte. Bedingungen sind also entscheidend für den Verlauf deines Programmes und werden besonders interessant, wenn wir sie mit Variablen selbst gestalten können.
 
 ```python
 import turtle
@@ -25,12 +57,14 @@ t = turtle.Turtle()
 x = 6
 if x < 5:
     t.write("x ist kleiner 5!")
-if x >= 5:
+else:
     t.write("x ist groesser-gleich 5!")
 ```
+
 :::detail Erklärung
-Tobi prüft zuerst ob die Bedingung `x < 5` True ist. Das ist sie nicht, also führt er die Anweisung `t.write("x ist kleiner 5!")` nicht aus. `x >= 5` ist jedoch True. Daher führt er die Anweisung aus.
+Tobi prüft zuerst ob die Bedingung `x < 5` True ist. Das ist sie nicht, also führt er die Anweisung `t.write("x ist kleiner 5!")` nicht aus. Da es ein `else` gibt, führt er die Alternative aus.
 :::
+
 Man beachte den **häufig vergessenen Doppelpunkt hinter der Bedingung**.
 
 #### Mögliche Vergleichsoperatoren
@@ -44,68 +78,34 @@ Man beachte den **häufig vergessenen Doppelpunkt hinter der Bedingung**.
 | `>=`    | Größer oder gleich        | `x >= 5`           | `5`                             | `4`                              |
 
 :::danger Warnung
-Einen der häufigsten Fehler beim Programmieren ist es, `=` und `==` zu vertauschen. `=` kennen wir als Zuweisungsoperator von den Variablen. Wir nutzen `=` um einer Variable einen Wert zuzuweisen z.B. `x = 5`. Mit `x == 5` **prüfen** wir nun, ob diese Bedingung stimmt, was sie in diesem Fall tut.
+Einen der häufigsten Fehler beim Programmieren ist es, `=` und `==` zu vertauschen. `=` kennen wir als Zuweisungsoperator von den Variablen. Mit `x == 5` **prüfen** wir, ob diese Bedingung stimmt.
 :::
 
-### Verknüpfte Bedingungen
+## Aufgaben
 
-Hitzefrei bekommt man mancherorts unter zwei Bedingungen. Die Temperatur muss im Schatten über 30 Grad Celsius betragen und es muss vor 10:00 Uhr sein. Man könnte auch sagen: wenn `temp >= 30` und `schatten == True` und `time < 10` müssen alle True sein. Oder: `if temp >= 30 and schatten == True and time < 10: Hitzefrei = True` Ist eine der Bedingung False, so gibt es kein Hitzefrei.
+### Aufgabe 1: Altersgruppen
+Schreibe ein Programm, das das Alter einer Person in einer Variable speichert und je nach Alter eine passende Nachricht ausgibt:
+- Unter 12: "Du bist ein Kind"
+- 12-17: "Du bist ein Jugendlicher"  
+- Ab 18: "Du bist erwachsen"
 
-Solche Verknüpfungen von Bedingungen sind an unsere Sprache angeknüpft wie im Beispiel zuvor gut erkenntlich. Ist Bedingung 1 True UND ist Bedingung 2 True, so tue etwas. Eine weitere Möglichkeit Bedingungen zu verknüpfen ist das logische ODER. Ist Bedingung 1 True ODER ist Bedingung 2 True, so tue etwas. Wirf einen Blick auf die Tabelle und versuche die Werte jeweils nachzuvollziehen.
+### Aufgabe 2: Notenausgabe
+Erstelle ein Programm, das eine Punktzahl (0-15) in eine Note umwandelt:
+- 15-13 Punkte: "Sehr gut"
+- 12-10 Punkte: "Gut"
+- 9-7 Punkte: "Befriedigend"
+- 6-4 Punkte: "Ausreichend"
+- Unter 4 Punkte: "Mangelhaft"
 
-| Operator | Name               | Beispiel-Bedingung             | Wert für `x`, der `True` ergibt | Wert für `x`, der `False` ergibt |
-|:-------:|--------------------|-------------------------------:|--------------------------------:|---------------------------------:|
-| `and`   | Logisches UND      | `x > 0 and x < 10`             | `5`                             | `0`                              |
-| `or`    | Logisches ODER     | `x < 0 or x > 10`              | `11`                            | `5`                              |
-| `not`   | Logisches NICHT    | `not (x == 5)`                 | `3`                             | `5`                              |
+### Aufgabe 3: Temperatur-Check
+Schreibe ein Programm, das eine Temperatur auswertet:
+- Unter 0°C: "Es ist gefroren"
+- 0-10°C: "Es ist kalt"
+- 11-25°C: "Angenehme Temperatur"
+- Über 25°C: "Es ist warm"
 
-:::info Aufgabe
-Verändere das Programm so, dass die Person mitfahren darf.
-```python
-import turtle
-t = turtle.Turtle()
-
-koerperhoehe = 
-alter = 
-if koerperhoehe > 150 and alter > 8:
-    t.write("Du darfst mitfahren")
-else:
-    t.write("Du darfst NICHT mitfahren")
-```
-
-Verändere das Programm so, dass die Person nicht hereinkommt.
-```python
-import turtle
-t = turtle.Turtle()
-
-hat_ticket = True
-ist_vip = True
-
-if hat_ticket or ist_vip:
-    t.write("Du kommst rein")
-else:
-    t.write("Kein Zutritt")
-```
-:::
-
-
-
-## Schleifen
-
-Sicher erinnerst du dich daran, wie du den Roboter Karol durch die kleinen Welten geschickt hast. Oft musste Karol bestimmte Anweisungen mehrmals hintereinander ausführen. Anstatt jede Anweisung einzeln zu tippen haben wir uns **Schleifen** zu Nutze gemacht. Sicher erinnerst du dich an folgendes Beispiel:
-
-```
-wiederhole 5 mal 
-Schritt
-RechtsDrehen
-endewiederhole
-```
-
-### for-Schleifen
-
-Schleifen gibt es nicht nur bei Karol, sondern auch bei Tobi der Schildkröte. Hier sehen sie zwar etwas anders aus, erfüllen aber den selben Zweck. Möchte man Anweisungen eine feste Anzahl von malen wiederholen (Karol: `wiederhole 5 mal`), so nimmt man in Python den `for i in range(anfang, ende):` Befehl. Schau dir das Beispiel an und überlege, was Tobi auf den Bildschirm schreibt.
-
-```python
+## Vorbereitung für Block 3
+Bereite dich auf verknüpfte Bedingungen vor, indem du überlegst, wie man mehrere Bedingungen gleichzeitig prüfen könnte.
 import turtle
 t = turtle.Turtle()
 

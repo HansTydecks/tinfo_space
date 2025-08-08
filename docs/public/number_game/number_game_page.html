@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahlen-Hörspiel - DaZ Training</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .title {
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .score-board {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .score-item {
+            text-align: center;
+        }
+
+        .score-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .score-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .mode-selector {
+            margin: 20px 0;
+        }
+
+        .mode-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .mode-btn {
+            padding: 10px 20px;
+            border: 2px solid #4a90e2;
+            background: white;
+            color: #4a90e2;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .mode-btn.active {
+            background: #4a90e2;
+            color: white;
+        }
+
+        .mode-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+        }
+
+        .game-area {
+            margin: 30px 0;
+        }
+
+        .number-display {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #4a90e2;
+            margin: 20px 0;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            min-width: 120px;
+        }
+
+        .btn-primary {
+            background: #4a90e2;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #357abd;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .input-area {
+            margin: 20px 0;
+        }
+
+        .number-input {
+            font-size: 1.5rem;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px 0;
+        }
+
+        .number-input:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+        }
+
+        .feedback {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 500;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feedback.correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .feedback.wrong {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .feedback.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4a90e2, #7b68ee);
+            transition: width 0.3s ease;
+            border-radius: 4px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .game-container {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .number-display {
+                font-size: 2.5rem;
+                min-height: 60px;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mode-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mode-btn {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+
+        .celebration {
+            animation: celebration 0.6s ease-in-out;
+        }
+
+        @keyframes celebration {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 class="title">🎵 Zahlen-Hörspiel</h1>
+            <p class="subtitle">Höre die Zahlen und tippe sie ein!</p>
+        </div>
+
+        <div class="score-board">
+            <div class="score-item">
+                <div class="score-label">Punkte</div>
+                <div class="score-value" id="score">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Richtig</div>
+                <div class="score-value" id="correct">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Level</div>
+                <div class="score-value" id="level">1</div>
+            </div>
+        </div>
+
+        <div class="mode-selector">
+            <div class="mode-buttons">
+                <button class="mode-btn active" data-mode="easy">Einfach (1-20)</button>
+                <button class="mode-btn" data-mode="medium">Mittel (1-100)</button>
+                <button class="mode-btn" data-mode="hard">Schwer (1-1000)</button>
+                <button class="mode-btn" data-mode="sequence">Zahlenfolge</button>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress"></div>
+        </div>
+
+        <div class="game-area">
+            <div class="number-display" id="numberDisplay">Bereit?</div>
+            
+            <div class="controls">
+                <button class="btn btn-primary" id="playBtn">▶️ Abspielen</button>
+                <button class="btn btn-secondary" id="repeatBtn" disabled>🔄 Wiederholen</button>
+                <button class="btn btn-secondary" id="newGameBtn">🎮 Neues Spiel</button>
+            </div>
+
+            <div class="input-area">
+                <input type="text" class="number-input" id="userInput" 
+                       placeholder="Hier die gehörte Zahl eingeben..." disabled>
+                <div>
+                    <button class="btn btn-success" id="submitBtn" disabled>✓ Prüfen</button>
+                </div>
+            </div>
+
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </div>
+
+    <script>
+        // Game State
+        let gameState = {
+            score: 0,
+            correctAnswers: 0,
+            level: 1,
+            currentNumber: null,
+            currentSequence: [],
+            mode: 'easy',
+            gameActive: false,
+            speechSupported: 'speechSynthesis' in window
+        };
+
+        // Game Modes Configuration
+        const gameModes = {
+            easy: { min: 1, max: 20, name: 'Einfach' },
+            medium: { min: 1, max: 100, name: 'Mittel' },
+            hard: { min: 1, max: 1000, name: 'Schwer' },
+            sequence: { min: 1, max: 10, name: 'Zahlenfolge' }
+        };
+
+        // DOM Elements
+        const elements = {
+            score: document.getElementById('score'),
+            correct: document.getElementById('correct'),
+            level: document.getElementById('level'),
+            progress: document.getElementById('progress'),
+            numberDisplay: document.getElementById('numberDisplay'),
+            playBtn: document.getElementById('playBtn'),
+            repeatBtn: document.getElementById('repeatBtn'),
+            newGameBtn: document.getElementById('newGameBtn'),
+            userInput: document.getElementById('userInput'),
+            submitBtn: document.getElementById('submitBtn'),
+            feedback: document.getElementById('feedback'),
+            modeButtons: document.querySelectorAll('.mode-btn')
+        };
+
+        // Text-to-Speech Functions
+        function speakNumber(number) {
+            if (!gameState.speechSupported) return;
+            
+            // Cancel any ongoing speech
+            speechSynthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(number.toString());
+            
+            // Force German settings
+            utterance.lang = 'de-DE';
+            utterance.rate = 0.6;
+            utterance.pitch = 1.0;
+            utterance.volume = 1.0;
+            
+            // Wait for voices to load, then find German voice
+            const setGermanVoice = () => {
+                const voices = speechSynthesis.getVoices();
+                console.log('Available voices:', voices.map(v => `${v.name} (${v.lang})`));
+                
+                // Priority order for German voices
+                const germanVoice = voices.find(voice => 
+                    voice.lang === 'de-DE' ||
+                    voice.lang === 'de' ||
+                    voice.lang.startsWith('de-') ||
+                    voice.name.toLowerCase().includes('deutsch') ||
+                    voice.name.toLowerCase().includes('german') ||
+                    voice.name.toLowerCase().includes('hedda') ||
+                    voice.name.toLowerCase().includes('katrin')
+                );
+                
+                if (germanVoice) {
+                    utterance.voice = germanVoice;
+                    console.log('Using German voice:', germanVoice.name, germanVoice.lang);
+                } else {
+                    console.log('No German voice found, using default with de-DE lang');
+                }
+                
+                speechSynthesis.speak(utterance);
+            };
+            
+            // Check if voices are already loaded
+            if (speechSynthesis.getVoices().length > 0) {
+                setGermanVoice();
+            } else {
+                // Wait for voices to load
+                speechSynthesis.addEventListener('voiceschanged', setGermanVoice, { once: true });
+                setTimeout(setGermanVoice, 1000);
+            }
+        }
+
+        function speakSequence(sequence) {
+            if (!gameState.speechSupported) return;
+            
+            speechSynthesis.cancel();
+            
+            let delay = 0;
+            sequence.forEach((num, index) => {
+                setTimeout(() => {
+                    speakNumber(num);
+                }, delay);
+                delay += 1500;
+            });
+        }
+
+        function repeatNumber() {
+            speechSynthesis.cancel();
+            
+            setTimeout(() => {
+                if (gameState.mode === 'sequence') {
+                    speakSequence(gameState.currentSequence);
+                } else {
+                    speakNumber(gameState.currentNumber);
+                }
+            }, 200);
+        }
+
+        // Initialize Game
+        function initGame() {
+            updateDisplay();
+            setupEventListeners();
+            
+            if (gameState.speechSupported) {
+                speechSynthesis.getVoices();
+                
+                speechSynthesis.addEventListener('voiceschanged', () => {
+                    const voices = speechSynthesis.getVoices();
+                    console.log(`${voices.length} voices loaded`);
+                    
+                    const germanVoices = voices.filter(v => 
+                        v.lang.startsWith('de') || 
+                        v.name.toLowerCase().includes('german') ||
+                        v.name.toLowerCase().includes('deutsch')
+                    );
+                    
+                    if (germanVoices.length > 0) {
+                        console.log('German voices found:', germanVoices.map(v => v.name));
+                        showFeedback('info', '🇩🇪 Deutsche Stimme gefunden! Wähle einen Modus und klicke auf "Abspielen"!');
+                    } else {
+                        showFeedback('info', '⚠️ Keine deutsche Stimme gefunden. Sprache könnte auf Englisch sein.');
+                    }
+                });
+                
+                showFeedback('info', 'Wähle einen Schwierigkeitsgrad und klicke auf "Abspielen"!');
+            } else {
+                showFeedback('info', 'Audio wird in diesem Browser nicht unterstützt. Zahlen werden nur angezeigt.');
+            }
+        }
+
+        // Event Listeners
+        function setupEventListeners() {
+            elements.playBtn.addEventListener('click', startNewRound);
+            elements.repeatBtn.addEventListener('click', repeatNumber);
+            elements.submitBtn.addEventListener('click', checkAnswer);
+            elements.newGameBtn.addEventListener('click', resetGame);
+            
+            elements.userInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && !elements.submitBtn.disabled) {
+                    checkAnswer();
+                }
+            });
+
+            elements.modeButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    selectMode(e.target.dataset.mode);
+                });
+            });
+        }
+
+        // Mode Selection
+        function selectMode(mode) {
+            gameState.mode = mode;
+            elements.modeButtons.forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
+            
+            if (gameState.gameActive) {
+                resetGame();
+            }
+        }
+
+        // Start New Round
+        function startNewRound() {
+            gameState.gameActive = true;
+            elements.userInput.value = '';
+            elements.userInput.disabled = false;
+            elements.submitBtn.disabled = false;
+            elements.repeatBtn.disabled = false;
+            
+            if (gameState.mode === 'sequence') {
+                generateSequence();
+            } else {
+                generateSingleNumber();
+            }
+            
+            elements.playBtn.textContent = '🎵 Nächste Zahl';
+            updateDisplay();
+        }
+
+        // Generate Single Number
+        function generateSingleNumber() {
+            const config = gameModes[gameState.mode];
+            let min = config.min;
+            let max = config.max;
+            
+            // Vereinfachte Level-Logik für bessere Vorhersagbarkeit
+            const levelMultiplier = Math.min(gameState.level, 10);
+            
+            switch(gameState.mode) {
+                case 'easy':
+                    max = Math.min(20, 10 + (levelMultiplier - 1) * 2);
+                    break;
+                case 'medium':
+                    max = Math.min(100, 20 + (levelMultiplier - 1) * 8);
+                    break;
+                case 'hard':
+                    max = Math.min(1000, 50 + (levelMultiplier - 1) * 95);
+                    break;
+            }
+            
+            // Stelle sicher, dass min <= max
+            if (min > max) {
+                max = min;
+            }
+            
+            // Verbesserte Zufallsgeneration
+            gameState.currentNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+            gameState.currentSequence = [gameState.currentNumber];
+            
+            // Besseres Debugging
+            console.log(`Generated number: ${gameState.currentNumber} (Range: ${min}-${max}, Level: ${gameState.level}, Mode: ${gameState.mode})`);
+            
+            // Zusätzliche Validierung
+            if (gameState.currentNumber < min || gameState.currentNumber > max) {
+                console.error(`Number generation error: ${gameState.currentNumber} not in range ${min}-${max}`);
+                // Fallback: Generiere eine sichere Zahl
+                gameState.currentNumber = min;
+            }
+            
+            if (gameState.speechSupported) {
+                setTimeout(() => {
+                    speakNumber(gameState.currentNumber);
+                }, 200);
+                elements.numberDisplay.textContent = '🎵 Höre zu...';
+            } else {
+                elements.numberDisplay.textContent = gameState.currentNumber;
+            }
+        }
+
+        // Generate Number Sequence
+        function generateSequence() {
+            const sequenceLength = Math.min(2 + Math.floor(gameState.level / 3), 6);
+            gameState.currentSequence = [];
+            
+            for (let i = 0; i < sequenceLength; i++) {
+                // Verbesserte Zufallsgeneration für Sequenzen
+                const num = Math.floor(Math.random() * 10) + 1;
+                gameState.currentSequence.push(num);
+            }
+            
+            console.log(`Generated sequence: [${gameState.currentSequence.join(', ')}] (Length: ${sequenceLength}, Level: ${gameState.level})`);
+            
+            if (gameState.speechSupported) {
+                speakSequence(gameState.currentSequence);
+                elements.numberDisplay.textContent = `🎵 ${sequenceLength} Zahlen...`;
+            } else {
+                elements.numberDisplay.textContent = gameState.currentSequence.join(' - ');
+            }
+            
+            elements.userInput.placeholder = 'Zahlen mit Leerzeichen getrennt eingeben...';
+        }
+
+        // Check Answer
+        function checkAnswer() {
+            const userAnswer = elements.userInput.value.trim();
+            
+            if (!userAnswer) {
+                showFeedback('wrong', 'Bitte gib eine Antwort ein!');
+                return;
+            }
+
+            let isCorrect = false;
+            let correctAnswer = '';
+            
+            if (gameState.mode === 'sequence') {
+                const userSequence = userAnswer.split(/\s+/).map(n => parseInt(n)).filter(n => !isNaN(n));
+                isCorrect = arraysEqual(userSequence, gameState.currentSequence);
+                correctAnswer = gameState.currentSequence.join(' ');
+                
+                console.log(`Sequence check: User=[${userSequence.join(', ')}], Correct=[${gameState.currentSequence.join(', ')}], Match=${isCorrect}`);
+            } else {
+                const userNumber = parseInt(userAnswer);
+                isCorrect = userNumber === gameState.currentNumber;
+                correctAnswer = gameState.currentNumber.toString();
+                
+                console.log(`Number check: User=${userNumber}, Correct=${gameState.currentNumber}, Match=${isCorrect}`);
+            }
+
+            if (isCorrect) {
+                handleCorrectAnswer();
+            } else {
+                handleWrongAnswer(correctAnswer);
+            }
+        }
+
+        // Handle Correct Answer
+        function handleCorrectAnswer() {
+            gameState.score += gameState.level * 10;
+            gameState.correctAnswers++;
+            
+            if (gameState.correctAnswers % 5 === 0) {
+                gameState.level++;
+                showFeedback('correct', `🎉 Richtig! Level ${gameState.level} erreicht!`);
+                elements.level.classList.add('celebration');
+            } else {
+                showFeedback('correct', '✅ Richtig! Gut gemacht!');
+            }
+            
+            elements.numberDisplay.classList.add('celebration');
+            elements.userInput.disabled = true;
+            elements.submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                elements.level.classList.remove('celebration');
+                elements.numberDisplay.classList.remove('celebration');
+            }, 600);
+            
+            updateDisplay();
+        }
+
+        // Handle Wrong Answer
+        function handleWrongAnswer(correctAnswer = null) {
+            if (!correctAnswer) {
+                correctAnswer = gameState.mode === 'sequence' 
+                    ? gameState.currentSequence.join(' ')
+                    : gameState.currentNumber;
+            }
+                
+            showFeedback('wrong', `❌ Falsch! Die richtige Antwort war: ${correctAnswer}`);
+            elements.numberDisplay.classList.add('shake');
+            
+            setTimeout(() => {
+                elements.numberDisplay.classList.remove('shake');
+            }, 500);
+        }
+
+        // Helper Functions
+        function arraysEqual(a, b) {
+            return a.length === b.length && a.every((val, i) => val === b[i]);
+        }
+
+        function showFeedback(type, message) {
+            elements.feedback.className = `feedback ${type}`;
+            elements.feedback.textContent = message;
+        }
+
+        function updateDisplay() {
+            elements.score.textContent = gameState.score;
+            elements.correct.textContent = gameState.correctAnswers;
+            elements.level.textContent = gameState.level;
+            
+            const progressToNextLevel = (gameState.correctAnswers % 5) / 5 * 100;
+            elements.progress.style.width = `${progressToNextLevel}%`;
+        }
+
+        function resetGame() {
+            gameState.score = 0;
+            gameState.correctAnswers = 0;
+            gameState.level = 1;
+            gameState.gameActive = false;
+            
+            elements.userInput.value = '';
+            elements.userInput.disabled = true;
+            elements.userInput.placeholder = 'Hier die gehörte Zahl eingeben...';
+            elements.submitBtn.disabled = true;
+            elements.repeatBtn.disabled = true;
+            elements.playBtn.textContent = '▶️ Abspielen';
+            elements.numberDisplay.textContent = 'Bereit?';
+            
+            showFeedback('info', 'Neues Spiel gestartet! Wähle einen Modus und klicke auf "Abspielen".');
+            updateDisplay();
+        }
+
+        // Start Game
+        initGame();
+    </script>
+</body>
+</html>
