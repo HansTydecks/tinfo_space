@@ -32,11 +32,6 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-
-    editLink: {
-      pattern: 'https://github.com/HansTydecks/vitepress_tinf/docs/:path',
-      text: 'Click here to make to this a better page'
-    },
     footer: {
       message: `
         <nav>
@@ -63,7 +58,6 @@ export default defineConfig({
         {
           text: 'Informatik',
           items: [
-            { text: 'Informatikunterricht', link: '/students/informatik/index' },
             {
               text: 'Klasse 7',
               link: '/students/informatik/inf_klasse_7/index',
@@ -173,7 +167,6 @@ export default defineConfig({
         {
           text: 'English',
           items: [
-            { text: 'Englischunterricht', link: '/students/english/index' },
             { text: 'Grammar', link: '/students/english/grammar' },
             { text: 'Vocabulary', link: '/students/english/vocabulary' }
           ]
@@ -183,7 +176,6 @@ export default defineConfig({
         {
           text: 'Deutsch als Zweitsprache im Klassenzimmer',
           items: [
-            { text: 'Deutsch als Zweitsprache', link: '/students/daz/index' },
             {
               text: 'Grammatik',
               items: [

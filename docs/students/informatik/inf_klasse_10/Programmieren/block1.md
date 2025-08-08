@@ -4,7 +4,7 @@ description: "Einstieg in PyTurtle, erste Schritte mit Variablen und Aufgaben f�
 ---
 ## Algorithmen
 
-Vor einiger Zeit hast Du dich schon ganz intensiv mit Algorithmen hier im Informatikunterricht beschäftigt. Hier noch einmal eine Definition, auf die wir uns einigen.
+Vor einiger Zeit hast Du dich schon intensiv mit Algorithmen hier im Informatikunterricht beschäftigt. Hier noch einmal eine Definition, auf die wir uns einigen.
 :::info Definition: Algorithmus
 Ein Algorithmus ist eine Handlungsanweisung zum Lösen einer Aufgabe bzw. einer Menge von Aufgaben.
 :::details Eigenschaften
