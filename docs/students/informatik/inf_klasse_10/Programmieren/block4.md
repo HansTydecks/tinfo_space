@@ -37,6 +37,11 @@ Dabei ist `i` eine Variable, die genau wie die Variablen aus Block 1 genutzt wer
 Die Zählvariable `i` ist zu Beginn der Schleife gleich der ersten Zahl in `range(anfang, ende)`. `i` wird jedoch nie zu `ende`, da die Abbruchbedingung der Schleife erreicht ist *sobald `i` das `ende`* erreicht. In unserem Beispiel zählt `i` also hoch bis 9, wird dann um 1 erhöht und bricht somit die Schleife ab.
 :::
 
+:::danger Warnung
+Anders als in vielen Programmiersprachen wird der Inhalt der Schleife bei Python um eine Tabulatortaste eingerückt. Das ist die Taste mit den zwei Pfeilen am linken Ende der Tastatur.
+Vergiss nie den Doppelpunkt am Ende der Schleife
+:::
+
 ### Verschiedene range()-Varianten
 
 ```python
@@ -91,7 +96,15 @@ for i in range(1, 6):
     t.pendown()
 ```
 
+:::info Aufgaben
+1. Schreibe das obige Programm so um, sodass nur eine einzige Zahl in der `range()` Funktion steht. Beobachte, was Tobi auf den Bildschirm schreibt.
+2. Schreibe ein Programm, das Tobi dazu bringt, ein gleichseitiges Dreieck zu zeichnen. Nutze eine Schleife. Bedenke: Tobi dreht sich immer um die angegebene Gradzahl.
+3. Schreibe das Programm so um das Tobi erst das Dreieck zeichnet und anschließend die Kanten mit 1, 2 und 3 beschriftet.
+:::
+
 ## Aufgaben
+
+Löse die folgenden Aufgaben selbstständig oder mit einem Partner oder Partnerin.
 
 ### Aufgabe 1: Zebrastreifen
 Zeichne mit einer Schleife 5 kurze, parallele Linien nebeneinander, die wie ein Zebrastreifen aussehen.
@@ -118,5 +131,7 @@ Zeichne 7 Rechtecke in verschiedenen Farben nebeneinander. Jedes Rechteck soll e
 farben = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 ```
 
-## Vorbereitung für Block 5
+## Aufgaben vor dem folgenden Block
+:::info 
 Überlege dir, welche Teile deines Codes du öfter verwendest und wie man diese in wiederverwendbare Bausteine packen könnte.
+:::

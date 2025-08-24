@@ -1,33 +1,115 @@
-const ftp = require('basic-ftp');
+const FTP = require('ftp');
 const { exec } = require('child_process');
 const path = require('path');
+const fs = require('fs');
 
 async function uploadFiles() {
-    const client = new ftp.Client();
-    client.ftp.verbose = true; // Enable verbose logging
-
-    try {
-        await client.access({
-            host: "ftp.tinfo.space",  
-            user: "4f846938@tinfo.space", 
-            password: "yasPECQVcYEWFNAs6SMo",
-            secure: false, // Set to true if using SFTP
+    return new Promise((resolve, reject) => {
+        const client = new FTP();
+        
+        client.on('ready', function() {
+            console.log('FTP connection ready');
+            
+            // Change to public_html directory
+            client.cwd('/public_html', function(err) {
+                if (err) {
+                    console.error('Error changing to public_html:', err);
+                    client.end();
+                    reject(err);
+                    return;
+                }
+                
+                console.log('Changed to public_html directory');
+                
+                // Upload dist folder contents
+                const distPath = path.join(__dirname, 'docs', '.vitepress', 'dist');
+                uploadDirectory(client, distPath, '/', function(err) {
+                    if (err) {
+                        console.error('Error uploading files:', err);
+                        client.end();
+                        reject(err);
+                        return;
+                    }
+                    
+                    console.log('Upload complete!');
+                    client.end();
+                    resolve();
+                });
+            });
         });
-
-        await client.ensureDir('/public_html'); // Ensure the target directory exists
-        await client.clearWorkingDir(); // Optional: Clear the working directory
         
-        // Upload the dist folder
-        await client.uploadFromDir(path.join(__dirname, 'docs', '.vitepress', 'dist'));
+        client.on('error', function(err) {
+            console.error('FTP connection error:', err);
+            reject(err);
+        });
         
-        // Upload the public folder
-        await client.uploadFromDir(path.join(__dirname, 'public')); // Upload the public folder
+        // Connect with explicit active mode (not passive)
+        client.connect({
+            host: 'ftp.tinfo.space',
+            user: '4f846938@tinfo.space',
+            password: 'yasPECQVcYEWFNAs6SMo',
+            connTimeout: 60000,
+            pasvTimeout: 60000,
+            keepalive: 60000,
+            pasv: false // Force active mode
+        });
+    });
+}
 
-        console.log('Upload complete!');
-    } catch (err) {
-        console.error(err);
-    }
-    client.close();
+function uploadDirectory(client, localDir, remoteDir, callback) {
+    fs.readdir(localDir, function(err, files) {
+        if (err) {
+            callback(err);
+            return;
+        }
+        
+        let uploaded = 0;
+        let errors = [];
+        
+        if (files.length === 0) {
+            callback(null);
+            return;
+        }
+        
+        files.forEach(function(file) {
+            const localPath = path.join(localDir, file);
+            const remotePath = remoteDir + file;
+            
+            fs.stat(localPath, function(err, stats) {
+                if (err) {
+                    errors.push(err);
+                    uploaded++;
+                    if (uploaded === files.length) {
+                        callback(errors.length > 0 ? errors : null);
+                    }
+                    return;
+                }
+                
+                if (stats.isFile()) {
+                    console.log(`Uploading ${file}...`);
+                    client.put(localPath, remotePath, function(err) {
+                        if (err) {
+                            console.error(`Failed to upload ${file}:`, err.message);
+                            errors.push(err);
+                        } else {
+                            console.log(`✓ ${file} uploaded`);
+                        }
+                        
+                        uploaded++;
+                        if (uploaded === files.length) {
+                            callback(errors.length > 0 ? errors : null);
+                        }
+                    });
+                } else if (stats.isDirectory()) {
+                    // Skip directories for now, just upload files
+                    uploaded++;
+                    if (uploaded === files.length) {
+                        callback(errors.length > 0 ? errors : null);
+                    }
+                }
+            });
+        });
+    });
 }
 
 exec('npm run build', (error, stdout, stderr) => {

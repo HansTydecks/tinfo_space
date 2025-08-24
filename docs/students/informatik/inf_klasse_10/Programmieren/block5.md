@@ -130,6 +130,8 @@ t.write(f"Umfang: {umfang}")
 
 ## Aufgaben
 
+Löse die folgenden Aufgaben selbstständig oder mit einem Partner oder Partnerin.
+
 ### Aufgabe 1: Stern-Funktion
 Schreibe eine Funktion `stern_zeichnen(groesse)`, die einen 5-zackigen Stern zeichnet.
 
@@ -148,5 +150,7 @@ Schreibe Funktionen für geometrische Berechnungen:
 - `kreis_flaeche(radius)`: Berechnet die Fläche eines Kreises
 - `rechteck_umfang(breite, hoehe)`: Berechnet den Umfang eines Rechtecks
 
-## Vorbereitung für Block 6
+## Aufgaben vor dem folgenden Block
+:::info 
 Denke über komplexere Programme nach, die alle bisherigen Konzepte kombinieren.
+:::

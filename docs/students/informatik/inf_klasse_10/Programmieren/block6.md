@@ -80,7 +80,9 @@ def koch_schneeflocke(laenge, ordnung):
     # Implementierung für fortgeschrittene Schüler
 ```
 
-## Herausfordernde Einzelaufgaben
+## Aufgaben
+
+Löse die folgenden Aufgaben selbstständig oder mit einem Partner oder Partnerin.
 
 ### Aufgabe 1: Zahlenrätsel
 Programmiere ein Zahlenratespiel:
@@ -115,11 +117,13 @@ Simuliere Wetter-Daten:
 
 Bei der Bewertung eurer Projekte achte ich auf:
 
+:::details Kriterien
 1. **Funktionalität**: Läuft das Programm fehlerfrei?
 2. **Code-Qualität**: Ist der Code sauber strukturiert und kommentiert?
 3. **Verwendung der Konzepte**: Werden Funktionen, Schleifen, Bedingungen sinnvoll eingesetzt?
 4. **Kreativität**: Eigene Ideen und Erweiterungen
 5. **Problemlösung**: Wie werden Herausforderungen gelöst?
+:::
 
 ## Zusammenfassung des Kurses
 

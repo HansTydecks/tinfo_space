@@ -14,6 +14,7 @@ Hitzefrei bekommt man mancherorts unter zwei Bedingungen. Die Temperatur muss im
 
 Solche Verknüpfungen von Bedingungen sind an unsere Sprache angeknüpft wie im Beispiel zuvor gut erkenntlich. Ist Bedingung 1 True UND ist Bedingung 2 True, so tue etwas. Eine weitere Möglichkeit Bedingungen zu verknüpfen ist das logische ODER.
 
+### Logische Operatoren
 | Operator | Name               | Beispiel-Bedingung             | Wert für `x`, der `True` ergibt | Wert für `x`, der `False` ergibt |
 |:-------:|--------------------|-------------------------------:|--------------------------------:|---------------------------------:|
 | `and`   | Logisches UND      | `x > 0 and x < 10`             | `5`                             | `0`                              |
@@ -76,15 +77,17 @@ while win == False:
         win = True
 ```
 
-:::detail Erklärung
+:::details Erklärung
 Tobi soll ein kleines Rennen bestreiten. Dazu muss er Strecke zurücklegen und gewinnen. Solange er nicht gewonnen hat, muss er immer weiter laufen (`win == False`). Nun läuft er 10 Schritte und es wird geprüft, ob er bereits mehr als 100 Schritte getan hat. Ist das der Fall, so hat er gewonnen `win = True` und die Bedingung `win == False` ist nicht mehr erfüllt.
 :::
 
 :::danger Warnung
-Anders als in vielen Programmiersprachen wird der Inhalt der Schleife bei Python um eine Tabulatortaste eingerückt. Vergiss nie den Doppelpunkt am Ende der Schleife.
+Anders als in vielen Programmiersprachen wird der Inhalt der Schleife bei Python um eine Tabulatortaste eingerückt. Vergiss nie den Doppelpunkt am Ende der Schleife hinter dem while().
 :::
 
 ## Aufgaben
+
+Löse die folgenden Aufgaben selbstständig oder mit einem Partner oder Partnerin.
 
 ### Aufgabe 1: Einlass-Kontrolle
 Schreibe ein Programm für eine Disco. Eine Person kommt nur rein, wenn sie:
@@ -100,5 +103,3 @@ Simuliere das Würfeln, bis eine 6 kommt. Zähle dabei mit, wie oft gewürfelt w
 Nutze `import random` und `random.randint(1,6)` für den Würfel.
 :::
 
-## Vorbereitung für Block 4
-Überlege dir, wann man eine while-Schleife und wann man besser eine Schleife mit fester Anzahl von Wiederholungen verwenden würde.
