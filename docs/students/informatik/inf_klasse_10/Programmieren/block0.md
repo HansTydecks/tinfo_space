@@ -75,7 +75,7 @@ Nun können wir Tobi (`t.`) herumkommandieren. Wir geben ihm erst eine Geschwind
 
 ![Ausführen](press_play.gif)
 
-Es gibt noch weitere Befehle, die sich als sehr nützlich erweisen: mit `t.right(180)` und `t.left(90)` dreht sich Tobi um den jeweiligen Grad (man denke an einen Kreis mit 360 Grad), `t.circle(10)` zeichnet einen Kreis der Größe 10, `t.penup()` und `t.pendown()` heben bzw. senken den Stift und `t.goto(x, y)` teleportieren Tobi an die Koordinate, die du für x und y eingibst.
+Es gibt noch weitere Befehle, die sich als sehr nützlich erweisen: mit `t.right(180)` und `t.left(90)` dreht sich Tobi um den jeweiligen Grad (man denke an einen Kreis mit 360 Grad), `t.circle(10)` zeichnet einen Kreis der Größe 10, `t.penup()` und `t.pendown()` heben bzw. senken den Stift und `t.goto(x, y)` teleportieren Tobi an die Koordinate, die du für x und y eingibst. Mit `t.pos()` erfragst du Tobis Position im Koordinatensystem. Lass sie dir mit `t.write(t.pos())` an den Bildschirm schreiben.
 
 :::info Aufgabe
 Schreibe ein Programm, das den ersten Buchstaben deines Namens zeichnet. Schon fertig? Zeichne die Zahl 9 hinter deinen Buchstaben.

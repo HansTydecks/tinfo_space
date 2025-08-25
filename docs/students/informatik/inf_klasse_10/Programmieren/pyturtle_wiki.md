@@ -42,6 +42,7 @@ t.speed(5)  # 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
 | `t.color("farbe")` | Farbe ändern | `t.color("red")` |
 | `t.write("text")` | Text schreiben | `t.write("Hallo!")` |
 | `t.heading()` | Aktuelle Richtung abfragen (0-360°) | `if t.heading() == 90:` |
+| `t.pos()` | Aktuelle Position abfragen | `t.write(t.pos())`|
 
 ## 📊 Variablen & Behältermodell
 

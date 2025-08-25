@@ -71,7 +71,7 @@ Hier wird sehr deutlich, wie das `=` als Zuweisungsoperator funktioniert. `zahl 
 ### Rechenzeichen
 Hier alle arithmetischen Operatoren auf einen Blick
 
-| Operator | Name                    |
+| Operator| Name                     |
 |:-------:|--------------------------|
 | `+`     | Addition                 |
 | `-`     | Subtraktion              |
@@ -143,26 +143,7 @@ Nach jedem Kreis: `radius = radius + 10`.
 Zum Bewegen kannst du `penup()`, `forward()` und `pendown()` verwenden.
 :::
 
-### Aufgabe 5: Taschenrechner
-
-Erstelle einen einfachen Taschenrechner, der zwei Zahlen vom Benutzer abfragt und alle vier Grundrechenarten berechnet und ausgibt.
-
-Dein Programm soll:
-
-1. Nach der ersten Zahl fragen
-2. Nach der zweiten Zahl fragen
-3. Alle vier Ergebnisse (Addition, Subtraktion, Multiplikation, Division) berechnen und ausgeben
-
-```
-Erste Zahl: 12
-Zweite Zahl: 4
-Addition: 16
-Subtraktion: 8
-Multiplikation: 48
-Division: 3.0
-```
-
-### Aufgabe 6: Vertauschen
+### Aufgabe 5: Vertauschen
 
 Erstelle zwei Variablen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Ergebnis aus.
 
