@@ -5,15 +5,14 @@ description: "Informatik Klassenstufe 9 - Datenbanken, Netzwerke, Protokolle und
 
 # Informatik Klasse 9
 
-In der 9. Klasse vertiefst du deine Informatik-Kenntnisse und lernst moderne Technologien kennen.
-
 ## Lernbereiche
 
 ### 1. Datenbanken
 - **Datenbankmodelle** - Relationale Datenbanken verstehen
 - **SQL-Grundlagen** - Datenbank-Abfragen erstellen
 - **Datenbankdesign** - Tabellen planen und normalisieren
-- **DSGVO und Datenschutz** - Rechtliche Aspekte beim Umgang mit Daten
+
+Die Inhalte für diesen Lernbereich sind stark an Julian Dorns [Informatikbuch](https://buch.informatik.cc/dm) inspiriert und angelehnt.
 
 ### 2. Netzwerke und Protokolle
 - **Netzwerk-Topologien** - LAN, WAN, Internet-Struktur

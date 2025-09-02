@@ -136,15 +136,55 @@ export default defineConfig({
               text: 'Klasse 9',
               link: '/students/informatik/inf_klasse_9/index',
               items: [
-                {
+                /*{
                   text: 'Datenbanken',
                   items: [
                     { text: 'Aufbau v. Datenbanken', link: '/students/informatik/inf_klasse_9/Datenbanken/Aufbau_Datenbanken' },
-                    { text: 'Datenbanken_Entwickeln', link: '/students/informatik/inf_klasse_9/Datenbanken/Datenbanken_Entwickeln' },
-                    { text: 'Operationen_Datenbanken', link: '/students/informatik/inf_klasse_9/Datenbanken/Operationen_Datenbanken' },
-                    { text: 'Massenspeichern und Gesellschaft', link: '/students/informatik/inf_klasse_9/Datenbanken/Gesellschaft' }
+                    {
+                      text: 'Datenmanagement',
+                      items: [
+                        { text: 'Daten im Alltag', link: '/students/informatik/inf_klasse_9/Datenbanken/datenmanagement/daten-im-alltag' },
+                        { text: 'Big Data', link: '/students/informatik/inf_klasse_9/Datenbanken/datenmanagement/big-data' },
+                        { text: 'Metadaten', link: '/students/informatik/inf_klasse_9/Datenbanken/datenmanagement/metadaten' }
+                      ]
+                    },
+                    {
+                      text: 'Datenmanagementphasen',
+                      items: [
+                        { text: 'Datenmanagementphasen', link: '/students/informatik/inf_klasse_9/Datenbanken/datenmanagementphasen/datenmanagementphasen' },
+                        { text: 'Generieren und Erfassen', link: '/students/informatik/inf_klasse_9/Datenbanken/datenmanagementphasen/generieren-und-erfassen' },
+                        {
+                          text: 'Speichern und Verwalten',
+                          items: [
+                            { text: 'Speichern und Verwalten', link: '/students/informatik/inf_klasse_9/Datenbanken/speichern-und-verwalten/speichern-und-verwalten' },
+                            { text: 'Datenbankmanagementsystem', link: '/students/informatik/inf_klasse_9/Datenbanken/speichern-und-verwalten/datenbankmanagementsystem' },
+                            { text: 'Datenmodellierung', link: '/students/informatik/inf_klasse_9/Datenbanken/speichern-und-verwalten/datenmodellierung' },
+                            { text: 'Entity Relationship Model', link: '/students/informatik/inf_klasse_9/Datenbanken/speichern-und-verwalten/entity-relationship-model' },
+                            { text: 'Kardinalitäten', link: '/students/informatik/inf_klasse_9/Datenbanken/speichern-und-verwalten/kardinalitaeten' },
+                            { text: 'Primär- und Fremdschlüssel', link: '/students/informatik/inf_klasse_9/Datenbanken/speichern-und-verwalten/primaer-und-fremdschluessel' },
+                            { text: 'Übungen', link: '/students/informatik/inf_klasse_9/Datenbanken/speichern-und-verwalten/uebungen' }
+                          ]
+                        },
+                        {
+                          text: 'Nutzen und Teilen',
+                          items: [
+                            { text: 'Nutzen und Teilen', link: '/students/informatik/inf_klasse_9/Datenbanken/nutzen-und-teilen/nutzen-und-teilen' },
+                            { text: 'Datenabfragen', link: '/students/informatik/inf_klasse_9/Datenbanken/nutzen-und-teilen/datenabfragen' },
+                            { text: 'Datengraph', link: '/students/informatik/inf_klasse_9/Datenbanken/nutzen-und-teilen/datengraph' },
+                            { text: 'Datengruppierung', link: '/students/informatik/inf_klasse_9/Datenbanken/nutzen-und-teilen/datengruppierung' },
+                            { text: 'Datenkennzahlen', link: '/students/informatik/inf_klasse_9/Datenbanken/nutzen-und-teilen/datenkennzahlen' },
+                            { text: 'Datenoperationen', link: '/students/informatik/inf_klasse_9/Datenbanken/nutzen-und-teilen/datenoperationen' },
+                            { text: 'Datenvisualisierung', link: '/students/informatik/inf_klasse_9/Datenbanken/nutzen-und-teilen/datenvisualisierung' },
+                            { text: 'Datenvorhersage', link: '/students/informatik/inf_klasse_9/Datenbanken/nutzen-und-teilen/datenvorhersage' },
+                            { text: 'Übung Tracking und Werbung', link: '/students/informatik/inf_klasse_9/Datenbanken/nutzen-und-teilen/uebung-tracking-und-werbung' }
+                          ]
+                        },
+                        { text: 'Archivieren oder Vernichten', link: '/students/informatik/inf_klasse_9/Datenbanken/datenmanagementphasen/archivieren-oder-vernichten' }
+                      ]
+                    },
+                    { text: 'Meine Daten!', link: '/students/informatik/inf_klasse_9/Datenbanken/meine-daten' }
                   ]
-                },
+                },*/
                 {
                   text: 'Netzwerke',
                   items: [
@@ -197,8 +237,26 @@ export default defineConfig({
         {
           text: 'English',
           items: [
-            { text: 'Grammar', link: '/students/english/grammar' },
-            { text: 'Vocabulary', link: '/students/english/vocabulary' }
+            { text: 'Klasse 5', link: '/students/english/klasse_5/index' },
+            { text: 'Klasse 6', link: '/students/english/klasse_6/index' },
+            { text: 'Klasse 7', link: '/students/english/klasse_7/index' },
+            { text: 'Klasse 8', link: '/students/english/klasse_8/index' },
+            { text: 'Klasse 9', link: '/students/english/klasse_9/index' },
+            { text: 'Klasse 10', link: '/students/english/klasse_10/index' },
+            {
+              text: 'Klasse 11',
+              link: '/students/english/klasse_11/index',
+              items: [
+                {
+                  text: 'The Commonwealth of Nations',
+                  items: [
+                    { text: 'Overview', link: '/students/english/klasse_11/The Commonwealth of Nations/index' },
+                    { text: 'Historical Timeline', link: '/students/english/klasse_11/The Commonwealth of Nations/history_commonwealth_timeline' }
+                  ]
+                }
+              ]
+            },
+            { text: 'Klasse 12', link: '/students/english/klasse_12/index' }
           ]
         }
       ],
@@ -278,10 +336,7 @@ export default defineConfig({
                 {
                   text: 'Databases',
                   items: [
-                    { text: 'Database Structure', link: '/en/students/informatik/inf_klasse_9/Datenbanken/Aufbau_Datenbanken' },
-                    { text: 'Database Development', link: '/en/students/informatik/inf_klasse_9/Datenbanken/Datenbanken_Entwickeln' },
-                    { text: 'Database Operations', link: '/en/students/informatik/inf_klasse_9/Datenbanken/Operationen_Datenbanken' },
-                    { text: 'Mass Storage and Society', link: '/en/students/informatik/inf_klasse_9/Datenbanken/Gesellschaft' }
+                    { text: 'Database Structure', link: '/en/students/informatik/inf_klasse_9/Datenbanken/Aufbau_Datenbanken' }
                   ]
                 },
                 {
@@ -337,8 +392,26 @@ export default defineConfig({
           text: 'English',
           items: [
             { text: 'English Classes', link: '/en/students/english/index' },
-            { text: 'Grammar', link: '/en/students/english/grammar' },
-            { text: 'Vocabulary', link: '/en/students/english/vocabulary' }
+            { text: 'Grade 5', link: '/students/english/klasse_5/index' },
+            { text: 'Grade 6', link: '/students/english/klasse_6/index' },
+            { text: 'Grade 7', link: '/students/english/klasse_7/index' },
+            { text: 'Grade 8', link: '/students/english/klasse_8/index' },
+            { text: 'Grade 9', link: '/students/english/klasse_9/index' },
+            { text: 'Grade 10', link: '/students/english/klasse_10/index' },
+            {
+              text: 'Grade 11',
+              link: '/students/english/klasse_11/index',
+              items: [
+                {
+                  text: 'The Commonwealth of Nations',
+                  items: [
+                    { text: 'Overview', link: '/students/english/klasse_11/The Commonwealth of Nations/index' },
+                    { text: 'Historical Timeline', link: '/students/english/klasse_11/The Commonwealth of Nations/history_commonwealth_timeline' }
+                  ]
+                }
+              ]
+            },
+            { text: 'Grade 12', link: '/students/english/klasse_12/index' }
           ]
         }
       ],
@@ -419,10 +492,7 @@ export default defineConfig({
                 {
                   text: 'Бази даних',
                   items: [
-                    { text: 'Структура баз даних', link: '/uk/students/informatik/inf_klasse_9/Datenbanken/Aufbau_Datenbanken' },
-                    { text: 'Розробка баз даних', link: '/uk/students/informatik/inf_klasse_9/Datenbanken/Datenbanken_Entwickeln' },
-                    { text: 'Операції з базами даних', link: '/uk/students/informatik/inf_klasse_9/Datenbanken/Operationen_Datenbanken' },
-                    { text: 'Масове зберігання та суспільство', link: '/uk/students/informatik/inf_klasse_9/Datenbanken/Gesellschaft' }
+                    { text: 'Структура баз даних', link: '/uk/students/informatik/inf_klasse_9/Datenbanken/Aufbau_Datenbanken' }
                   ]
                 },
                 {
@@ -478,8 +548,26 @@ export default defineConfig({
           text: 'Англійська мова',
           items: [
             { text: 'Уроки англійської', link: '/uk/students/english/index' },
-            { text: 'Граматика', link: '/uk/students/english/grammar' },
-            { text: 'Словниковий запас', link: '/uk/students/english/vocabulary' }
+            { text: '5 клас', link: '/students/english/klasse_5/index' },
+            { text: '6 клас', link: '/students/english/klasse_6/index' },
+            { text: '7 клас', link: '/students/english/klasse_7/index' },
+            { text: '8 клас', link: '/students/english/klasse_8/index' },
+            { text: '9 клас', link: '/students/english/klasse_9/index' },
+            { text: '10 клас', link: '/students/english/klasse_10/index' },
+            {
+              text: '11 клас',
+              link: '/students/english/klasse_11/index',
+              items: [
+                {
+                  text: 'Співдружність Націй',
+                  items: [
+                    { text: 'Огляд', link: '/students/english/klasse_11/The Commonwealth of Nations/index' },
+                    { text: 'Історична хронологія', link: '/students/english/klasse_11/The Commonwealth of Nations/history_commonwealth_timeline' }
+                  ]
+                }
+              ]
+            },
+            { text: '12 клас', link: '/students/english/klasse_12/index' }
           ]
         }
       ],
