@@ -212,7 +212,7 @@ export default defineConfig({
                 {
                   text: 'Algorithmen und Programmieren',
                   items: [
-                    { text: 'Einführung PyTurtle', link: '/students/informatik/inf_klasse_10/Programmieren/block0' },
+                    { text: 'Einführung in PyTurtle', link: '/students/informatik/inf_klasse_10/Programmieren/block0' },
                     { text: 'Block 1: Variablen', link: '/students/informatik/inf_klasse_10/Programmieren/block1' },
                     { text: 'Block 2: Datentypen & einfache Verzweigungen', link: '/students/informatik/inf_klasse_10/Programmieren/block2' },
                     { text: 'Block 3: Verknüpfte Verzweigungen & while-Schleifen', link: '/students/informatik/inf_klasse_10/Programmieren/block3' },
