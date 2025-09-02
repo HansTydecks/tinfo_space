@@ -5,11 +5,25 @@ description: "Erste Schritte mit Variablen und deren Anwendung in maschinellen E
 
 ## Variablen
 
+
 Den Begriff der Variable kennst du bereits aus dem Mathematikunterricht. Für den Informatikunterricht ist es wichtig, dass Du dein Vorwissen beiseite legst und das Konzept der Variable in der Informatik neu lernst. Wir können uns **Variablen als Behälter für einen Wert** vorstellen, aus dem man etwas herausnehmen und hineinlegen kann. In Python können wir Variablen "erschaffen", indem wir folgenden Ausdruck in unseren Code schreiben: `variablenname = wert` oder `schuhgroeße = 39`.
 
 ::: info Hinweis
 Variablennamen werden per Konvention klein geschrieben und sollten möglichst selbsterklärend sein. Namen wie `gfpr_123juhu` oder `dasistdiewichtigevariabledenkdaran` sind möglich, aber sehr ungern gesehen.
 :::
+
+Wozu aber Variablen? Sie machen unsere Programm flexibel und erlauben uns Eingaben, sodass wir mit unserem Programm interagieren können ohne den Code ständig abändern zu müssen.
+Das Praktische: Wenn sich der Wert ändert, musst du nur an einer Stelle was austauschen – der Name bleibt gleich.
+
+Stell dir ein System vor, das deine **Telefonnummer** kennt.
+```python
+telefonnummer = "0176 1234567"
+name = "Ali"
+
+t.write(name, "hat die Nummer", telefonnummer)
+```
+Wenn Ali eine neue Nummer bekommt, musst du nur die Variable ändern: `telefonnummer = "0157 9876543"`
+
 
 ::: details Detailliertere Erklärung, Begriffe
 In Python ist `x = 10` ein einfacher Zuweisungsausdruck, der gleichzeitig folgendes leistet:
@@ -39,7 +53,7 @@ In Zeile 9 wird der Wert von `zahl` neu zugewiesen. Der alte Wert verfällt und 
 :::
 
 ### Aufgabe 1: Korrigieren
-
+Hier geht es zu PyTurtule: [pythonsandbox.com/turtle](https://pythonsandbox.com/turtle)
 ```python
 import turtle
 tobi = turtle.Turtle()
@@ -76,6 +90,13 @@ Summe: 13
 Differenz: 7
 Produkt: 30
 ```
+
+:::details Text und Variablenwerte ausgeben
+Der Befehel für die Ausgabe von *Text* lautet: `t.write("Hier deinen Text einfügen.")`
+Der Befehl für die Ausgabe von *Variablen* lautet: `t.write(zahl)`
+Der Befehl zur Ausgabe von beidem in der selben Zeile lautet (spannenderweise): `t.write("Name" + str(name))`
+Das mag seltsam aussehen. Eine Erklärung folgt im nächsten Block.
+:::
 
 ### Beispiel 3 
 ```python
@@ -147,13 +168,12 @@ Achte darauf, dass die Kreise nebeneinander stehen.
 Setze `radius = 50` am Anfang.
 Nach jedem Kreis: `radius = radius + 10`.
 Zum Bewegen kannst du `penup()`, `forward()` und `pendown()` verwenden.
+![Beispiel für drei Kreise mit zunehmendem Radius](./block_1_images/circles_example.png)
 :::
 
 ### Aufgabe 5: Vertauschen
 
 Erstelle zwei Variablen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Ergebnis aus.
-
-
 
 
 ## Aufgaben vor dem folgenden Block
