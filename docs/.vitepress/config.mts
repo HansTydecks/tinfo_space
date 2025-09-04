@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Tinfo.Space",
   description: "Digitale Lernseite für Informatik, Englisch und DaZ",
-  base: '/vitepress_tinf/',
+  base: '/tinfo_space/',
   lastUpdated: true,
   
   head: [
