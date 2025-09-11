@@ -12,19 +12,6 @@ Den Begriff der Variable kennst du bereits aus dem Mathematikunterricht. Für de
 Variablennamen werden per Konvention klein geschrieben und sollten möglichst selbsterklärend sein. Namen wie `gfpr_123juhu` oder `dasistdiewichtigevariabledenkdaran` sind möglich, aber sehr ungern gesehen.
 :::
 
-Wozu aber Variablen? Sie machen unsere Programm flexibel und erlauben uns Eingaben, sodass wir mit unserem Programm interagieren können ohne den Code ständig abändern zu müssen.
-Das Praktische: Wenn sich der Wert ändert, musst du nur an einer Stelle was austauschen – der Name bleibt gleich.
-
-Stell dir ein System vor, das deine **Telefonnummer** kennt.
-```python
-telefonnummer = "0176 1234567"
-name = "Ali"
-
-t.write(name, "hat die Nummer", telefonnummer)
-```
-Wenn Ali eine neue Nummer bekommt, musst du nur die Variable ändern: `telefonnummer = "0157 9876543"`
-
-
 ::: details Detailliertere Erklärung, Begriffe
 In Python ist `x = 10` ein einfacher Zuweisungsausdruck, der gleichzeitig folgendes leistet:
 - Erstellt die Variable x, falls sie noch nicht existiert (**Definition**).
