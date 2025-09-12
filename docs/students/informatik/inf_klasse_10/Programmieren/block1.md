@@ -160,7 +160,11 @@ Zum Bewegen kannst du `penup()`, `forward()` und `pendown()` verwenden.
 
 ### Aufgabe 5: Vertauschen
 
-Erstelle zwei Variablen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Ergebnis aus.
+Erstelle zwei Variablen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Ergebnis aus, sodass `a == 7` und `a == 5` am Ende deines Programmes gilt.
+
+:::details Hinweise
+Viele Wege führen beim Programmieren zum Ziel. Man kann dieses Problem durch cleveres Rechnen lösen. Man kann sich aber auch eine **Hilfsvariable** zunutze machen.
+:::
 
 
 ## Aufgaben vor dem folgenden Block

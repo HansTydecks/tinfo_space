@@ -35,7 +35,8 @@ t.speed(5)  # 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
 | `t.backward(zahl)` | Tobi geht rückwärts | `t.backward(50)` |
 | `t.right(grad)` | Tobi dreht sich rechts | `t.right(90)` |
 | `t.left(grad)` | Tobi dreht sich links | `t.left(45)` |
-| `t.circle(radius)` | Tobi zeichnet einen Kreis | `t.circle(30)` |
+| `t.circle(radius)` | Tobi zeichnet einen **Kreis** | `t.circle(30)` |
+| `t.circle(radius, grad)` | Tobi zeichnet einen **Halbkreis** | `t.circle(20, 180)` |
 | `t.goto(x, y)` | Tobi springt zur Position | `t.goto(100, 50)` |
 | `t.penup()` | Stift heben (nicht zeichnen) | `t.penup()` |
 | `t.pendown()` | Stift senken (zeichnen) | `t.pendown()` |

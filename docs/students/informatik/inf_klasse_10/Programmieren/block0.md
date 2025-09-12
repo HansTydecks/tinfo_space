@@ -79,6 +79,10 @@ Es gibt noch weitere Befehle, die sich als sehr nützlich erweisen: mit `t.right
 
 :::info Aufgabe
 Schreibe ein Programm, das den ersten Buchstaben deines Namens zeichnet. Schon fertig? Zeichne die Zahl 9 hinter deinen Buchstaben.
+:::details Halbkreis
+Wenn du herausfinden möchtest, wie man einen Halbkreis zeichnet, so schau doch in das Wiki links im Verzeichnis.
+:::
+
 :::
 
 :::warning Speichern
