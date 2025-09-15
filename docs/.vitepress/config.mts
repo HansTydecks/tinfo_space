@@ -279,6 +279,32 @@ export default defineConfig({
           ]
         }
       ],
+      '/teachers/': [
+        {
+          text: 'Lehrkräfte',
+          items: [
+            { text: 'Übersicht', link: '/teachers/index' },
+            {
+              text: 'Digitale Tools',
+              items: [
+                { text: 'Digitale Tools', link: '/teachers/Digitale_Tools/index' }
+              ]
+            },
+            {
+              text: 'Stundenentwürfe',
+              items: [
+                { text: 'Stundenentwürfe', link: '/teachers/Stundenentwuerfe/index' }
+              ]
+            },
+            {
+              text: 'Material',
+              items: [
+                { text: 'Material', link: '/teachers/Material/index' }
+              ]
+            }
+          ]
+        }
+      ],
       '/en/students/informatik/': [
         {
           text: 'Computer Science',
