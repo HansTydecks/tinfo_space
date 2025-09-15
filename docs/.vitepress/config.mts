@@ -287,12 +287,6 @@ export default defineConfig({
             {
               text: 'Digitale Tools',
               items: [
-                { text: 'Digitale Tools', link: '/teachers/Digitale_Tools/index' }
-              ]
-            },
-            {
-              text: 'Digitale Tools',
-              items: [
                 { text: 'Übersicht', link: '/teachers/Digitale_Tools/index' },
                 { text: 'Card Creator', link: '/teachers/Digitale_Tools/card-creator-website/' },
                 { text: 'Wort‑Versteck', link: '/teachers/Digitale_Tools/word-reveal/' },
