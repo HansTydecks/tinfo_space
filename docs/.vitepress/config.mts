@@ -291,6 +291,18 @@ export default defineConfig({
               ]
             },
             {
+              text: 'Digitale Tools',
+              items: [
+                { text: 'Übersicht', link: '/teachers/Digitale_Tools/index' },
+                { text: 'Card Creator', link: '/teachers/Digitale_Tools/card-creator-website/' },
+                { text: 'Wort‑Versteck', link: '/teachers/Digitale_Tools/word-reveal/' },
+                { text: 'Table Reveal', link: '/teachers/Digitale_Tools/table-reveal/' },
+                { text: 'Pixel & Bits', link: '/teachers/Digitale_Tools/edu-pixel-draw/' },
+                { text: 'Binär‑ASCII‑Visualizer', link: '/teachers/Digitale_Tools/binary-ascii-visualizer/' },
+                { text: 'Quizmaster / Analog Programming', link: '/teachers/Digitale_Tools/analog-programming/' }
+              ]
+            },
+            {
               text: 'Stundenentwürfe',
               items: [
                 { text: 'Stundenentwürfe', link: '/teachers/Stundenentwuerfe/index' }
