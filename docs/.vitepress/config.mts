@@ -69,6 +69,18 @@ export default defineConfig({
           <a href="/privacy">Privacy Policy</a> |
           <a href="/contact">Contact</a>
         </nav>
+        <footer>
+          <div class="impressum">
+            <p>
+              Entwickelt für Lernende und Lehrende |
+              <a href="https://tinfo.space/teachers/Digitale_Tools/" target="_blank" rel="noopener">More apps and tools</a>
+              <a href="http://contact.tinfo.space/" id="contact-link">Kontakt</a>
+              <a href="https://linktr.ee/tinfo.space" target="_blank" rel="noopener">Links</a>
+              <a href="https://github.com/HansTydecks" target="_blank" rel="noopener">GitHub</a>
+              © 2025 Hans Tydecks
+            </p>
+          </div>
+        </footer>
       `,
       copyright: 'Unless stated otherwise, all content is public domain or open for educational use.'
     },
@@ -292,7 +304,9 @@ export default defineConfig({
                 { text: 'Wort‑Versteck', link: '/teachers/Digitale_Tools/word-reveal/' },
                 { text: 'Table Reveal', link: '/teachers/Digitale_Tools/table-reveal/' },
                 { text: 'Pixel & Bits', link: '/teachers/Digitale_Tools/edu-pixel-draw/' },
+                { text: 'Becimal', link: '/teachers/Digitale_Tools/becimal/' },
                 { text: 'Binär‑ASCII‑Visualizer', link: '/teachers/Digitale_Tools/binary-ascii-visualizer/' },
+                { text: 'Lessplan', link: '/teachers/Digitale_Tools/lessplan/' },
                 { text: 'Quizmaster / Analog Programming', link: '/teachers/Digitale_Tools/analog-programming/' }
               ]
             },

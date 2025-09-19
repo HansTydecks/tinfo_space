@@ -129,7 +129,7 @@ zahl = zahl + 10
 t.write(zahl)
 ```
 :::details Erklärung Userinput
-Das Program startet die einzelnen Zeilen Code werden abgearbeitet, bis sie zur `input()` Funktion gelangen. Nun wartet das Programm... auf deine Eingabe. Tipp doch mal eine Zahl ein und bestätige mit **Enter** und schau dir das Ergebnis an.
+Das Program startet und die einzelnen Zeilen Code werden von oben nach unten abgearbeitet, bis sie zur `input()` Funktion gelangen. Nun wartet das Programm... auf deine Eingabe. Tipp doch mal eine Zahl ein und bestätige mit **Enter** und schau dir das Ergebnis an.
 :::warning Vorsicht
 Erwarten wir eine ganze Zahl, so müssen wir den Befehl `input()` in die Klammern des `int()` Casts schreiben wie im Beispiel darüber (bspw. `zahl = int(input())`). Erwarten wir einen Text, so reicht ein einfaches `input()` (bspw. `name = input()`)
 :::
@@ -160,7 +160,7 @@ Zum Bewegen kannst du `penup()`, `forward()` und `pendown()` verwenden.
 
 ### Aufgabe 5: Vertauschen
 
-Erstelle zwei Variablen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Ergebnis aus, sodass `a == 7` und `a == 5` am Ende deines Programmes gilt.
+Erstelle zwei Variablen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Ergebnis aus, sodass `a == 7` und `b == 5` am Ende deines Programmes gilt.
 
 :::details Hinweise
 Viele Wege führen beim Programmieren zum Ziel. Man kann dieses Problem durch cleveres Rechnen lösen. Man kann sich aber auch eine **Hilfsvariable** zunutze machen.

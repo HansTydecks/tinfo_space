@@ -7,7 +7,7 @@ description: "Sammlung kleiner, mit GitHub Pages gehosteter Lernwerkzeuge"
 
 Hier liste ich kleine Webtools, die ich für den Unterricht gebaut habe. Zu jedem Eintrag findest du die Live‑Seite sowie den Link zum GitHub‑Repository; zwei kurze Sätze fassen Zweck und Einsatzmöglichkeiten zusammen.
 
-Hinweis zu Rückmeldungen: Wenn du Fehler oder Verbesserungsvorschläge hast, öffne bitte ein Issue im jeweiligen GitHub‑Repository. Du kannst alternativ die E‑Mail-Adresse aus den Kontaktinformationen dieser Seite verwenden.
+Hinweis zu Rückmeldungen: Wenn du Fehler oder Verbesserungsvorschläge hast, öffne bitte ein Issue im jeweiligen GitHub‑Repository. Nutze als schnelle Alternative dieses [Kontaktformular](https://contact.tinfo.space)
 
 ---
 
@@ -34,6 +34,13 @@ Tool zum schrittweisen Enthüllen von Tabellenzellen (CSV/Excel/TSV) mit Timerfu
 
 [Mehr zu Table Reveal →](./table-reveal/)
 
+## Programm zum Erstellen von Stundenverlaufsplänen (Lessplan)
+- Live: https://lessplan.tinfo.space
+- Repo: https://github.com/HansTydecks/fast-lessonplan
+Tool zum schnellen Verschriftlichen von Stundenplänen. KI-Prompt mitgeliefert!
+
+[Mehr zu Lessplan →](./lessplan/)
+
 ---
 # Informatik
 
@@ -51,11 +58,10 @@ Interaktive Visualisierung von 8 Bits: Schalter, ASCII‑Zeichen, Dezimalwerte u
 
 [Mehr zum Binär‑ASCII‑Visualizer →](./binary-ascii-visualizer/)
 
+## Binär‑ASCII‑Visualizer
+- Live: https://becimal.tinfo.space/
+- Repo: https://github.com/HansTydecks/binary-decimal-visualizer
+Das selbe Format wie der Binär-ASCII Visualisierer, aber mit Fokus auf Binär -> Dezimal Konversion, ganz und gar ASCII-frei.
 
-## Quizmaster / Analog Programming
-- Live: https://hanstydecks.github.io/analog-programming/
-- Repo: https://github.com/HansTydecks/analog-programming
-Eine Steueroberfläche (React/Vite) für analoge Kartenspiele: Timer, Glücksrad und Variablenmanagement für Lehrkräfte. Die Weboberfläche unterstützt die analoge Spielanleitung und ist per GitHub Actions als statische Seite verfügbar.
-
-[Mehr zu Quizmaster →](./analog-programming/)
+[Mehr zum Binär‑ASCII‑Visualizer →](./becimal/)
 
