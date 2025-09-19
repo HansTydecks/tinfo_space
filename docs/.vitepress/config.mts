@@ -64,23 +64,12 @@ export default defineConfig({
     },
     footer: {
       message: `
-        <nav>
-          <a href="/about">About Us</a> |
-          <a href="/privacy">Privacy Policy</a> |
-          <a href="/contact">Contact</a>
-        </nav>
-        <footer>
-          <div class="impressum">
-            <p>
-              Entwickelt für Lernende und Lehrende |
-              <a href="https://tinfo.space/teachers/Digitale_Tools/" target="_blank" rel="noopener">More apps and tools</a>
-              <a href="http://contact.tinfo.space/" id="contact-link">Kontakt</a>
-              <a href="https://linktr.ee/tinfo.space" target="_blank" rel="noopener">Links</a>
-              <a href="https://github.com/HansTydecks" target="_blank" rel="noopener">GitHub</a>
-              © 2025 Hans Tydecks
-            </p>
-          </div>
-        </footer>
+        <div class="footer-links"> 
+          <a href="https://tinfo.space/teachers/Digitale_Tools/" target="_blank" rel="noopener">More apps</a> |
+          <a href="http://contact.tinfo.space/" id="contact-link">Kontakt</a> |
+          <a href="https://linktr.ee/tinfo.space" target="_blank" rel="noopener">Links</a> |
+          <a href="https://github.com/HansTydecks" target="_blank" rel="noopener">GitHub</a>
+        </div>
       `,
       copyright: 'Unless stated otherwise, all content is public domain or open for educational use.'
     },
