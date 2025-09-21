@@ -222,6 +222,7 @@ export default defineConfig({
                     { text: 'Block 5: Bibliotheken & Funktionen', link: '/students/informatik/inf_klasse_10/Programmieren/block5' },
                     { text: 'Block 6: Komplexe Übungen', link: '/students/informatik/inf_klasse_10/Programmieren/block6' },
                     { text: 'Wiki', link: '/students/informatik/inf_klasse_10/Programmieren/pyturtle_wiki' },
+                    { text: 'Wasserfallmodell', link: '/students/informatik/inf_klasse_10/Programmieren/wasserfall' },
                   ]
                 },
                 {

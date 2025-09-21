@@ -33,8 +33,9 @@ if koerperhoehe > 150 and alter > 8:
 else:
     t.write("Du darfst NICHT mitfahren")
 ```
+Probieren: [pythonsandbox.com/turtle](https://pythonsandbox.com/turtle)
 
-:::info Aufgabe
+:::info Aufgabe 1
 Verändere das Programm so, dass die Person mitfahren darf.
 ```python
 import turtle
@@ -47,6 +48,18 @@ if koerperhoehe > 150 and alter > 8:
 else:
     t.write("Du darfst NICHT mitfahren")
 ```
+:::
+
+:::info Aufgabe 2
+**Einlass-Kontrolle**
+
+Der örtliche Club hat angefragt, ob du ein Programm für den Jugenschutz schreiben kannst. Eine Person kommt nur rein, wenn sie:
+- Mindestens 18 Jahre alt ist UND ein Ticket hat
+
+:::
+
+:::info Aufgabe 3
+Erweitere dein Programm. Personen unter die zwar unter 18 sind aber älter als 16 Jahre bekommen an der Tür den Hinweis, dass sie nur bis 10 Uhr bleiben dürfen.
 :::
 
 ## While-Schleifen
@@ -89,17 +102,15 @@ Anders als in vielen Programmiersprachen wird der Inhalt der Schleife bei Python
 
 Löse die folgenden Aufgaben selbstständig oder mit einem Partner oder Partnerin.
 
-### Aufgabe 1: Einlass-Kontrolle
-Schreibe ein Programm für eine Disco. Eine Person kommt nur rein, wenn sie:
-- Mindestens 18 Jahre alt ist UND ein Ticket hat
-- ODER wenn sie VIP-Status hat (unabhängig vom Alter)
-
-### Aufgabe 2: Countdown
+### Aufgabe 3: Countdown
 Erstelle einen Countdown von 10 bis 0 mit einer while-Schleife. Tobi soll jede Zahl einzeln schreiben.
 
-### Aufgabe 3: Würfel-Spiel
+### Aufgabe 4: Würfel-Spiel
 Simuliere das Würfeln, bis eine 6 kommt. Zähle dabei mit, wie oft gewürfelt wurde.
 :::details Tipp
-Nutze `import random` und `random.randint(1,6)` für den Würfel.
+Nutze `import random` und `random.randint(1,6)` für den Würfel. Schreibe dazu `import random` unter den anderen Import deines Programmes. `random.randint(1,6)` kannst du als Funktion genau so wie `input()` nutzen und z.B. das Ergebnis in einer Variable speichern:
+`zufallszahl = random.randint(1,6)`
+`t.write(zufallszahl)`
 :::
+
 

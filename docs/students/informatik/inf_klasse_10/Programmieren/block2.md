@@ -30,6 +30,7 @@ i = 10 # [!code focus]
 f = 3.6 # [!code focus]
 t.write(i - f) # [!code focus]
 ```
+Probieren: [pythonsandbox.com/turtle](https://pythonsandbox.com/turtle)
 
 Versucht man jedoch einfach mit einem String von Buchstaben zu rechnen, so wird das nicht funktionieren.
 ```python
