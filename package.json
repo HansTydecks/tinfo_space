@@ -9,6 +9,7 @@
     "build": "vitepress build docs",
     "build-and-dev": "vitepress build docs && vitepress dev docs",
     "deploy": "node deploy.js",
+    "deploy-github": "npm run docs:build && git add . && git commit -m \"Deploy website\" && git push origin main",
     "build-and-deploy": "npm run build && npm run deploy",
     "serve": "vitepress serve docs/.vitepress/dist"
   },
