@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Tinfo.Space",
   description: "Digitale Lernseite für Informatik, Englisch und DaZ",
-  base: '/tinfo_space/',
+  base: '/',
   lastUpdated: true,
   
   head: [
@@ -64,11 +64,12 @@ export default defineConfig({
     },
     footer: {
       message: `
-        <nav>
-          <a href="/about">About Us</a> |
-          <a href="/privacy">Privacy Policy</a> |
-          <a href="/contact">Contact</a>
-        </nav>
+        <div class="footer-links"> 
+          <a href="https://tinfo.space/teachers/Digitale_Tools/" target="_blank" rel="noopener">More apps</a> |
+          <a href="http://contact.tinfo.space/" id="contact-link">Kontakt</a> |
+          <a href="https://linktr.ee/tinfo.space" target="_blank" rel="noopener">Links</a> |
+          <a href="https://github.com/HansTydecks" target="_blank" rel="noopener">GitHub</a>
+        </div>
       `,
       copyright: 'Unless stated otherwise, all content is public domain or open for educational use.'
     },
@@ -221,6 +222,7 @@ export default defineConfig({
                     { text: 'Block 5: Bibliotheken & Funktionen', link: '/students/informatik/inf_klasse_10/Programmieren/block5' },
                     { text: 'Block 6: Komplexe Übungen', link: '/students/informatik/inf_klasse_10/Programmieren/block6' },
                     { text: 'Wiki', link: '/students/informatik/inf_klasse_10/Programmieren/pyturtle_wiki' },
+                    { text: 'Wasserfallmodell', link: '/students/informatik/inf_klasse_10/Programmieren/wasserfall' },
                   ]
                 },
                 {
@@ -276,6 +278,41 @@ export default defineConfig({
             },
             { text: 'Vokabeln', link: '/students/daz/vocabulary/index' },
             { text: 'Nummernübung', link: '/students/daz/number_game/game_intro' }
+          ]
+        }
+      ],
+      '/teachers/': [
+        {
+          text: 'Lehrkräfte',
+          items: [
+            { text: 'Übersicht', link: '/teachers/index' },
+            {
+              text: 'Digitale Tools',
+              items: [
+                { text: 'Übersicht', link: '/teachers/Digitale_Tools/index' },
+                { text: 'Card Creator', link: '/teachers/Digitale_Tools/card-creator-website/' },
+                { text: 'Wort‑Versteck', link: '/teachers/Digitale_Tools/word-reveal/' },
+                { text: 'Table Reveal', link: '/teachers/Digitale_Tools/table-reveal/' },
+                { text: 'Pixel & Bits', link: '/teachers/Digitale_Tools/edu-pixel-draw/' },
+                { text: 'Becimal', link: '/teachers/Digitale_Tools/becimal/' },
+                { text: 'Binär‑ASCII‑Visualizer', link: '/teachers/Digitale_Tools/binary-ascii-visualizer/' },
+                { text: 'Lessplan', link: '/teachers/Digitale_Tools/lessplan/' },
+                { text: 'EVA-Stationen', link: '/teachers/Digitale_Tools/eva-stationen/' },
+                { text: 'Quizmaster / Analog Programming', link: '/teachers/Digitale_Tools/analog-programming/' }
+              ]
+            },
+            {
+              text: 'Stundenentwürfe',
+              items: [
+                { text: 'Stundenentwürfe', link: '/teachers/Stundenentwuerfe/index' }
+              ]
+            },
+            {
+              text: 'Material',
+              items: [
+                { text: 'Material', link: '/teachers/Material/index' }
+              ]
+            }
           ]
         }
       ],

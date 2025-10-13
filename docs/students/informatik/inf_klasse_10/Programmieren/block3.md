@@ -25,7 +25,7 @@ Solche Verknüpfungen von Bedingungen sind an unsere Sprache angeknüpft wie im 
 import turtle
 t = turtle.Turtle()
 
-koerperhoehe = 160
+koerperhoehe = 145
 alter = 12
 
 if koerperhoehe > 150 and alter > 8:
@@ -33,8 +33,9 @@ if koerperhoehe > 150 and alter > 8:
 else:
     t.write("Du darfst NICHT mitfahren")
 ```
+Probieren: [pythonsandbox.com/turtle](https://pythonsandbox.com/turtle)
 
-:::info Aufgabe
+:::info Aufgabe 1
 Verändere das Programm so, dass die Person mitfahren darf.
 ```python
 import turtle
@@ -48,6 +49,23 @@ else:
     t.write("Du darfst NICHT mitfahren")
 ```
 :::
+
+:::info Aufgabe 2
+**Einlass-Kontrolle**
+
+Der örtliche Club hat angefragt, ob du ein Programm für den Jugenschutz schreiben kannst. Eine Person kommt nur rein, wenn sie:
+- Mindestens 18 Jahre alt ist UND ein Ticket hat
+
+:::details Ticketsystem
+Eine Person kann entweder 0 Ticket haben, oder 1 Ticket haben.
+:::
+:::
+
+:::info Aufgabe 3
+Erweitere dein Programm. Personen unter die zwar unter 18 sind aber älter als 16 Jahre bekommen an der Tür den Hinweis, dass sie nur bis 10 Uhr bleiben dürfen.
+:::
+
+
 
 ## While-Schleifen
 
@@ -82,24 +100,28 @@ Tobi soll ein kleines Rennen bestreiten. Dazu muss er Strecke zurücklegen und g
 :::
 
 :::danger Warnung
-Anders als in vielen Programmiersprachen wird der Inhalt der Schleife bei Python um eine Tabulatortaste eingerückt. Vergiss nie den Doppelpunkt am Ende der Schleife hinter dem while().
+Anders als in vielen Programmiersprachen wird der Inhalt der Schleife bei Python um eine Tabulatortaste eingerückt. Vergiss nie den Doppelpunkt am Ende der Schleife hinter dem while `while BEDINGUNG == True:` .
 :::
 
 ## Aufgaben
 
 Löse die folgenden Aufgaben selbstständig oder mit einem Partner oder Partnerin.
 
-### Aufgabe 1: Einlass-Kontrolle
-Schreibe ein Programm für eine Disco. Eine Person kommt nur rein, wenn sie:
-- Mindestens 18 Jahre alt ist UND ein Ticket hat
-- ODER wenn sie VIP-Status hat (unabhängig vom Alter)
-
-### Aufgabe 2: Countdown
+### Aufgabe 4: Countdown
 Erstelle einen Countdown von 10 bis 0 mit einer while-Schleife. Tobi soll jede Zahl einzeln schreiben.
 
-### Aufgabe 3: Würfel-Spiel
+### Aufgabe 5: Würfel-Spiel
 Simuliere das Würfeln, bis eine 6 kommt. Zähle dabei mit, wie oft gewürfelt wurde.
 :::details Tipp
-Nutze `import random` und `random.randint(1,6)` für den Würfel.
+Nutze `import random` und `random.randint(1,6)` für den Würfel. Schreibe dazu `import random` unter den anderen Import deines Programmes. `random.randint(1,6)` kannst du als Funktion genau so wie `input()` nutzen und z.B. das Ergebnis in einer Variable speichern:
+`zufallszahl = random.randint(1,6)`
+`t.write(zufallszahl)`
 :::
 
+### Aufgabe 6: Quadrat zeichnen
+
+Nutze eine while-Schleife um ein Quadrat zu zeichnen.
+
+:::details Tipp
+Nutze eine Hilfsvariable, um die Seiten zu zählen.
+:::

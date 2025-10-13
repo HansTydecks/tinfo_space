@@ -12,19 +12,6 @@ Den Begriff der Variable kennst du bereits aus dem Mathematikunterricht. Für de
 Variablennamen werden per Konvention klein geschrieben und sollten möglichst selbsterklärend sein. Namen wie `gfpr_123juhu` oder `dasistdiewichtigevariabledenkdaran` sind möglich, aber sehr ungern gesehen.
 :::
 
-Wozu aber Variablen? Sie machen unsere Programm flexibel und erlauben uns Eingaben, sodass wir mit unserem Programm interagieren können ohne den Code ständig abändern zu müssen.
-Das Praktische: Wenn sich der Wert ändert, musst du nur an einer Stelle was austauschen – der Name bleibt gleich.
-
-Stell dir ein System vor, das deine **Telefonnummer** kennt.
-```python
-telefonnummer = "0176 1234567"
-name = "Ali"
-
-t.write(name, "hat die Nummer", telefonnummer)
-```
-Wenn Ali eine neue Nummer bekommt, musst du nur die Variable ändern: `telefonnummer = "0157 9876543"`
-
-
 ::: details Detailliertere Erklärung, Begriffe
 In Python ist `x = 10` ein einfacher Zuweisungsausdruck, der gleichzeitig folgendes leistet:
 - Erstellt die Variable x, falls sie noch nicht existiert (**Definition**).
@@ -142,7 +129,7 @@ zahl = zahl + 10
 t.write(zahl)
 ```
 :::details Erklärung Userinput
-Das Program startet die einzelnen Zeilen Code werden abgearbeitet, bis sie zur `input()` Funktion gelangen. Nun wartet das Programm... auf deine Eingabe. Tipp doch mal eine Zahl ein und bestätige mit **Enter** und schau dir das Ergebnis an.
+Das Program startet und die einzelnen Zeilen Code werden von oben nach unten abgearbeitet, bis sie zur `input()` Funktion gelangen. Nun wartet das Programm... auf deine Eingabe. Tipp doch mal eine Zahl ein und bestätige mit **Enter** und schau dir das Ergebnis an.
 :::warning Vorsicht
 Erwarten wir eine ganze Zahl, so müssen wir den Befehl `input()` in die Klammern des `int()` Casts schreiben wie im Beispiel darüber (bspw. `zahl = int(input())`). Erwarten wir einen Text, so reicht ein einfaches `input()` (bspw. `name = input()`)
 :::
@@ -173,7 +160,11 @@ Zum Bewegen kannst du `penup()`, `forward()` und `pendown()` verwenden.
 
 ### Aufgabe 5: Vertauschen
 
-Erstelle zwei Variablen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Ergebnis aus.
+Erstelle zwei Variablen `a = 5` und `b = 7`. Tausche ihre Werte und gib das Ergebnis aus, sodass `a == 7` und `b == 5` am Ende deines Programmes gilt.
+
+:::details Hinweise
+Viele Wege führen beim Programmieren zum Ziel. Man kann dieses Problem durch cleveres Rechnen lösen. Man kann sich aber auch eine **Hilfsvariable** zunutze machen.
+:::
 
 
 ## Aufgaben vor dem folgenden Block
