@@ -228,8 +228,7 @@ export default defineConfig({
                 {
                   text: 'Sprachen und Automaten',
                   items: [
-                    { text: 'Sprachen', link: '/students/informatik/inf_klasse_10/Sprachen_Automaten' },
-                    { text: 'Syntax und Semantik', link: '/students/informatik/inf_klasse_10/Sprachen_Automaten' }
+                    { text: 'Block 1: Syntax und Semantik', link: '/students/informatik/inf_klasse_10/Sprachen/block1' }
                   ]
                 }
               ]
