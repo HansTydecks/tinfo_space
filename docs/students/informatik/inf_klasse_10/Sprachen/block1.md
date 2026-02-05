@@ -13,16 +13,18 @@ Unter **Semantik** verstehen wir die Zuordnung von Bedeutung zu Texten oder Befe
 
 ## Aufgabe: Syntax und Semantik im Tabellenkalkulationsprogramm
 
-### Aufgabenstellung
+:::info Aufgabe 1
 
 Korrigiere die automatischen Berechnungen. Überlege die, ob es sich um einen Syntaxfehler oder einen Semantikfehler handelt.
-
+<a href="/tabelle_1.ods" download>Tabellen-Download Aufgabe 1</a>
+:::
 ### Stichpunkte
 
 - Um eine Reihe von Zellen auszuwählen, muss man den Doppelpunkt nutzen (von A1 bis A4 -> A1:A4)
 - Summe ist nicht die korrekte Schreibweise für den Summen-Befehl (denke an das Englische Wort für Summe)
 - Können alle Zellen in diesem Beispiel verrechnet werden?
 
-### Materialien
-
-<a href="/tabelle_1.ods" download>Tabellen-Download</a>
+:::info Aufgabe 2
+Löse folgende Aufgaben selbständig. Nutze dazu die gezeigten Formmeln.
+<a href="/tabelle_2.ods" download>Tabellen-Download Aufgabe 2</a>
+:::
