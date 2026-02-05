@@ -25,4 +25,4 @@ Korrigiere die automatischen Berechnungen. Überlege die, ob es sich um einen Sy
 
 ### Materialien
 
-[Tabellen-Download](./inf_klasse_10/Fehlersuche_Tabellenkalkulation.ods)
+[Tabellen-Download](/inf_klasse_10/Fehlersuche_Tabellenkalkulation.ods)
