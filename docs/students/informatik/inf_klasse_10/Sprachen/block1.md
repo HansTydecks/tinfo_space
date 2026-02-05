@@ -25,4 +25,4 @@ Korrigiere die automatischen Berechnungen. Überlege die, ob es sich um einen Sy
 
 ### Materialien
 
-[Tabellen-Download](/tabelle_1.ods)
+<a href="/tabelle_1.ods" download>Tabellen-Download</a>
