@@ -5,9 +5,7 @@ export default defineConfig({
   description: "Digitale Lernseite für Informatik, Englisch und DaZ",
   base: '/',
   lastUpdated: true,
-  ignoreDeadLinks: [
-    /\/inf_klasse_10\/.*\.ods$/
-  ],
+  ignoreDeadLinks: ['/tabelle_1.ods'],
   
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],
