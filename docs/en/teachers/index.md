@@ -1,8 +1,17 @@
 # Page for Teachers
 
+Welcome to the Teachers Portal! Here you will find a comprehensive collection of teaching materials, curricula and practical tools for your lessons.
+
 In this area you'll find a variety of information, templates, and considerations. Of course, there's no claim to completeness. This page serves me as a way to sort and structure my thoughts.
 
 Everyone should benefit from the content accessible here. This way we save time and effort. In the best case, our own work improves as well. Materials may therefore be used for private or educational purposes unless otherwise stated. Suggestions for improvement are naturally desired. Here you can find [contact options](/en/about/contact.md).
+
+## Quick Links
+
+- [Digital Tools](./Digitale_Tools/index)
+- [Lesson Plans](./Stundenentwuerfe/index)
+- [Materials](./Material/index)
+- [Professional Development](./Fortbildungen/Vibecoding/index)
 
 ## Overview
 

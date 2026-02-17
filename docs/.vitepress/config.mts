@@ -5,7 +5,6 @@ export default defineConfig({
   description: "Digitale Lernseite für Informatik, Englisch und DaZ",
   base: '/',
   lastUpdated: true,
-  ignoreDeadLinks: ['/tabelle_1.ods'],
   
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],
@@ -293,12 +292,28 @@ export default defineConfig({
                 { text: 'Card Creator', link: '/teachers/Digitale_Tools/card-creator-website/' },
                 { text: 'Wort‑Versteck', link: '/teachers/Digitale_Tools/word-reveal/' },
                 { text: 'Table Reveal', link: '/teachers/Digitale_Tools/table-reveal/' },
+                { text: 'Lessplan', link: '/teachers/Digitale_Tools/lessplan/' },
                 { text: 'Pixel & Bits', link: '/teachers/Digitale_Tools/edu-pixel-draw/' },
                 { text: 'Becimal', link: '/teachers/Digitale_Tools/becimal/' },
                 { text: 'Binär‑ASCII‑Visualizer', link: '/teachers/Digitale_Tools/binary-ascii-visualizer/' },
-                { text: 'Lessplan', link: '/teachers/Digitale_Tools/lessplan/' },
                 { text: 'EVA-Stationen', link: '/teachers/Digitale_Tools/eva-stationen/' },
+                { text: 'Graphs', link: '/teachers/Digitale_Tools/Graphs/' },
+                { text: 'Schlosssimulation', link: '/teachers/Digitale_Tools/lock_simulation/' },
+                { text: 'Logic Stories', link: '/teachers/Digitale_Tools/lories/' },
+                { text: 'Memory-Visualizer', link: '/teachers/Digitale_Tools/memory/' },
+                { text: 'Dilemmataxi', link: '/teachers/Digitale_Tools/dilemmataxi/' },
                 { text: 'Quizmaster / Analog Programming', link: '/teachers/Digitale_Tools/analog-programming/' }
+              ]
+            },
+            {
+              text: 'Fortbildungen',
+              items: [
+                { text: 'Vibecoding', link: '/teachers/Fortbildungen/Vibecoding/index' },
+                { text: 'Setup', link: '/teachers/Fortbildungen/Vibecoding/setup' },
+                { text: 'How-to Vibecode', link: '/teachers/Fortbildungen/Vibecoding/how-to-vibecode' },
+                { text: 'Vibecoding im Unterricht', link: '/teachers/Fortbildungen/Vibecoding/vibecoding-im-unterricht' },
+                { text: 'Bedenken', link: '/teachers/Fortbildungen/Vibecoding/bedenken' },
+                { text: 'Sharing is Caring', link: '/teachers/Fortbildungen/Vibecoding/sharing-is-caring' }
               ]
             },
             {
@@ -469,6 +484,56 @@ export default defineConfig({
             },
             { text: 'Vocabulary', link: '/en/students/daz/vocabulary/index' },
             { text: 'Number Exercise', link: '/en/students/daz/number_game/game_intro' }
+          ]
+        }
+      ],
+      '/en/teachers/': [
+        {
+          text: 'Teachers',
+          items: [
+            { text: 'Overview', link: '/en/teachers/index' },
+            {
+              text: 'Digital Tools',
+              items: [
+                { text: 'Overview', link: '/en/teachers/Digitale_Tools/index' },
+                { text: 'Card Creator', link: '/en/teachers/Digitale_Tools/card-creator-website/' },
+                { text: 'Word Reveal', link: '/en/teachers/Digitale_Tools/word-reveal/' },
+                { text: 'Table Reveal', link: '/en/teachers/Digitale_Tools/table-reveal/' },
+                { text: 'Lessplan', link: '/en/teachers/Digitale_Tools/lessplan/' },
+                { text: 'Pixel & Bits', link: '/en/teachers/Digitale_Tools/edu-pixel-draw/' },
+                { text: 'Becimal', link: '/en/teachers/Digitale_Tools/becimal/' },
+                { text: 'Binary-ASCII-Visualizer', link: '/en/teachers/Digitale_Tools/binary-ascii-visualizer/' },
+                { text: 'EVA Stations', link: '/en/teachers/Digitale_Tools/eva-stationen/' },
+                { text: 'Graphs', link: '/en/teachers/Digitale_Tools/Graphs/' },
+                { text: 'Lock Simulation', link: '/en/teachers/Digitale_Tools/lock_simulation/' },
+                { text: 'Logic Stories', link: '/en/teachers/Digitale_Tools/lories/' },
+                { text: 'Memory Visualizer', link: '/en/teachers/Digitale_Tools/memory/' },
+                { text: 'Dilemmataxi', link: '/en/teachers/Digitale_Tools/dilemmataxi/' }
+              ]
+            },
+            {
+              text: 'Professional Development',
+              items: [
+                { text: 'Vibecoding', link: '/en/teachers/Fortbildungen/Vibecoding/index' },
+                { text: 'Setup', link: '/en/teachers/Fortbildungen/Vibecoding/setup' },
+                { text: 'How-to Vibecode', link: '/en/teachers/Fortbildungen/Vibecoding/how-to-vibecode' },
+                { text: 'Vibecoding in Classroom', link: '/en/teachers/Fortbildungen/Vibecoding/vibecoding-im-unterricht' },
+                { text: 'Considerations', link: '/en/teachers/Fortbildungen/Vibecoding/bedenken' },
+                { text: 'Sharing is Caring', link: '/en/teachers/Fortbildungen/Vibecoding/sharing-is-caring' }
+              ]
+            },
+            {
+              text: 'Lesson Plans',
+              items: [
+                { text: 'Lesson Plans', link: '/en/teachers/Stundenentwuerfe/index' }
+              ]
+            },
+            {
+              text: 'Materials',
+              items: [
+                { text: 'Materials', link: '/en/teachers/Material/index' }
+              ]
+            }
           ]
         }
       ],

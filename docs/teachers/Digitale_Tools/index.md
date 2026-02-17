@@ -58,10 +58,52 @@ Interaktive Visualisierung von 8 Bits: Schalter, ASCII‑Zeichen, Dezimalwerte u
 
 [Mehr zum Binär‑ASCII‑Visualizer →](./binary-ascii-visualizer/)
 
-## Binär‑ASCII‑Visualizer
+## Binär‑Dezimal‑Visualizer (Becimal)
 - Live: https://becimal.tinfo.space/
 - Repo: https://github.com/HansTydecks/binary-decimal-visualizer
 Das selbe Format wie der Binär-ASCII Visualisierer, aber mit Fokus auf Binär -> Dezimal Konversion, ganz und gar ASCII-frei.
 
-[Mehr zum Binär‑ASCII‑Visualizer →](./becimal/)
+[Mehr zum Binär‑Dezimal‑Visualizer →](./becimal/)
+
+## EVA-Stationen
+- Live: Verschiedene Stationen (siehe Detailseite)
+- Repo: GitHub‑Links auf der Detailseite
+Eine Sammlung interaktiver Stationen zum EVA-Modell (Eingabe-Verarbeitung-Ausgabe). Mit physischen Geräten (Mikrofon, MIDI-Keyboard, Barcodescanner, Drucker) lassen sich verschiedene Ein- und Ausgabemodalitäten erlebbar machen.
+
+[Mehr zu EVA-Stationen →](./eva-stationen/)
+
+## Graphentheorie und Netzwerktopologien
+- Live: https://graphs.tinfo.space/
+- Repo: https://github.com/HansTydecks/network-topology
+Interaktive Simulation von Graphen mit Knoten und Kanten. Lernende entdecken verschiedene Netzwerktopologien, simulieren Datenfluss (BFS/DFS) und analysieren Ausfälle — ideal für Graphentheorie und Netzwerke.
+
+[Mehr zu Graphs →](./Graphs/)
+
+## Schlosssimulation (Lock Simulation)
+- Live: https://lock.tinfo.space/
+- Repo: https://github.com/HansTydecks/combination-lock
+Eine digitale Kombinations-Schloss-Simulation, bestens geeignet für Escape Rooms oder verschlossene digitale Inhalte. Wenn keine physischen Schlösser zur Verfügung stehen, bietet diese Simulation eine gute Alternative.
+
+[Mehr zur Schlosssimulation →](./lock_simulation/)
+
+## Logic Stories (Lories)
+- Live: https://lories.tinfo.space/
+- Repo: https://github.com/HansTydecks/logic-story
+Drei unterschiedliche interaktive Geschichten zur Einführung in Programmierlogik und Variablen. Ohne Vorkenntnisse nutzbar, ideal für Stundeneinstiege. Mit LRS-Unterstützung.
+
+[Mehr zu Logic Stories →](./lories/)
+
+## Speichermedien-Visualizer (Memory)
+- Live: https://memory.tinfo.space/
+- Repo: https://github.com/HansTydecks/memory-visualizer
+Diese Simulation stellt Speichermedien (CD, DVD, USB-Stick, etc.) und Dateitypen ins Verhältnis. In Kombination mit physischen Speichermedien als Anschauungsobjekte können Lernende Speichergrößen greifbar verstehen.
+
+[Mehr zum Memory-Visualizer →](./memory/)
+
+## Dilemmataxi
+- Live: https://dilemmataxi.tinfo.space/
+- Repo: https://github.com/HansTydecks/car-dilemma
+Eine Umfrage-Website zu ethischen Dilemmata beim autonomen Fahren. Lernende beantworten Fragen zu maschinellen Entscheidungsprozessen — ideal für Diskussionen über Utilitarismus vs. prinzipiengesteuerte Ethik (ca. 40 Minuten einplanen).
+
+[Mehr zum Dilemmataxi →](./dilemmataxi/)
 

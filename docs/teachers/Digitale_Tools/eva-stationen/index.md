@@ -16,3 +16,5 @@ Zusätzliches Material wird benötigt. Es geht ja schließlich um Ein- und Ausga
 
 [Barcodescanner mit Lautsprecher](https://scanner.eva.tinfo.space/)
 
+[Memory-Spiel (Maus und Tastatur/Bildschirm)](https://scanner.eva.tinfo.space/)
+
