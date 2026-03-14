@@ -3,10 +3,7 @@ title: "Stationen für das EVA-Modell"
 description: "Sammlung einiger interaktiver Stationen"
 ---
 
-Zusätzliches Material wird benötigt. Es geht ja schließlich um Ein- und Ausgabemodalitäten. Foglendes Material ist empfohlen: Mikrofon, MIDI-Keyboard (alterantiv auch Tastatur), Beamer, Lautsprecher, Arduino Roboterarm, Barcodescanner
-
-
-
+Zusätzliches Material wird benötigt. Es geht ja schließlich um Ein- und Ausgabemodalitäten. Foglendes Material ist empfohlen: Mikrofon, MIDI-Keyboard (alterantiv auch Tastatur), Beamer, Lautsprecher, Barcodescanner, einen Laptop mit Kamera und einen Drucker
 
 [Webcam mit Drucker](https://camera.eva.tinfo.space/)
 

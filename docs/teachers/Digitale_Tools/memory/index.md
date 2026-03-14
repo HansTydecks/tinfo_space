@@ -12,4 +12,4 @@ Benötigt werden:
 - Textdatei (z.B. .DOCX), Musikdatei (.mp3), Pixelgrafik (.jpeg)
 - physisch: CD, DVD, Festplatte, USB-Stick mit Aufdruck (Größe), Handy (Lernende selbst prüfen lassen in den Einstellungen), Diskette
 
-Hinweise: die Bedienung ist etwas speziell. Selbst ausprobieren und Feedback geben!
+Hinweise: die Bedienung ist etwas speziell. Selbst ausprobieren und Vorschläge zur Verbesserung geben.
