@@ -7,7 +7,6 @@ Diese Anleitung führt Schritt für Schritt durch die grundlegende Einrichtung:
 3. Entwicklungsumgebung (IDE) installieren
 4. IDE mit GitHub verbinden
 
----
 
 ## Disclaimer
 
@@ -31,7 +30,7 @@ Ein Programm zum Schreiben von Code. Es bündelt Editor, Fehlerhilfe und Werkzeu
 Nachricht, die man an das LLM schickt, um eine Antwort zu erhalten.
 ---
 
-## 2. GitHub-Account erstellen
+## 1. GitHub-Account erstellen
 
 1. Webseite **github.com** öffnen.
 2. Auf **Sign up** klicken.
@@ -41,7 +40,7 @@ Nachricht, die man an das LLM schickt, um eine Antwort zu erhalten.
 
 ---
 
-## 3. Schullizenz & GitHub Copilot aktivieren
+## 2. Schullizenz & GitHub Copilot aktivieren
 
 Schulen erhalten Copilot kostenlos über Education-Lizenzen.
 
@@ -56,7 +55,7 @@ Schulen erhalten Copilot kostenlos über Education-Lizenzen.
 
 ---
 
-## 4. IDE installieren (empfohlen: Visual Studio Code)
+## 3. IDE installieren (empfohlen: Visual Studio Code)
 
 Warum diese IDE?
 
@@ -74,11 +73,11 @@ Warum diese IDE?
 
 ---
 
-## 5. VS Code mit GitHub verbinden
+## 4. VS Code mit GitHub verbinden
 
 1. VS Code öffnen.
 2. Links im Menü auf **Accounts** (Profil-Symbol) klicken.
-3. **Sign in with GitHub** auswählen.
+3. **Sign in with GitHub** auswählen. (oder äquivalente Option)
 4. Browser öffnet sich → Anmeldung bestätigen.
 5. Zurück zu VS Code wechseln.
 
@@ -86,7 +85,7 @@ Warum diese IDE?
 
 ---
 
-## 6. GitHub Copilot in der IDE aktivieren
+## 5. GitHub Copilot in der IDE aktivieren
 
 1. In VS Code links auf **Accounts** (Profil-Symbol).
 2. Mit GitHub-Account einloggen
@@ -102,12 +101,10 @@ Man kann das Ganze nun testen:
 * Links wird eine HTML-Datei erstellt und benannt.
 * HTML-Datei öffnen
 * (Korrekturen im Chatfenster erfragen, HTML-Datei prüfen...)
-* 
+
 Weitere Details [hier](how-to-vibecode.md).
 
 Probleme beim Setup? Im Internet finden sich eine Vielzahl von Lösungen. Neben dem altgewohnten Googlen stehen dir nun auch die KIs zur Verfügung. Diese funktionieren bei spezifischen Setup-Fragen sehr zuverlässig.
-
-✅ Das Setup ist nun vollständig
 
 ---
 
@@ -118,5 +115,3 @@ Probleme beim Setup? Im Internet finden sich eine Vielzahl von Lösungen. Neben 
 
 **Git wird verlangt**
 → VS Code bietet automatische Installation an → bestätigen.
-
-

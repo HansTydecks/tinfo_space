@@ -260,7 +260,8 @@ export default defineConfig({
                 }
               ]
             },
-            { text: 'Klasse 12', link: '/students/english/klasse_12/index' }
+            { text: 'Klasse 12', link: '/students/english/klasse_12/index' },
+            { text: 'Spiele', link: '/students/english/spiele/index' }
           ]
         }
       ],
