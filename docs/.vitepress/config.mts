@@ -64,14 +64,14 @@ export default defineConfig({
     },
     footer: {
       message: `
-        <div class="footer-links"> 
+        <span class="footer-links"> 
           <a href="https://tinfo.space/teachers/Digitale_Tools/" target="_blank" rel="noopener">More apps</a> |
           <a href="/about/contact" id="contact-link">Kontakt</a> |
           <a href="/about/impressum">Impressum</a> |
           <a href="/about/privacy">Datenschutz</a> |
           <a href="https://linktr.ee/tinfo.space" target="_blank" rel="noopener">Links</a> |
           <a href="https://github.com/HansTydecks" target="_blank" rel="noopener">GitHub</a>
-        </div>
+        </span>
       `,
       copyright: 'Unless stated otherwise, all content is public domain or open for educational use.'
     },
