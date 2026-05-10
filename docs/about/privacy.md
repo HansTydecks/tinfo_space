@@ -58,8 +58,8 @@ Our website may contain links to external sites. We are not responsible for the 
 
 ## Contact Us
 If you have questions about this Privacy Policy, please contact us at:
-- **Email:** [Insert Your Email Address]
-- **Address:** [Optional: Insert Your Physical Address]
+- **Email:** hanstydecks.tea@gmail.com
+- **Address:** Talamtstr. 9, 06108 Halle (Saale)
 
 ---
 
