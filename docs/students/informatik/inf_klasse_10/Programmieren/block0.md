@@ -14,28 +14,17 @@ Ein Algorithmus ist eine Handlungsanweisung zum Lösen einer Aufgabe bzw. einer 
 Nicht jede Handlungsanweisung ist ein Algorithmus. Damit wir von einem Algorithmus sprechen können, muss die Handlungsanweisung folgende Eigenschaften erfüllen:
 
 :::details Eigenschaften
-- **Ausführbarkeit**: Der Algorithmus sollte fehlerfrei ausführbar sein.
-- **Endlichkeit**: Der Algorithmus hat endliche Länge.
+- **Ausführbarkeit**: Der Algorithmus sollte fehlerfrei ausführbar sein (von Mensch oder Maschine).
+- **Endlichkeit**: Der Algorithmus ist durch einen endlichen Text beschreibbar.
 - **Wiederholbarkeit**: Bei jeder Wiederholung erhält man für gleiche Eingaben gleiche Ausgaben.
 - **Eindeutigkeit**: Für jeden Schritt gibt es genau einen festgelegten Folgeschritt.
 :::
 
-## 🤖 Von RobotKarol zu PyTurtle 🐢
-Den Roboter Karol kennst du bereits. In der Vergangenheit hast Du ihr genau gesagt, was sie zu tun hatte.
+Außerdem gibt es noch weitere, optionale Eigenschaften, die für die Ausführung am Computer nicht unbedingt notwendig sind.
 
-::: info Aufgabe
-Sammle gemeinsam mit deinem Partner **Anweisungen**, die ihr Karol geben konntet. Überlegt euch dazu, was Karol alles tun konnte. Öffnet anschließend den folgenden [Link](https://karol.arrrg.de/#WFCC) und schaut euch die Welt an, in der sich Karol befindet. Werft nun einen Blick auf den Code und überlegt, was Karol beim Ausführen wohl anstellt. **Hinweis:** schalte auf der Carol Website den Toogle-Button in der oberen Zeile von "Blöcken" auf "Text" um den Code effektiv zu kopieren.
-```js
-wiederhole 4 mal
-  Schritt(3)
-  Hinlegen
-  Schritt
-  LinksDrehen
-endewiederhole
-```
-:::
+Sortiere in dieser Übung die Eigenschaften von Algorithmen. Lies dir dazu die Erklärungen hinter dem (i) durch.
 
-Karol hat leider ein kleines Problem. Obwohl sie sich sehr gut in ihrer Umgebung zurechtfinden, hat sie große Schwierigkeiten, sich Dinge zu merken. Um größere und komplexere Probleme zu lösen, müssen wir uns jedoch verschiedenste Daten merken und abrufen können. Ein Glück, dass Karol einen guten Freund hat: **Tobi die Schildkröte**, der sich so manches merken kann 🐢
+<iframe src="https://learningapps.org/watch?app=34379647" style="border:0; width:100%; height:500px;" allowfullscreen></iframe>
 
 ## Ziele
 - Wie du mit PyTurtle arbeitest
