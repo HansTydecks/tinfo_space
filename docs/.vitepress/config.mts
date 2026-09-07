@@ -16,6 +16,18 @@ export default defineConfig({
   markdown: {
     lineNumbers: true
   },
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@codemirror/state',
+        '@codemirror/view',
+        '@codemirror/commands',
+        '@codemirror/language',
+        '@codemirror/lang-python',
+        '@codemirror/theme-one-dark'
+      ]
+    }
+  },
   locales: {
     root: {
       label: 'Deutsch',
@@ -235,7 +247,78 @@ export default defineConfig({
                   ]
                 }
               ]
+            },
+            {
+              text: 'Oberstufe',
+              link: '/students/informatik/inf_oberstufe/index',
+              items: [
+                { text: 'Python-Kurs', link: '/students/informatik/inf_oberstufe/python_kurs/' }
+              ]
             }
+          ]
+        }
+      ],
+      '/students/informatik/inf_oberstufe/python_kurs/': [
+        {
+          text: 'Python-Kurs (Oberstufe)',
+          items: [
+            { text: 'Kursübersicht', link: '/students/informatik/inf_oberstufe/python_kurs/' },
+            {
+              text: '1 · Grundlagen',
+              collapsed: false,
+              items: [
+                { text: 'Übersicht', link: '/students/informatik/inf_oberstufe/python_kurs/grundlagen/' },
+                { text: 'Datentypen', link: '/students/informatik/inf_oberstufe/python_kurs/grundlagen/datentypen' },
+                { text: 'Operatoren', link: '/students/informatik/inf_oberstufe/python_kurs/grundlagen/operatoren' },
+                { text: 'Methoden', link: '/students/informatik/inf_oberstufe/python_kurs/grundlagen/methoden' },
+                { text: 'Problemlöseprozess', link: '/students/informatik/inf_oberstufe/python_kurs/grundlagen/problemloeseprozess' }
+              ]
+            },
+            {
+              text: '2 · Für Einsteiger',
+              collapsed: false,
+              items: [
+                { text: 'Übersicht', link: '/students/informatik/inf_oberstufe/python_kurs/einsteiger/' },
+                { text: 'Erste Schritte', link: '/students/informatik/inf_oberstufe/python_kurs/einsteiger/erste-schritte' },
+                { text: 'Ausgabe mit print()', link: '/students/informatik/inf_oberstufe/python_kurs/einsteiger/ausgabe' },
+                { text: 'Selektion (if/elif/else)', link: '/students/informatik/inf_oberstufe/python_kurs/einsteiger/selektion' },
+                { text: 'while-Schleife', link: '/students/informatik/inf_oberstufe/python_kurs/einsteiger/while-schleife' },
+                { text: 'for-Schleife', link: '/students/informatik/inf_oberstufe/python_kurs/einsteiger/for-schleife' },
+                { text: 'Listen', link: '/students/informatik/inf_oberstufe/python_kurs/einsteiger/listen' },
+                { text: 'Funktionen', link: '/students/informatik/inf_oberstufe/python_kurs/einsteiger/funktionen' },
+                { text: 'Eingabe mit input()', link: '/students/informatik/inf_oberstufe/python_kurs/einsteiger/eingabe' }
+              ]
+            },
+            {
+              text: '3 · Für Fortgeschrittene',
+              collapsed: false,
+              items: [
+                { text: 'Übersicht', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/' },
+                { text: 'Schleifen steuern', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/schleifen-steuern' },
+                { text: 'do-while & try/except', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/do-while' },
+                { text: 'Iterativ & rekursiv', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/iterativ-rekursiv' },
+                { text: 'Komplexität & O-Notation', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/komplexitaet' },
+                { text: 'Lineare Suche, Max/Min, Mittelwert', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/lineare-suche' },
+                { text: 'Binäre Suche', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/binaere-suche' },
+                { text: 'Primzahlen & GGT', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/primzahlen-teiler' },
+                { text: 'Fibonacci', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/fibonacci' },
+                { text: 'Ziffern & Stellenwerte', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/ziffern' },
+                { text: 'Palindrome', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/palindrom' },
+                { text: 'Textanalyse', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/textanalyse' },
+                { text: 'Sortieren (Bubble & Selection)', link: '/students/informatik/inf_oberstufe/python_kurs/fortgeschritten/sortieren' }
+              ]
+            },
+            {
+              text: '4 · Komplexe Aufgaben',
+              collapsed: false,
+              items: [
+                { text: 'Übersicht', link: '/students/informatik/inf_oberstufe/python_kurs/komplexe-aufgaben/' },
+                { text: 'Dezimal ↔ Binär', link: '/students/informatik/inf_oberstufe/python_kurs/komplexe-aufgaben/dezimal-binaer' },
+                { text: 'Projekt: Ratespiel', link: '/students/informatik/inf_oberstufe/python_kurs/komplexe-aufgaben/ratespiel' },
+                { text: 'Projekt: Minesweeper', link: '/students/informatik/inf_oberstufe/python_kurs/komplexe-aufgaben/minesweeper' }
+              ]
+            },
+            { text: '↩ Zur Informatik-Übersicht', link: '/students/informatik/index' }
           ]
         }
       ],

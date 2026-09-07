@@ -29,6 +29,9 @@ Willkommen im Informatik-Bereich! Hier findest du alle Materialien, Übungen und
 - Sprachen und Automaten
 - Projektarbeit
 
+### [Oberstufe](/students/informatik/inf_oberstufe/)
+- Interaktiver Python-Kurs – programmieren direkt im Browser
+
 ## Lernziele
 
 Der Informatikunterricht vermittelt:
