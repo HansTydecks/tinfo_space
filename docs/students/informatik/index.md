@@ -1,50 +1,67 @@
 ---
+layout: home
 title: "Informatik"
-description: "Informatik-Portal für Schüler am Gymnasium - Programmierung, Algorithmen, Datenstrukturen und digitale Kompetenzen für die Klassenstufen 7-10"
+description: "Informatik am Gymnasium nach Themen sortiert – von Klasse 7 bis zur Oberstufe: Daten, Technische Informatik, Algorithmen, Netzwerke, Informationssicherheit, KI, Sprachen und Automaten."
+
+hero:
+  name: "Informatik"
+  text: "Nach Themen, nicht nach Klassen"
+  tagline: "Jedes Kapitel wächst mit dir – von den Grundlagen in Klasse 7 bis zur Oberstufe. Du kannst jederzeit zurückspringen und Altes wiederholen."
+  actions:
+    - theme: brand
+      text: Nach Klassenstufe suchen
+      link: /students/informatik/klassenstufen/
+    - theme: alt
+      text: Python-Kurs
+      link: /students/informatik/algorithmen/python-kurs/
+
+features:
+  - icon: 📊
+    title: Daten & Informationen
+    details: "Daten, Codierung und digitale Medien, Datenbanken und der Datenlebenszyklus bis hin zu SQL. Klasse 7 bis Oberstufe."
+    link: /students/informatik/daten-und-informationen/
+    linkText: Zum Kapitel
+  - icon: 🔌
+    title: Technische Informatik
+    details: "Informatiksysteme, EVA-Prinzip, Binärzahlen, Logik, Schaltnetze und die Von-Neumann-Architektur. Klasse 7 bis Oberstufe."
+    link: /students/informatik/technische-informatik/
+    linkText: Zum Kapitel
+  - icon: 🧩
+    title: Algorithmen & Programmieren
+    details: "Vom Algorithmusbegriff über Calliope und PyTurtle bis zum Python-Kurs, Objektorientierung und Softwareentwicklung."
+    link: /students/informatik/algorithmen/
+    linkText: Zum Kapitel
+  - icon: 🌐
+    title: Netzwerke
+    details: "Client und Server, IP-Adressen, Datenpakete, DNS, Topologien, Subnetze und Routing. Klasse 8 bis Oberstufe."
+    link: /students/informatik/netzwerke/
+    linkText: Zum Kapitel
+  - icon: 🔐
+    title: Informationssicherheit
+    details: "Phishing, Passwörter, Datenschutz, Verschlüsselung, RSA, Signaturen, Datensicherung und Steganografie."
+    link: /students/informatik/informationssicherheit/
+    linkText: Zum Kapitel
+  - icon: 🤖
+    title: Künstliche Intelligenz
+    details: "Was ist KI? Bestärkendes, überwachtes und unüberwachtes Lernen, generative KI, neuronale Netze und KI in der Gesellschaft."
+    link: /students/informatik/kuenstliche-intelligenz/
+    linkText: Zum Kapitel
+  - icon: 📝
+    title: Sprachen & Automaten
+    details: "Syntax und Semantik, reguläre Ausdrücke, HTML, formale Grammatiken und endliche Automaten."
+    link: /students/informatik/sprachen-und-automaten/
+    linkText: Zum Kapitel
 ---
 
-# Informatik Portal
+## So nutzt du diese Seite
 
-Willkommen im Informatik-Bereich! Hier findest du alle Materialien, Übungen und Projekte für den Informatikunterricht am Gymnasium.
+Jedes Kapitel ist nach **Lernstufen** aufgebaut. Oben stehen die Grundlagen, weiter unten wird es anspruchsvoller. Die kleinen Markierungen neben den Überschriften zeigen dir, wann ein Thema im Unterricht vorkommt:
 
-## Klassenstufen
+<Badge type="tip" text="Klasse 7–10" /> Sekundarstufe I &nbsp; <Badge type="info" text="Grundkurs" /> Oberstufe &nbsp; <Badge type="warning" text="Leistungskurs" /> nur im Leistungskurs
 
-### [Klasse 7](/students/informatik/inf_klasse_7/)
-- Informationen und Daten
-- Algorithmen und Programmierung (Grundlagen)
-- Informatiksysteme
+::: tip Wiedereinstieg
+Du startest in ein neues Thema und merkst, dass dir etwas fehlt? Öffne das Kapitel und lies zuerst die Seiten der früheren Klassenstufen. Sie sind kurz gehalten und bringen dich schnell wieder auf den Stand.
+:::
 
-### [Klasse 8](/students/informatik/inf_klasse_8/)
-- Algorithmen und Programmierung (Vertiefung)
-- Vernetzte Systeme
-- Datenverarbeitung
+Die Grundlage dieser Seiten ist der [Lehrplan Informatik für das Gymnasium in Sachsen (2022)](/lehrplaene/Informatik_Lehrplan_Gymnasium_Sachsen.pdf).
 
-### [Klasse 9](/students/informatik/inf_klasse_9/)
-- Datenbanken
-- Netzwerke und Protokolle
-- Künstliche Intelligenz (Einführung)
-
-### [Klasse 10](/students/informatik/inf_klasse_10/)
-- Programmierung (Vertiefung)
-- Sprachen und Automaten
-- Projektarbeit
-
-### [Oberstufe](/students/informatik/inf_oberstufe/)
-- Interaktiver Python-Kurs – programmieren direkt im Browser
-
-## Lernziele
-
-Der Informatikunterricht vermittelt:
-- **Algorithmisches Denken** und Problemlösungsstrategien
-- **Programmierkenntnisse** in verschiedenen Sprachen
-- **Datenverständnis** und Datenschutzkompetenzen
-- **Systemverständnis** für IT-Infrastrukturen
-- **Kritisches Denken** im Umgang mit digitalen Medien
-
-## Praktische Anwendungen
-
-- Programmiersprachen: Python, Scratch, HTML/CSS
-- Entwicklungsumgebungen und Tools
-- Datenbanksysteme
-- Netzwerktechnologien
-- KI-Tools und Anwendungen

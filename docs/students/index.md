@@ -19,11 +19,15 @@ Programmierung, Algorithmen und digitale Kompetenzen für das 21. Jahrhundert
 - 🌐 **Netzwerke** - Wie das Internet funktioniert
 - 🤖 **Künstliche Intelligenz** - Zukunftstechnologien verstehen
 
-**Für alle Klassenstufen:**
-- [Klasse 7](/students/informatik/inf_klasse_7/) - Grundlagen und erste Programme
-- [Klasse 8](/students/informatik/inf_klasse_8/) - Vertiefung und Projekte  
-- [Klasse 9](/students/informatik/inf_klasse_9/) - Datenbanken und KI
-- [Klasse 10](/students/informatik/inf_klasse_10/) - Komplexe Projekte und Abitur-Vorbereitung
+**Themenkapitel (Klasse 7 bis Oberstufe):**
+- [Daten & Informationen](/students/informatik/daten-und-informationen/) - Codierung, digitale Medien, Datenbanken
+- [Technische Informatik](/students/informatik/technische-informatik/) - Binärzahlen, Schaltungen, Rechnerarchitektur
+- [Algorithmen & Programmieren](/students/informatik/algorithmen/) - Calliope, PyTurtle, Python-Kurs
+- [Netzwerke](/students/informatik/netzwerke/) - IP-Adressen, DNS, Routing
+- [Informationssicherheit](/students/informatik/informationssicherheit/) - Passwörter, Verschlüsselung, Datenschutz
+- [Künstliche Intelligenz](/students/informatik/kuenstliche-intelligenz/) - Maschinelles Lernen, neuronale Netze
+- [Sprachen & Automaten](/students/informatik/sprachen-und-automaten/) - Regex, HTML, Grammatiken, Automaten
+- [Nach Klassenstufe suchen](/students/informatik/klassenstufen/)
 
 ### 🌍 **[English](/students/english/)**
 Sprache, Kultur und Kommunikation für die globalisierte Welt

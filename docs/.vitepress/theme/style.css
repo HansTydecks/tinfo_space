@@ -71,3 +71,50 @@
   color: var(--vp-c-brand-2);
 }
   
+
+/* ------------------------------------------------------------------
+   Struktogramme (Nassi-Shneiderman) als HTML-Tabellen
+   Verwendung: <table class="struktogramm"> ... </table>
+   ------------------------------------------------------------------ */
+.vp-doc table.struktogramm {
+  display: table;
+  border-collapse: collapse;
+  margin: 16px 0;
+  min-width: 280px;
+}
+
+.vp-doc table.struktogramm tr,
+.vp-doc table.struktogramm tr:nth-child(2n) {
+  background-color: transparent;
+  border: none;
+}
+
+.vp-doc table.struktogramm td {
+  border: 2px solid var(--vp-c-text-2);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+/* schmale, leere Spalte links neben einem Schleifenrumpf */
+.vp-doc table.struktogramm td.einrueckung {
+  width: 1.5em;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+/* Kopfzeile einer Verzweigung: Bedingung mittig, ja/nein in den Ecken */
+.vp-doc table.struktogramm td.bedingung {
+  text-align: center;
+  background: linear-gradient(to top right, transparent calc(50% - 1px), var(--vp-c-text-3) 50%, transparent calc(50% + 1px)) left / 50% 100% no-repeat,
+              linear-gradient(to top left, transparent calc(50% - 1px), var(--vp-c-text-3) 50%, transparent calc(50% + 1px)) right / 50% 100% no-repeat;
+}
+
+/* Diagramme als Inline-SVG passen sich dem Farbschema an */
+.vp-doc svg.diagramm {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 16px 0;
+  color: var(--vp-c-text-1);
+}
