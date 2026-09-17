@@ -8,6 +8,8 @@ description: "Mehrere Werte in einer Variablen: Listen anlegen, ändern und durc
 - Elemente hinzufügen und entfernen
 - Eine Liste mit einer Schleife auswerten
 
+<SilentTeacherButton kapitel="listen" />
+
 ## Warum Listen?
 
 Statt `note1`, `note2`, `note3` … packst du zusammengehörige Werte in **eine** Liste. Danach kannst

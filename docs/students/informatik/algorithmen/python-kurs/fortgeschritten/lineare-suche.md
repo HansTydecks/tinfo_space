@@ -8,6 +8,8 @@ description: "Eine Liste in einem einzigen Durchlauf auswerten: suchen, Extremwe
 - Maximum, Minimum und Mittelwert in einem Durchlauf bestimmen
 - Das „Akkumulator"-Muster erkennen
 
+<SilentTeacherButton kapitel="lineare-suche" />
+
 ## Lineare Suche
 
 Die einfachste Suche: Gehe die Liste **von vorn nach hinten** durch und vergleiche jedes Element mit

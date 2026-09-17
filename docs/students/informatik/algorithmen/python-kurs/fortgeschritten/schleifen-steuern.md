@@ -8,6 +8,8 @@ description: "Mit break, continue und pass den Ablauf einer Schleife gezielt bee
 - Einen Durchlauf überspringen (`continue`)
 - `pass` als Platzhalter einsetzen
 
+<SilentTeacherButton kapitel="schleifen-steuern" />
+
 ## break – raus aus der Schleife
 
 `break` bricht die Schleife **sofort** ab:

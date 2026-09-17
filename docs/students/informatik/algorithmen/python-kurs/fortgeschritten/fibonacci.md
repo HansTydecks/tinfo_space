@@ -8,6 +8,8 @@ description: "Dieselbe Zahlenfolge iterativ und rekursiv – und warum die eine 
 - Die rekursive Definition umsetzen
 - Den Laufzeitunterschied selbst messen
 
+<SilentTeacherButton kapitel="fibonacci" />
+
 ## Die Folge
 
 Jede Zahl ist die Summe der beiden vorherigen:

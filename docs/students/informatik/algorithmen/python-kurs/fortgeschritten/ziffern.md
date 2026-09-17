@@ -8,6 +8,8 @@ description: "Einzelne Ziffern einer Zahl herauslösen: Quersumme, Zahl rückwä
 - Die letzte Ziffer mit `// 10` entfernen
 - Damit Quersumme und weitere Aufgaben lösen
 
+<SilentTeacherButton kapitel="ziffern" />
+
 ## Das Grundprinzip
 
 Für jede natürliche Zahl gilt:

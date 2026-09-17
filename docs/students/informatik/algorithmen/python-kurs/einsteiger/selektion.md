@@ -8,6 +8,8 @@ description: "Programme, die Entscheidungen treffen: Verzweigungen mit if, elif 
 - Mehrere Fälle mit `elif` und `else` abdecken
 - Einrückung und Doppelpunkt korrekt setzen
 
+<SilentTeacherButton kapitel="selektion" />
+
 ## Die einfache Verzweigung
 
 Eine **Bedingung** ist ein Ausdruck, der `True` oder `False` ergibt. Ist sie wahr, wird der

@@ -8,6 +8,8 @@ description: "In einer sortierten Liste blitzschnell finden – durch fortgesetz
 - Die binäre Suche iterativ programmieren
 - Erkennen, warum sie `O(log n)` ist
 
+<SilentTeacherButton kapitel="binaere-suche" />
+
 ## Die Idee
 
 Wie im Wörterbuch: Du schlägst in der Mitte auf. Steht das gesuchte Wort weiter hinten, kannst du

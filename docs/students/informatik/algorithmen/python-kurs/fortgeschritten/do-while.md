@@ -8,6 +8,8 @@ description: "Schleifen, die mindestens einmal laufen, und wie man Abstürze bei
 - Falsche Eingaben mit `try` / `except` abfangen
 - Eine Eingabe so lange wiederholen, bis sie gültig ist
 
+<SilentTeacherButton kapitel="do-while" />
+
 ## Python hat kein do-while
 
 Die `while`-Schleife prüft die Bedingung **vorher** (kopfgesteuert) – sie läuft also evtl. gar nicht.

@@ -8,6 +8,8 @@ description: "Code wiederholen, solange eine Bedingung erfüllt ist – mit Zäh
 - Eine Zählvariable korrekt hoch- oder runterzählen
 - Endlosschleifen erkennen und vermeiden
 
+<SilentTeacherButton kapitel="while-schleife" />
+
 ## Wozu Schleifen?
 
 Eine **Schleife** wiederholt einen Codeblock. Es gibt zwei Arten:

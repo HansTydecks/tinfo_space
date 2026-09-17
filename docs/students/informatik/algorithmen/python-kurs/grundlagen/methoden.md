@@ -8,6 +8,8 @@ description: "Eingebaute Werkzeuge für Strings und Listen – und Zufallszahlen
 - Wichtige String- und Listen-Methoden anwenden
 - Mit `random` Zufallswerte erzeugen
 
+<SilentTeacherButton kapitel="methoden" />
+
 ## Funktion oder Methode?
 
 Eine **Funktion** rufst du direkt auf: `len(farben)`, `print("Hi")`.

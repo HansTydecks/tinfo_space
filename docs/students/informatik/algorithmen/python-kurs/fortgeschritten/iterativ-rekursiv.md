@@ -8,6 +8,8 @@ description: "Zwei Wege zum selben Ziel: Wiederholung mit einer Schleife oder ei
 - Basisfall und Rekursionsfall benennen
 - Den Aufrufstapel und die Rekursionstiefe verstehen
 
+<SilentTeacherButton kapitel="iterativ-rekursiv" />
+
 ## Zwei Denkweisen
 
 **Iterativ** heißt: Ein Codeblock wird mit einer **Schleife** wiederholt, bis eine Bedingung erreicht

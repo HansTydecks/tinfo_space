@@ -8,6 +8,8 @@ description: "Mehrere Werte ausgeben, direkt in print() rechnen und Text mit f-S
 - Den Unterschied zwischen `,` und `+` in `print()` kennen
 - f-Strings für lesbare Ausgaben nutzen
 
+<SilentTeacherButton kapitel="ausgabe" />
+
 ## Mehrere Werte mit Komma
 
 Trennst du Werte in `print()` mit **Komma**, setzt Python automatisch ein Leerzeichen dazwischen –

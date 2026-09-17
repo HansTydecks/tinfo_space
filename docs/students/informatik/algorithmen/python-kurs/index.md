@@ -33,6 +33,18 @@ Python läuft komplett **in deinem Browser**. Dein Code wird nirgendwo hochgelad
 gespeichert. Wenn du etwas behalten willst, kopiere es dir heraus.
 :::
 
+## Silent Teacher: erst ausprobieren, dann lesen
+
+Unter den Zielen fast jeder Lektion findest du einen Button wie diesen:
+
+<SilentTeacherButton kapitel="operatoren" />
+
+Er führt dich zum **[Silent Teacher](./silent-teacher)**. Dort gibt es keine Erklärungen – nur kleine
+Programme. Du tippst an, was sie ausgeben (oder „💥 Fehler", wenn sie abstürzen), und erkennst
+die Regeln aus deinen Treffern und Fehlern. Richtige Antworten bringen einen Punkt, falsche kosten
+einen; mit **8 Punkten** ist ein Level geschafft. Die Zahlen sind jedes Mal neu – Auswendiglernen
+hilft also nicht, Verstehen schon.
+
 ## Die vier Kapitel
 
 ### 1 · [Grundlagen](./grundlagen/)
