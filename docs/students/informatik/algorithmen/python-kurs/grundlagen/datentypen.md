@@ -9,6 +9,8 @@ description: "Zahlen, Text, Wahrheitswerte und Sammlungen: die Datentypen von Py
 - Werte gezielt umwandeln
 - Auf einzelne Zeichen und Listenelemente zugreifen
 
+<SilentTeacherButton kapitel="datentypen" />
+
 ## Was ist ein Datentyp?
 
 Jeder Wert in Python hat einen **Datentyp**. Der Datentyp legt fest, *welche Werte* möglich sind und

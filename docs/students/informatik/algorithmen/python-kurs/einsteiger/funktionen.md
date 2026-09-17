@@ -8,6 +8,8 @@ description: "Eigene Bausteine schreiben: Funktionen mit Parametern und Rückgab
 - Parameter übergeben
 - Ergebnisse mit `return` zurückgeben
 
+<SilentTeacherButton kapitel="funktionen" />
+
 ## Von „benutzen" zu „schreiben"
 
 `print()`, `len()`, `.upper()` hast du schon benutzt (siehe

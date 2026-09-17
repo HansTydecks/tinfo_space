@@ -8,6 +8,8 @@ description: "Dein erstes Python-Programm, Variablen als Behälter für Werte un
 - Variablen anlegen und benutzen
 - Fehlermeldungen nicht fürchten
 
+<SilentTeacherButton kapitel="erste-schritte" />
+
 ## Jede Zeile ein Befehl
 
 In Python steht in jeder Zeile normalerweise **ein Befehl**. Das Programm wird von oben nach unten

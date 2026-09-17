@@ -178,6 +178,7 @@ const algorithmen: DefaultTheme.SidebarItem[] = [
     collapsed: true,
     items: [
       { text: 'Kursübersicht', link: `${PK}/` },
+      { text: '🤫 Silent Teacher', link: `${PK}/silent-teacher` },
       {
         text: '1 · Grundlagen',
         collapsed: true,

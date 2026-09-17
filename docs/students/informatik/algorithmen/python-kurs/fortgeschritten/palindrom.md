@@ -8,6 +8,8 @@ description: "Wörter und Sätze prüfen, die vorwärts wie rückwärts gleich s
 - Groß-/Kleinschreibung und Leerzeichen sauber behandeln
 - Einen Palindromtest als Funktion schreiben
 
+<SilentTeacherButton kapitel="palindrom" />
+
 ## Was ist ein Palindrom?
 
 Ein Wort, das rückwärts gelesen gleich bleibt: *otto*, *reliefpfeiler*, *rentner*.

@@ -8,6 +8,8 @@ description: "Jedes Element einer Folge abarbeiten – mit for und range()."
 - `range()` in seinen drei Varianten nutzen
 - for- und while-Schleife unterscheiden
 
+<SilentTeacherButton kapitel="for-schleife" />
+
 ## for über eine Folge
 
 Die `for`-Schleife nimmt sich **nacheinander jedes Element** einer Folge. Die Laufvariable musst du

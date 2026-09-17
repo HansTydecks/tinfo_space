@@ -8,6 +8,8 @@ description: "Wie man abschätzt, wie schnell ein Algorithmus mit wachsender Ein
 - Die wichtigsten Komplexitätsklassen kennen
 - Zwei Algorithmen anhand ihrer Laufzeit vergleichen
 
+<SilentTeacherButton kapitel="komplexitaet" />
+
 ## Die Idee
 
 Nicht die Sekunden auf *deinem* Rechner zählen, sondern: **Wie viele Schritte** braucht ein

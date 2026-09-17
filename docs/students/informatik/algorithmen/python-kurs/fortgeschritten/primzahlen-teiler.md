@@ -8,6 +8,8 @@ description: "Teilbarkeit mit dem Modulo-Operator: Primzahltest und der euklidis
 - Einen Primzahltest schreiben und ihn beschleunigen
 - Den euklidischen Algorithmus (GGT) iterativ und rekursiv umsetzen
 
+<SilentTeacherButton kapitel="primzahlen-teiler" />
+
 ## Teilbarkeit
 
 `a % b == 0` bedeutet: `a` ist ohne Rest durch `b` teilbar.

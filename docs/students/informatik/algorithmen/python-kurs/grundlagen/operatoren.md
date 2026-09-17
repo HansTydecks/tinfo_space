@@ -8,6 +8,8 @@ description: "Rechnen, vergleichen und logisch verknüpfen: die Operatoren von P
 - Vergleiche formulieren und ihr Ergebnis (`True`/`False`) verstehen
 - Bedingungen mit `and`, `or`, `not` verknüpfen
 
+<SilentTeacherButton kapitel="operatoren" />
+
 ## Arithmetische Operatoren
 
 | Operator | Bedeutung | `17 ○ 5` |

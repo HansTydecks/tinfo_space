@@ -8,6 +8,8 @@ description: "Häufigstes Wort, häufigster Buchstabe: Texte auswerten mit Dicti
 - Ein **Dictionary** als Zähler benutzen
 - Das häufigste Element bestimmen
 
+<SilentTeacherButton kapitel="textanalyse" />
+
 ## Text in Wörter zerlegen
 
 <PyRunner>

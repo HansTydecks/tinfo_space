@@ -8,6 +8,8 @@ description: "Zwei klassische Sortierverfahren verstehen, programmieren und verg
 - Beide „in-place" programmieren
 - Vergleiche und Vertauschungen zählen
 
+<SilentTeacherButton kapitel="sortieren" />
+
 ## Worum geht es?
 
 **Sortieren** heißt: die Elemente einer Liste in eine Reihenfolge bringen (meist aufsteigend). Beide

@@ -8,6 +8,8 @@ description: "Die letzte Zutat: Programme, die den Nutzer nach Werten fragen."
 - Eingaben in Zahlen umwandeln
 - Eine einfache Prüfung der Eingabe einbauen
 
+<SilentTeacherButton kapitel="eingabe" />
+
 ## Bisher stand alles fest im Code
 
 In allen bisherigen Programmen hast du die Werte selbst in den Code geschrieben. Jetzt kommt die
