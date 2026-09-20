@@ -4,6 +4,7 @@
   "scripts": {
     "vendor:pyodide": "node scripts/vendor-pyodide.mjs",
     "test:silent-teacher": "node scripts/verify-silent-teacher.mjs",
+    "test:db-uebungen": "node scripts/verify-db-uebungen.mjs",
     "postinstall": "node scripts/vendor-pyodide.mjs || true",
     "docs:dev": "npm run vendor:pyodide && vitepress dev docs",
     "docs:build": "npm run vendor:pyodide && vitepress build docs",

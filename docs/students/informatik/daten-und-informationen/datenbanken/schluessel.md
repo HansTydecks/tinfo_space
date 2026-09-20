@@ -38,7 +38,9 @@ Ein **Primärschlüssel** ist ein Attribut (oder eine Kombination von Attributen
 Namen sind nicht eindeutig und können sich ändern (z. B. durch Heirat). Deshalb nimmt man meist **künstliche Schlüssel**.
 :::
 
-**Übung:** Welcher Schlüssel eignet sich für: Gerichte in der Schulmensa · Sitzplätze in einem Kinosaal · Spielstände in einem Onlinespiel · Parkplätze eines Parkhauses · Einträge im Klassenbuch?
+<SortierAufgabe aufgabe="schluessel-arten" />
+
+**Weiterdenken:** Welcher Schlüssel eignet sich für: Gerichte in der Schulmensa · Sitzplätze in einem Kinosaal · Spielstände in einem Onlinespiel · Parkplätze eines Parkhauses · Einträge im Klassenbuch?
 
 ## Fremdschlüssel
 

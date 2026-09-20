@@ -22,6 +22,14 @@ Die **Schulbibliothek** meldet sich: *„Wir brauchen eine Datenbank! Wir haben 
 | **Beziehung** (*Relationship*) | Verbindung zwischen Entitäten, kann selbst Attribute haben | **Raute** | leiht aus (mit Ausleihdatum) |
 :::
 
+::: warning Der häufigste Fehler: Beziehungen sind mehr als Striche
+Eine Beziehung ist keine Linie, sondern eine **Menge von Paaren**: „leiht aus“ ist die Menge aller Paare aus einer Leserin und einem Buch. Deshalb kann eine Beziehung **eigene Attribute** haben.
+
+Das **Ausleihdatum** gehört deshalb weder zum Buch noch zur Leserin, sondern **zum Paar**. Hängt man es ans Buch, bricht das Modell, sobald dasselbe Buch ein zweites Mal ausgeliehen wird: In der Spalte müssten dann zwei Daten gleichzeitig stehen.
+
+Merksatz: **Wovon hängt dieser Wert ab?** Von einer Entität allein → Attribut der Entität. Erst von beiden zusammen → Attribut der Beziehung.
+:::
+
 ## Beispiel: Schulbibliothek
 
 > In der Bibliothek gibt es **Bücher** mit eindeutiger Buch-ID, Titel, Erscheinungsjahr und Seitenzahl. Bücher werden von **Autor:innen** geschrieben, zu denen eine eindeutige ID, der Name und das Geburtsjahr gespeichert werden. **Leser:innen** haben einen eindeutigen Leserausweis, einen Namen und ein Eintrittsdatum. Leser:innen **leihen** Bücher **aus**; dabei wird das Ausleihdatum festgehalten.
@@ -86,16 +94,25 @@ Die **Schulbibliothek** meldet sich: *„Wir brauchen eine Datenbank! Wir haben 
 
 Die Zahlen an den Linien heißen **Kardinalitäten** (→ [nächste Seite](./kardinalitaeten)).
 
+<SortierAufgabe aufgabe="erm-bausteine" />
+
 ## So gehst du vor
 
 1. **Substantive** im Text suchen → Kandidaten für **Entitäten**
-2. **Eigenschaften** dieser Substantive → **Attribute**
-3. **Verben**, die Entitäten verbinden → **Beziehungen**
+2. **Eigenschaften** dieser Substantive → **Attribute**. Frage dabei immer: *Wovon hängt dieser Wert ab?*
+3. **Verben**, die Entitäten verbinden → **Beziehungen**. Prüfe, ob die Beziehung **eigene Attribute** braucht.
 4. Für jede Entität einen **Primärschlüssel** festlegen
 5. **Kardinalitäten** bestimmen
 
+## Übung: ein neuer Text
+
+> Der Sportverein **TSV Lindental** will seine Trainingsgruppen digital verwalten. Zu jedem **Mitglied** werden Mitgliedsnummer, Name und Eintrittsdatum gespeichert. Es gibt **Trainingsgruppen** mit Gruppen-ID, Name und Trainingstag. Mitglieder **melden sich** für Gruppen **an**; dabei wird festgehalten, seit wann sie in der Gruppe dabei sind. Die Vereinssatzung und die Nachbarvereine sollen ausdrücklich **nicht** gespeichert werden.
+
+<SortierAufgabe aufgabe="erm-sportverein" />
+
 ::: info Aufgabe
-Zeichne das ERM der Schulbibliothek mit den richtigen Symbolen auf ein Blatt. Ergänze anschließend: Die Bibliothek möchte auch speichern, **in welchem Regal** ein Buch steht.
+1. Zeichne das ERM des **Sportvereins** mit den richtigen Symbolen auf ein Blatt. Wo hängt „dabei seit“?
+2. Zeichne das ERM der **Schulbibliothek**. Ergänze anschließend: Die Bibliothek möchte auch speichern, **in welchem Regal** ein Buch steht.
 :::
 
 ## Weiterlesen

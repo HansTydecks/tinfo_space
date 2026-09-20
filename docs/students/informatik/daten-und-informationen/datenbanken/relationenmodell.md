@@ -25,6 +25,22 @@ leser    (_ausweis_nr_, vorname, klasse)
 ausleihe (_↑ausweis_nr_, _↑buch_id_, _ausleihdatum_)
 ```
 
+<SortierAufgabe aufgabe="relationen-ueberfuehrung" />
+
+## Der Tabellen-Test
+
+Ein ER-Diagramm sieht auch dann richtig aus, wenn es falsch ist. Eine Tabelle nicht. Deshalb gilt: **Schreibe drei Beispielzeilen hin, bevor du dem Diagramm glaubst.** Drei Symptome verraten einen Modellfehler sofort:
+
+| Was passiert | Was es bedeutet |
+|---|---|
+| Du müsstest eine **Liste in eine Zelle** schreiben („Tschick, Momo“) | Die Beziehung ist **n : m**, die Verbindungstabelle fehlt |
+| Derselbe Wert **wiederholt sich** über mehrere Zeilen | Das Attribut sitzt in der **falschen Tabelle** |
+| Du kannst einen Datensatz **nicht eintragen**, ohne einen zweiten zu erfinden | Zwei unabhängige Dinge stehen in **derselben Tabelle** |
+
+Genau danach fragt die nächste Übung: Wovon hängt ein Wert ab – von einer Entität allein oder erst von beiden zusammen?
+
+<SortierAufgabe aufgabe="relationen-attribute" />
+
 ## Warum nicht alles in eine Tabelle?
 
 Die Bibliothek hat ihre Ausleihen früher in **einer einzigen Liste** geführt:
@@ -41,6 +57,8 @@ Dieselben Informationen stehen **mehrfach** da (**Redundanz**). Das kostet Platz
 - **Einfügeanomalie:** Ein neues Buch kann man erst eintragen, wenn es jemand ausleiht.
 - **Löschanomalie:** Gibt Noah „Tschick“ zurück und alle Ausleihen werden gelöscht, verschwindet mit der letzten Zeile auch die Information über das Buch.
 :::
+
+<SortierAufgabe aufgabe="relationen-anomalien" />
 
 ::: info Merke: Qualitätsziele
 | Begriff | Bedeutung |
@@ -63,6 +81,8 @@ Die **Normalisierung** zerlegt Tabellen schrittweise, bis Redundanzen verschwind
 
 Ergebnis der Normalisierung: genau die vier Tabellen oben.
 
+<SortierAufgabe aufgabe="relationen-normalformen" />
+
 ## Datenbankmodelle <Badge type="warning" text="Lk" />
 
 | Modell | Idee | Einsatz |
@@ -80,3 +100,32 @@ Ein **verteiltes** Datenbanksystem (auf vielen Servern) kann **höchstens zwei**
 
 Da Netzausfälle in der Praxis vorkommen, muss man meist zwischen **Konsistenz** (Bank) und **Verfügbarkeit** (Social-Media-Feed) abwägen.
 :::
+
+## Aufgabe: ein eigenes Schema
+
+> Eine **Musikschule** verwaltet ihren Unterricht. Zu jeder **Lehrkraft** werden Personalnummer, Name und Instrument gespeichert, zu jedem **Kind** eine Schülernummer, Name und Geburtsdatum. Ein Kind kann bei mehreren Lehrkräften Unterricht haben, und eine Lehrkraft unterrichtet viele Kinder; für jeden Unterricht werden **Wochentag und Uhrzeit** festgehalten. Jedes Kind gehört außerdem zu genau einer **Rechnungsadresse** (Adress-ID, Straße, Ort), zu der mehrere Kinder gehören können.
+
+::: info Aufgabe
+1. Bestimme die Kardinalitäten der beiden Beziehungen.
+2. Notiere das Relationenschema in der Schreibweise von oben (Primärschlüssel zwischen Unterstrichen, Fremdschlüssel mit ↑).
+3. Mach den **Tabellen-Test**: Schreibe für zwei Kinder mit je zwei Unterrichtsstunden Beispielzeilen und prüfe, ob dein Schema sie aufnehmen kann.
+:::
+
+::: details Lösung
+```text:no-line-numbers
+lehrkraft  (_personalnr_, name, instrument)
+adresse    (_adress_id_, strasse, ort)
+kind       (_schuelernr_, name, geburtsdatum, ↑adress_id)
+unterricht (_↑personalnr_, _↑schuelernr_, wochentag, uhrzeit)
+```
+
+- Lehrkraft – Kind ist **n : m** → eigene Verbindungstabelle `unterricht`, und Wochentag und Uhrzeit sind Attribute der **Beziehung**, also landen sie genau dort.
+- Adresse – Kind ist **1 : n** → der Fremdschlüssel wandert auf die n-Seite, also nach `kind`.
+
+Der Tabellen-Test zeigt noch eine Feinheit: Nimmt ein Kind bei **derselben** Lehrkraft zweimal pro Woche Unterricht, reicht der Schlüssel (`personalnr`, `schuelernr`) nicht mehr – dann muss `wochentag` mit in den Primärschlüssel.
+:::
+
+## Weiterlesen
+
+- Grundlagen: [ER-Modell](./er-modell) · [Kardinalitäten](./kardinalitaeten) · [Primär- & Fremdschlüssel](./schluessel)
+- Die fertigen Tabellen abfragen: [Abfragen mit SQL](./sql-abfragen)

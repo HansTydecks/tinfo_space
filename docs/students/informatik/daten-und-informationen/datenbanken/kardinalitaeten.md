@@ -44,24 +44,24 @@ Kardinalitäten hängen davon ab, **was die Datenbank abbilden soll**. In einer 
 
 Bestimme die Kardinalität und begründe mit der Zwei-Richtungen-Methode.
 
-1. Fußballverein – Mannschaft
-2. Mannschaft – Spieler:in (in einer Saison)
-3. Buslinie – Haltestelle
-4. Mensch – Personalausweis (gültig)
-5. Lehrkraft – Klassenleitung einer Klasse
-6. Rezept – Zutat
-7. YouTube-Kanal – Video
-8. Kinovorstellung – Sitzplatzbuchung
+<SortierAufgabe aufgabe="kardinalitaeten-basis" />
 
-::: details Lösungen
-1. **1 : n**: ein Verein hat viele Mannschaften, eine Mannschaft gehört zu einem Verein
-2. **1 : n**: eine Mannschaft hat viele Spieler:innen; pro Saison spielt man in einer Mannschaft (über mehrere Jahre betrachtet: n : m)
-3. **n : m**: eine Linie hält an vielen Haltestellen, an einer Haltestelle halten viele Linien
-4. **1 : 1**
-5. **1 : 1** (wenn jede Klasse genau eine Klassenleitung hat und eine Lehrkraft höchstens eine Klasse leitet)
-6. **n : m**
-7. **1 : n**
-8. **1 : n**: eine Vorstellung hat viele Buchungen, jede Buchung gilt für eine Vorstellung
+Und jetzt der Zeitraum aus dem Hinweis oben – hier ist nicht jedes Paar eindeutig:
+
+<SortierAufgabe aufgabe="kardinalitaeten-kontext" />
+
+::: details Lösungen zum Nachlesen und Ausdrucken
+| Paar | Typ | Begründung |
+|---|---|---|
+| Fußballverein – Mannschaft | **1 : n** | ein Verein hat viele Mannschaften, eine Mannschaft gehört zu einem Verein |
+| Mannschaft – Spieler:in (eine Saison) | **1 : n** | eine Mannschaft hat viele Spieler:innen; pro Saison spielt man in einer Mannschaft (über mehrere Jahre: n : m) |
+| Buslinie – Haltestelle | **n : m** | eine Linie hält an vielen Haltestellen, an einer Haltestelle halten viele Linien |
+| Mensch – gültiger Personalausweis | **1 : 1** | genau einer pro Mensch, genau ein Mensch pro Ausweis |
+| Lehrkraft – Klassenleitung | **1 : 1** | wenn jede Klasse genau eine Klassenleitung hat und eine Lehrkraft höchstens eine Klasse leitet |
+| Rezept – Zutat | **n : m** | ein Rezept braucht viele Zutaten, eine Zutat kommt in vielen Rezepten vor |
+| YouTube-Kanal – Video | **1 : n** | ein Kanal hat viele Videos, ein Video gehört zu einem Kanal |
+| Kinovorstellung – Sitzplatzbuchung | **1 : n** | eine Vorstellung hat viele Buchungen, jede Buchung gilt für eine Vorstellung |
+| Bestellung – Artikel | **n : m** | eine Bestellung enthält viele Artikel, ein Artikel steht in vielen Bestellungen |
 :::
 
 ## Weiterlesen
