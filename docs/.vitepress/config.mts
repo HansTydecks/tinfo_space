@@ -52,7 +52,20 @@ export default defineConfig({
           { text: 'English', link: '/en/students/english/index' },
           { text: 'Computer Science', link: '/en/students/informatik/index' },
           { text: 'German as 2nd Language', link: '/en/students/daz/index' },
-        ]
+        ],
+        footer: {
+          message: `
+            <span class="footer-links"> 
+              <a href="https://tinfo.space/teachers/Digitale_Tools/" target="_blank" rel="noopener">More apps</a> |
+              <a href="https://contact.tinfo.space/" id="contact-link" target="_blank" rel="noopener">Contact</a> |
+              <a href="/en/about/imprint">Imprint</a> |
+              <a href="/en/about/privacy">Privacy</a> |
+              <a href="https://linktr.ee/tinfo.space" target="_blank" rel="noopener">Links</a> |
+              <a href="https://github.com/HansTydecks" target="_blank" rel="noopener">GitHub</a>
+            </span>
+          `,
+          copyright: 'Unless stated otherwise, all content is public domain or open for educational use.'
+        }
       }
     },
     uk: {
@@ -65,7 +78,20 @@ export default defineConfig({
           { text: 'Англійська', link: '/uk/students/english/index' },
           { text: 'Інформатика', link: '/uk/students/informatik/index' },
           { text: 'Німецька як 2-га мова', link: '/uk/students/daz/index' },
-        ]
+        ],
+        footer: {
+          message: `
+            <span class="footer-links"> 
+              <a href="https://tinfo.space/teachers/Digitale_Tools/" target="_blank" rel="noopener">Більше застосунків</a> |
+              <a href="https://contact.tinfo.space/" id="contact-link" target="_blank" rel="noopener">Контакти</a> |
+              <a href="/uk/about/imprint">Вихідні дані</a> |
+              <a href="/about/privacy">Політика конфіденційності</a> |
+              <a href="https://linktr.ee/tinfo.space" target="_blank" rel="noopener">Посилання</a> |
+              <a href="https://github.com/HansTydecks" target="_blank" rel="noopener">GitHub</a>
+            </span>
+          `,
+          copyright: 'Unless stated otherwise, all content is public domain or open for educational use.'
+        }
       }
     }
   },
@@ -79,7 +105,7 @@ export default defineConfig({
       message: `
         <span class="footer-links"> 
           <a href="https://tinfo.space/teachers/Digitale_Tools/" target="_blank" rel="noopener">More apps</a> |
-          <a href="/about/contact" id="contact-link">Kontakt</a> |
+          <a href="https://contact.tinfo.space/" id="contact-link" target="_blank" rel="noopener">Kontakt</a> |
           <a href="/about/impressum">Impressum</a> |
           <a href="/about/privacy">Datenschutz</a> |
           <a href="https://linktr.ee/tinfo.space" target="_blank" rel="noopener">Links</a> |
