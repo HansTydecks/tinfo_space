@@ -1,27 +1,24 @@
 ---
-title: "Lesson Plan Creator — Didaktische Hinweise"
+title: "Lessplan"
+description: "Stundenverlaufs- und Stoffverteilungspläne schnell erstellen und als PDF exportieren."
 ---
 
-# Lesson Plan Creator (fast-lessonplan)
+# Lessplan
 
-Live: https://lessplan.tinfo.space/
-Repo: https://github.com/HansTydecks/fast-lessonplan
+<ToolInfo id="lessplan" />
 
-Kurzbeschreibung
+Ein schlankes Browser-Tool für die Unterrichtsplanung. Es enthält zwei Planer:
 
-Ein leichtgewichtiges, statisches Browser‑Tool zum schnellen Erstellen von Stundenentwürfen. Das Tool erlaubt das Anlegen von Phasen, automatische Zeitberechnung, Lernziele, Reihung von Sozialformen und den PDF‑Export der fertigen Stunde.
+- **Stundenverlaufsplan:** Phasen mit Zeiten, Sozialformen, Lernzielen und Material – mit automatischer Zeitberechnung.
+- **Stoffverteilungsplan:** Grobplanung für das ganze Schuljahr mit automatischer Terminberechnung.
 
-Didaktische Hinweise
+Ein mitgelieferter KI-Prompt hilft beim schnellen Vorformulieren einer Stunde.
 
-- Einsatzszenarien: Planung von Einzelstunden, schnelle Vorbereitung von Vertretungsstunden oder als Vorlage für Unterrichtsreihen.
-- Unterrichtsaktivitäten: Zeiteinteilung, Gruppenzuordnung und Materiallisten direkt im Plan erfassen; PDF‑Export für die Ablage oder Weitergabe an Kolleg:innen.
-- Differenzierung: Nutze die Lernziele‑Sektion, um Aufgaben in unterschiedlichen Schwierigkeitsgraden zu notieren; Export/Import (JSON) erlaubt Austausch zwischen Lehrkräften.
+## Im Unterricht
 
-Technische Hinweise
+- **Einsatz:** Einzelstunden planen, Vertretungsstunden schnell vorbereiten oder eine Unterrichtsreihe auf das Schuljahr verteilen.
+- **Austausch:** Pläne als PDF ablegen oder weitergeben; per JSON-Export und -Import lassen sie sich zwischen Lehrkräften teilen.
 
-- Rein clientseitig (HTML/CSS/JS), verwendet jsPDF für den PDF‑Export und speichert Pläne als JSON für Backup und Austausch.
-- Keine Anmeldung nötig, kann lokal oder als GitHub Pages Seite betrieben werden.
+## Technik
 
-Feedback & Beitrag
-
-Bitte Issues oder Pull Requests im GitHub‑Repository öffnen: https://github.com/HansTydecks/fast-lessonplan
+Läuft vollständig im Browser, ohne Anmeldung. Pläne lassen sich als JSON sichern und wieder laden.

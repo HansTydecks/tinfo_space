@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { informatikSidebar } from './sidebar/informatik.mts'
+import { toolsSidebar } from './sidebar/tools.mts'
 
 export default defineConfig({
   title: "Tinfo.Space",
@@ -176,26 +177,8 @@ export default defineConfig({
           text: 'Lehrkräfte',
           items: [
             { text: 'Übersicht', link: '/teachers/index' },
-            {
-              text: 'Digitale Tools',
-              items: [
-                { text: 'Übersicht', link: '/teachers/Digitale_Tools/index' },
-                { text: 'Card Creator', link: '/teachers/Digitale_Tools/card-creator-website/' },
-                { text: 'Wort‑Versteck', link: '/teachers/Digitale_Tools/word-reveal/' },
-                { text: 'Table Reveal', link: '/teachers/Digitale_Tools/table-reveal/' },
-                { text: 'Lessplan', link: '/teachers/Digitale_Tools/lessplan/' },
-                { text: 'Pixel & Bits', link: '/teachers/Digitale_Tools/edu-pixel-draw/' },
-                { text: 'Becimal', link: '/teachers/Digitale_Tools/becimal/' },
-                { text: 'Binär‑ASCII‑Visualizer', link: '/teachers/Digitale_Tools/binary-ascii-visualizer/' },
-                { text: 'EVA-Stationen', link: '/teachers/Digitale_Tools/eva-stationen/' },
-                { text: 'Graphs', link: '/teachers/Digitale_Tools/Graphs/' },
-                { text: 'Schlosssimulation', link: '/teachers/Digitale_Tools/lock_simulation/' },
-                { text: 'Logic Stories', link: '/teachers/Digitale_Tools/lories/' },
-                { text: 'Memory-Visualizer', link: '/teachers/Digitale_Tools/memory/' },
-                { text: 'Dilemmataxi', link: '/teachers/Digitale_Tools/dilemmataxi/' },
-                { text: 'Quizmaster / Analog Programming', link: '/teachers/Digitale_Tools/analog-programming/' }
-              ]
-            },
+            // Wird aus docs/.vitepress/theme/components/tools/tools.js erzeugt
+            toolsSidebar,
             {
               text: 'Fortbildungen',
               items: [

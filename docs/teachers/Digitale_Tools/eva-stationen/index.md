@@ -1,17 +1,24 @@
 ---
-title: "Stationen für das EVA-Modell"
-description: "Sammlung einiger interaktiver Stationen"
+title: "EVA-Stationen"
+description: "Stationenlernen zum EVA-Prinzip mit echten Ein- und Ausgabegeräten."
 ---
 
-Zusätzliches Material wird benötigt. Es geht ja schließlich um Ein- und Ausgabemodalitäten. Foglendes Material ist empfohlen: Mikrofon, MIDI-Keyboard (alterantiv auch Tastatur), Beamer, Lautsprecher, Barcodescanner, einen Laptop mit Kamera und einen Drucker
+# EVA-Stationen
 
-[Webcam mit Drucker](https://camera.eva.tinfo.space/)
+<ToolInfo id="eva-stationen" />
 
-[Mikrofon mit Bildschirm](https://mic.eva.tinfo.space)
+Eine Sammlung interaktiver Stationen zum EVA-Prinzip (Eingabe – Verarbeitung – Ausgabe). Mit echten Geräten wie Mikrofon, MIDI-Keyboard, Barcodescanner und Drucker werden verschiedene Ein- und Ausgabemodalitäten erlebbar. Jede Station hat eine kleine Mission, danach füllen die Lernenden ihr Arbeitsblatt aus; ein Timer gibt den Stationswechsel vor.
 
-[MIDI-Keyboard mit Bildschirm](https://keys.eva.tinfo.space)
+## Die Stationen
 
-[Barcodescanner mit Lautsprecher](https://scanner.eva.tinfo.space/)
+| Station | Eingabe → Ausgabe | Quellcode |
+|---|---|---|
+| [Webcam & Drucker](https://camera.eva.tinfo.space/) | Kamera → Drucker | [eva-camera](https://github.com/HansTydecks/eva-camera) |
+| [Mikrofon](https://mic.eva.tinfo.space/) | Mikrofon → Bildschirm | [eva-mic](https://github.com/HansTydecks/eva-mic) |
+| [MIDI-Keyboard](https://keys.eva.tinfo.space/) | Keyboard → Beamer | [eva-keyboard](https://github.com/HansTydecks/eva-keyboard) |
+| [Barcodescanner](https://scanner.eva.tinfo.space/) | Scanner → Lautsprecher | [eva-barcode](https://github.com/HansTydecks/eva-barcode) |
+| [Memory-Spiel](https://mouse.eva.tinfo.space/) | Maus & Tastatur → Bildschirm | [eva-mouse](https://github.com/HansTydecks/eva-mouse) |
 
-[Memory-Spiel (Maus und Tastatur/Bildschirm)](https://scanner.eva.tinfo.space/)
+## Benötigtes Material
 
+Mikrofon, MIDI-Keyboard (alternativ eine Tastatur), Beamer, Lautsprecher, Barcodescanner, ein Laptop mit Kamera und ein Drucker.

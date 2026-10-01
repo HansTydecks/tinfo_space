@@ -5,11 +5,8 @@ hero:
   name: "Tinfo Space"
   text: "Digital Classroom Assistant"
   actions:
-    - theme: brand
-      text: Students
-      link: /en/students/index
     - theme: alt
-      text: Teachers
+      text: Content for teachers
       link: /en/teachers/index
 
 features:

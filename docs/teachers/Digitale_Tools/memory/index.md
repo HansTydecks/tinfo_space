@@ -1,15 +1,23 @@
 ---
-title: "Speichermedien und Speichergrößen"
-description: "Graphen mit Knoten und Kanten zum selbst ausprobieren"
+title: "Memory-Visualizer"
+description: "Speichermedien und Dateigrößen ins Verhältnis setzen – mit echten Datenträgern im Klassenzimmer."
 ---
 
-Live: https://memory.tinfo.space/
-Repo: https://github.com/HansTydecks/memory-visualizer
+# Memory-Visualizer
 
-Diese Simulation wird in Kombination mit den Speichermedien als Anschauungsobjekte genutzt. Die Speichermedien liegen im Klassenzimmer. Lernende prüfen an den Gegenständen selbst, wie groß sie sind. Die Dateien finden sie auf ihrem Computer und prüfen mit Hilfe des Dateiexplorers, wie groß sie sind. Die Simulation stellt letztlich die Medien ins Verhältnis und demonstriert, wie viele Dateien auf ein Medium passen.
+<ToolInfo id="memory" />
 
-Benötigt werden:
-- Textdatei (z.B. .DOCX), Musikdatei (.mp3), Pixelgrafik (.jpeg)
-- physisch: CD, DVD, Festplatte, USB-Stick mit Aufdruck (Größe), Handy (Lernende selbst prüfen lassen in den Einstellungen), Diskette
+Diese Simulation stellt Speichermedien (Diskette, CD, DVD, USB-Stick, Festplatte, Handy) und Dateitypen ins Verhältnis und zeigt, wie viele Dateien auf ein Medium passen.
 
-Hinweise: die Bedienung ist etwas speziell. Selbst ausprobieren und Vorschläge zur Verbesserung geben.
+## Im Unterricht
+
+Die Simulation wird mit echten Speichermedien als Anschauungsobjekten kombiniert. Die Lernenden prüfen an den Gegenständen selbst, wie groß sie sind, und ermitteln mit dem Dateiexplorer die Größe typischer Dateien. Die Simulation setzt beides ins Verhältnis.
+
+## Material
+
+- **Dateien:** eine Textdatei (z. B. `.docx`), eine Musikdatei (`.mp3`) und eine Pixelgrafik (`.jpeg`)
+- **Gegenstände:** CD, DVD, Festplatte, USB-Stick mit aufgedruckter Größe, Diskette und das eigene Handy (Speichergröße in den Einstellungen nachsehen)
+
+::: tip Hinweis
+Die Bedienung ist etwas speziell – am besten vorher selbst ausprobieren. Verbesserungsvorschläge sind willkommen.
+:::

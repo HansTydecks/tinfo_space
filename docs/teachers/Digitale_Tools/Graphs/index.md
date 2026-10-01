@@ -1,22 +1,22 @@
 ---
-title: "Graphentheorie und Netzwerktopologien"
-description: "Graphen mit Knoten und Kanten zum selbst ausprobieren"
+title: "Graphs"
+description: "Graphen mit Knoten und Kanten selbst bauen: Netzwerktopologien, Datenfluss und Ausfälle simulieren."
 ---
 
-# Graphentheorie und Netzwerktopologien
+# Graphs
 
-- [Live-Demo](https://graphs.tinfo.space/)
-- [GitHub-Repository](https://github.com/HansTydecks/network-topology)
+<ToolInfo id="Graphs" />
 
-Lernende können Knoten hinzufügen und mit Kanten verbinden. So entdecken sie verschiedene Topologien und beobachten Datenfluss per Knopfdruck.
+Eine interaktive Simulation von Graphen mit Knoten und Kanten. Lernende fügen Knoten hinzu, verbinden sie und entdecken so verschiedene Netzwerktopologien. Per Knopfdruck lässt sich beobachten, wie Daten durch das Netz fließen – und was passiert, wenn ein Knoten ausfällt.
 
 ## Funktionen
 
-- BFS- und DFS-Simulation
-- Simulation von Ausfällen
-- Verschiedene Analysetools
-- Erklärungen zu Topologien nach der Erkundung
+- Simulation von Breiten- und Tiefensuche (BFS/DFS)
+- Ausfälle simulieren und Auswirkungen analysieren
+- Fortgeschrittener Modus mit gerichteten Kanten, Kantengewichten und Graphfärbung
+- Erklärungen zu den Topologien nach der Erkundung
+- Oberfläche in Deutsch, Englisch, Ukrainisch, Französisch und Spanisch
 
-## Einsatz im Unterricht
+## Im Unterricht
 
-Die Simulation eignet sich als Einstieg in Graphentheorie und Netzwerke. Lehrkräfte können ergänzendes Material erstellen, um die Aufgaben passgenau in den Unterricht einzubinden.
+Die Simulation eignet sich als Einstieg in Graphentheorie und Netzwerke. Mit eigenem Begleitmaterial lassen sich die Aufgaben passgenau in den Unterricht einbinden.

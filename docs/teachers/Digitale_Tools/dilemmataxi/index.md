@@ -1,21 +1,16 @@
 ---
-title: "Umfragewebsite zum autonomen Fahren — Didaktische Hinweise"
+title: "Dilemmataxi"
+description: "Umfrage zu ethischen Dilemmata beim autonomen Fahren – Einstieg in die Diskussion über Maschinenentscheidungen."
 ---
 
-# Dilemmataxi - eine "Umfrage" zum autonomen Fahren
+# Dilemmataxi
 
-Live: https://dilemmataxi.tinfo.space/
-Repo: https://github.com/HansTydecks/car-dilemma
+<ToolInfo id="dilemmataxi" />
 
-Kurzbeschreibung
+Eine als „Marktforschung“ getarnte Umfrage zu ethischen Dilemmata beim autonomen Fahren. Die Lernenden entscheiden in 20 fiktiven Verkehrsszenarien, wie sich ein selbstfahrendes Auto verhalten soll – und sehen am Ende eine Auswertung ihrer Entscheidungen.
 
-Lernende sollen eine Vielzahl von Fragen zu autonomen Fahrzeugen beantworten.
+## Im Unterricht
 
-Didaktische Hinweise
-
-- Einsatz: Disukussion maschinelle Entscheidungsprozesse.
-- Aktivitäten: ungefähr 40 Minuten einplanen, um Lernende die Umfrage durchführen zu lassen. Es wird zwischendurch gekichert, aber auch diskutiert. Anschließend könnte man eine Diskussion "Utilitarismus vs. prinzipiengesteuerte Ethik" beginnen.
-
-# Feedback & Beitrag
-
-Bitte Issues im GitHub‑Repository öffnen.
+- **Einsatz:** Diskussion über maschinelle Entscheidungsprozesse und KI in der Gesellschaft.
+- **Ablauf:** Etwa 40 Minuten einplanen. Es wird zwischendurch gekichert, aber auch diskutiert.
+- **Anschluss:** Eine Diskussion „Utilitarismus vs. prinzipiengeleitete Ethik“ bietet sich an.

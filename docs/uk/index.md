@@ -5,12 +5,9 @@ hero:
   name: "Tinfo Space"
   text: "Цифровий помічник у класі"
   actions:
-    - theme: brand
-      text: Учні
-      link: /uk/students/index
     - theme: alt
-      text: Вчителі
-      link: /uk/teachers/index
+      text: Матеріали для вчителів
+      link: /teachers/index
 
 features:
   - icon:

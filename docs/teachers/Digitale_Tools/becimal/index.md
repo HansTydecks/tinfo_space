@@ -1,32 +1,33 @@
 ---
-title: "Becimal — Binär/Dezimal Visualisierung (Didaktische Hinweise)"
+title: "Becimal"
+description: "Stellenwertsysteme interaktiv: Binär, Hexadezimal und jede Basis von 2 bis 16."
 ---
 
-# Becimal — Binary‑Decimal Visualizer
+# Becimal
 
-Live: https://becimal.tinfo.space/  
-Repo: https://github.com/HansTydecks/binary-decimal-visualizer
+<ToolInfo id="becimal" />
 
-Kurzbeschreibung
+Eine interaktive Web-App zu **Stellenwertsystemen** – binär, hexadezimal und jede Basis von 2 bis 16. Gebaut für Smartboards und Tablets.
 
-Ein leichtgewichtiges, rein clientseitiges Lernwerkzeug zur Visualisierung von 8‑Bit‑Binärzahlen.
-Schülerinnen und Schüler können Bits ein- und ausschalten, sehen sofort den dezimalen Wert und bearbeiten 30 geführte Missionsaufgaben, die Konzepte schrittweise einführen.
+## Module
 
-Didaktische Hinweise
+| Modul | Basis | Eingabe |
+|---|---|---|
+| Binärsystem | 2, acht Stellen | Schalter mit LEDs (umschaltbar auf Drehregler) |
+| Hexadezimalsystem | 16, eine bis vier Stellen | Drehregler, dazu Hex ↔ Binär in Vierergruppen |
+| Beliebige Basis | 2–16 frei wählbar | Drehregler |
 
-- Einsatz: Einstieg in die Binärdarstellung, Übung zu Stellenwerten (Potenzen von 2), Einführung in Datenrepräsentation und Byte‑Konzept.
-- Unterrichtsaktivitäten: Missionen sequenziell bearbeiten lassen, Partnerarbeit mit Wechsel von Erklärer/Prüfer, Messreihen mit vorgegebenen Dezimalzahlen (z. B. welche Bits setzen?) als Quizaufgabe.
-- Differenzierung: Zeige unter den Schaltern wahlweise Potenzen (2⁷ … 2⁰), Dezimalwerte oder Graustufen‑Visualisierung, je nach Lernstand.
+Jedes Modul hat ein eigenes Tutorial, eigene Übungen und einen eigenen Fortschritt.
 
-Technische Hinweise
+## Im Unterricht
 
-- Technologie: Reines HTML/CSS/JavaScript (kein Framework), sehr klein und offline‑fähig nach dem ersten Laden.
-- Bedienung: Touch‑optimiert für interaktive Tafeln und Tablets; kann lokal durch Öffnen von index.html betrieben werden.
+- **Einsatz:** Einstieg in die Binärdarstellung, Stellenwerte als Potenzen, Hexadezimalzahlen und Umrechnung durch fortgesetzte Division.
+- **Kernidee Übertrag:** Ist der Übertrag eingeschaltet, wandert `+1` über die Stellen weiter – ein Pfeil zeigt, wohin.
+- **Differenzierung:** Stellenwerte, Produkte je Stelle und die komplette Summenzeile lassen sich nach Bedarf einblenden.
+- **Übungen:** Aufgaben werden nacheinander freigeschaltet; wer hängt, bekommt einen ausgearbeiteten Lösungsweg.
 
-Weiterentwickeln & Feedback
+## Technik
 
-- Issues und Pull‑Requests sind willkommen: https://github.com/HansTydecks/binary-decimal-visualizer/issues
+Läuft vollständig im Browser, der Fortschritt bleibt lokal gespeichert.
 
----
-
-Bitte melde Fehler oder didaktische Verbesserungsvorschläge im GitHub‑Repository.
+Verwandt: [Binär-ASCII-Visualizer](../binary-ascii-visualizer/) – dieselben Bits als Zeichen und Graustufe.

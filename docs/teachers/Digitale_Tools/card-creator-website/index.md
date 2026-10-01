@@ -1,22 +1,27 @@
 ---
-title: "Card Creator — Didaktische Hinweise"
+title: "Card Creator"
+description: "Lernkarten im Browser gestalten und als PDF, Word-Dokument oder Bilder exportieren."
 ---
 
 # Card Creator
 
-Live: https://ccreator.tinfo.space/
-Repo: https://github.com/HansTydecks/card-creator-website
+<ToolInfo id="card-creator-website" />
 
-Kurzbeschreibung
+Ein kostenloses Werkzeug, um Lernkarten für den Unterricht zu gestalten und zu drucken – direkt im Browser, ohne Konto und ohne Server. Ideal, um schnell individualisierte Kartensets für eine Klasse auszudrucken.
 
-Ein einfaches, statisches Tool zum Erstellen und Exportieren von Karteikarten als PDF.
+## So funktioniert's
 
-Didaktische Hinweise
+1. **Format wählen:** Papiergröße (A4/A3) und Kartenraster (2×2, 2×4, 3×3 oder eigene Kartengröße).
+2. **Masterkarte gestalten:** Hintergrund, Rahmen, Wasserzeichen sowie Text- und Bildfelder für Vorder- und Rückseite einmal festlegen – das Layout gilt für alle Karten.
+3. **Inhalte eingeben:** Jede Karte einzeln ausfüllen oder eine Tabelle aus Excel bzw. Sheets einfügen.
+4. **Exportieren:** als druckfertiges PDF (mit Schnittmarken und Duplex-Spiegelung), als Word-Dokument, als PNG-Bilder oder die Masterkarte als SVG.
 
-- Einsatz: Produktion individueller Lernkarten für Vokabeltraining, Klassenpools oder Assessment‑Karten.
-- Anpassung: Lehrkräfte können Vorlagen erstellen (z. B. Bild‑auf‑Vorderseite, Lösung‑auf‑Rückseite).
-- Differenzierung: Verwende kleinere Kartensets für schwächere Lerngruppen und größere Sets für Fortgeschrittene.
+## Im Unterricht
 
-Feedback & Beitrag
+- **Einsatz:** Vokabelkarten, Begriffs-Definitions-Paare, Quizkarten oder Karten für Stationenarbeit.
+- **Schnell befüllt:** Vorhandene Wortlisten aus einer Tabelle einfügen statt jede Karte abzutippen.
+- **Differenzierung:** Kleinere Kartensets für schwächere Lerngruppen, größere für Fortgeschrittene.
 
-Bitte Issues im GitHub‑Repository öffnen, wenn Fehler oder Verbesserungsvorschläge bestehen.
+## Technik & Datenschutz
+
+Alle Daten bleiben lokal im Browser (Autospeicherung) oder in Dateien, die du selbst herunterlädst. Projekte lassen sich als JSON sichern und wieder laden. Die App ist als PWA installierbar und funktioniert nach dem ersten Laden offline.

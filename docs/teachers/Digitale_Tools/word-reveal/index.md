@@ -1,22 +1,21 @@
 ---
-title: "Wort-Versteck — Didaktische Hinweise"
+title: "Wort-Versteck"
+description: "Interaktive Lückentexte in drei Schritten erstellen – optimiert für den Beamer."
 ---
 
-# Wort‑Versteck (Word Reveal)
+# Wort-Versteck
 
-Live: https://words.tinfo.space/
-Repo: https://github.com/HansTydecks/word-reveal
+<ToolInfo id="word-reveal" />
 
-Kurzbeschreibung
+Ein interaktiver Lückentext-Generator in drei Schritten: **Text eingeben → Wörter auswählen → Lückentext verwenden.** Per Klick auf eine Lücke wird das versteckte Wort aufgedeckt.
 
-Interaktiver Lückentext‑Generator: Texte eingeben, Wörter auswählen, Lückentext verwenden.
+## Im Unterricht
 
-Didaktische Hinweise
+- **Einsatz:** Lückentexte für Grammatikübungen, Vokabeltests oder Leseverständnis – gemeinsam am Beamer oder Smartboard.
+- **Differenzierung:** Wörter unterschiedlicher Schwierigkeit verstecken; Schriftgröße (14–28 px) und Farbschema an den Raum anpassen.
+- **Lesefreundlich:** Auswahl verschiedener Schriften, darunter das dyslexie-freundliche OpenDyslexic.
+- **Mehrere Texte:** Textabschnitte lassen sich in Tabs verwalten und bleiben im Browser gespeichert.
 
-- Einsatz: Lückentexte für Grammatikübungen, Vokabeltests oder Leseverständnis.
-- Differenzierung: Wähle Wörter unterschiedlicher Schwierigkeit; verwende größere Schrift bzw. Beamer‑Modus für Präsentationen.
-- Datenschutz: Keine Nutzerkonten — alles läuft lokal im Browser.
+## Datenschutz
 
-Feedback & Beitrag
-
-Bitte Issues im GitHub‑Repository öffnen.
+Keine Nutzerkonten – alles läuft lokal im Browser.
