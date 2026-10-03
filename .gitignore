@@ -4,3 +4,7 @@ docs/.vitepress/cache/
 
 # Vendored Pyodide runtime — recreated from node_modules by scripts/vendor-pyodide.mjs
 docs/public/pyodide/
+
+# Upload ZIPs built from docs/.vitepress/dist by package_for_upload.js / create-zip.js
+website_upload.zip
+website-upload.zip
