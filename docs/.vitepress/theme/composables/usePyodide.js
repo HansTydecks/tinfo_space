@@ -1,60 +1,165 @@
-// One shared Pyodide instance per page, plus a run queue so the stdout/stdin/stderr
-// handlers of different <PyRunner> blocks never overlap.
+// Fernsteuerung für den Python-Worker (docs/public/pyworker.js).
 //
-// SSR-safe: nothing here touches the DOM at import time; Pyodide itself is only
-// pulled in via a runtime import() of a /public URL when the first "Run" happens.
+// Pyodide läuft bewusst NICHT im Haupt-Thread: ein Web Worker hat kein
+// `document`, kein `window` und kein `localStorage`, also kann Schülercode die
+// Seite nicht anfassen. Und nur deshalb lassen sich eine Endlosschleife und
+// ein hängendes Programm überhaupt abbrechen – per worker.terminate().
+//
+// Ein Worker pro Seite, plus eine Warteschlange, damit die stdout-Handler
+// verschiedener <PyRunner>-Blöcke sich nicht überlagern.
+//
+// SSR-sicher: hier wird beim Import nichts angefasst; der Worker entsteht erst
+// beim ersten „Ausführen“.
 
 import { ref } from 'vue'
 
-let pyodidePromise = null
-
 export const pyodideStatus = ref('idle') // 'idle' | 'loading' | 'ready' | 'error'
-export const pyodideBusy = ref(false)    // true while ANY runner is executing
+export const pyodideBusy = ref(false)    // true, solange IRGENDEIN Runner läuft
 
-// Pyodide lives in /public, so Vite will not let us import() it as a module
-// ("can only be referenced via HTML tags"). We inject the UMD build with a
-// <script> tag instead; it sets globalThis.loadPyodide.
-function loadPyodideScript(src) {
-  return new Promise((resolve, reject) => {
-    if (typeof globalThis.loadPyodide === 'function') return resolve()
+export const ABGESCHNITTEN =
+  '\n[Ausgabe abgeschnitten – das Programm hat zu viel ausgegeben.]\n'
 
-    let script = document.querySelector('script[data-pyodide-loader]')
-    if (!script) {
-      script = document.createElement('script')
-      script.src = src
-      script.async = true
-      script.setAttribute('data-pyodide-loader', '')
-      document.head.appendChild(script)
+// Dateien in docs/public/ bekommen von Vite KEINEN Inhalts-Hash, und GitHub
+// Pages liefert sie mit max-age aus. Nach jeder Änderung an
+// docs/public/pyworker.js diese Zahl hochzählen, sonst bekommen Schüler bis zu
+// zehn Minuten lang die alte Fassung aus dem Browser-Cache.
+const PYWORKER_VERSION = '3'
+
+let worker = null
+let naechsteId = 1
+let aktiverLauf = null // { id, onOutput, resolve, timer }
+
+function basisUrl() {
+  return import.meta.env.BASE_URL || '/'
+}
+
+function getWorker() {
+  if (worker) return worker
+  worker = new Worker(`${basisUrl()}pyworker.js?v=${PYWORKER_VERSION}`)
+  worker.addEventListener('message', onMessage)
+  worker.addEventListener('error', onError)
+  return worker
+}
+
+// Worker wegwerfen. Der nächste Lauf startet einen frischen – das kostet den
+// Pyodide-Boot (ein paar Sekunden), räumt aber auch einen vergifteten
+// Interpreter auf (z. B. nach `import builtins; builtins.print = ...`).
+function workerWegwerfen() {
+  if (worker) {
+    worker.removeEventListener('message', onMessage)
+    worker.removeEventListener('error', onError)
+    worker.terminate()
+    worker = null
+  }
+  pyodideStatus.value = 'idle'
+}
+
+function beenden(lauf, ergebnis) {
+  clearTimeout(lauf.timer)
+  if (aktiverLauf === lauf) aktiverLauf = null
+  lauf.resolve(ergebnis)
+}
+
+// Laufenden Lauf hart abbrechen. Geht nur, weil Python im Worker sitzt.
+function abbrechen(grund) {
+  const lauf = aktiverLauf
+  workerWegwerfen()
+  if (lauf) beenden(lauf, { status: grund })
+}
+
+function onMessage(ereignis) {
+  const nachricht = ereignis.data || {}
+
+  if (nachricht.type === 'ready') {
+    pyodideStatus.value = 'ready'
+    return
+  }
+
+  const lauf = aktiverLauf
+  // Nachzügler eines abgebrochenen Laufs verwerfen
+  if (!lauf || nachricht.id !== lauf.id) return
+
+  switch (nachricht.type) {
+    case 'out':
+    case 'err':
+      lauf.onOutput(nachricht.text, nachricht.type)
+      break
+    case 'truncated':
+      lauf.onOutput(ABGESCHNITTEN, 'err')
+      break
+    case 'done':
+      beenden(lauf, { status: 'ok' })
+      break
+    case 'error':
+      beenden(lauf, { status: 'error', message: nachricht.message })
+      break
+  }
+}
+
+function onError(ereignis) {
+  const lauf = aktiverLauf
+  workerWegwerfen()
+  pyodideStatus.value = 'error'
+  if (lauf) {
+    beenden(lauf, {
+      status: 'load-error',
+      message: ereignis?.message || 'Der Python-Worker konnte nicht geladen werden.',
+    })
+  }
+}
+
+/**
+ * Führt Code im Worker aus. Lehnt nie ab, sondern liefert immer
+ * { status: 'ok' | 'error' | 'timeout' | 'stopped' | 'load-error', message? },
+ * damit die Komponente nur einen Pfad behandeln muss.
+ */
+export function runInWorker({ code, stdin = [], onOutput, timeoutMs = 10000 }) {
+  if (typeof Worker === 'undefined') {
+    // Absichtlich KEIN Rückfall auf den Haupt-Thread: das war genau die Lücke,
+    // die hier geschlossen wird.
+    pyodideStatus.value = 'error'
+    return Promise.resolve({
+      status: 'load-error',
+      message: 'Dieser Browser unterstützt keine Web Worker – bitte einen aktuellen Browser nutzen.',
+    })
+  }
+
+  return new Promise((resolve) => {
+    let w
+    try {
+      w = getWorker()
+    } catch (err) {
+      pyodideStatus.value = 'error'
+      resolve({ status: 'load-error', message: String(err?.message || err) })
+      return
     }
-    script.addEventListener('load', () => resolve(), { once: true })
-    script.addEventListener(
-      'error',
-      () => reject(new Error(`Konnte ${src} nicht laden.`)),
-      { once: true },
-    )
+
+    if (pyodideStatus.value !== 'ready') pyodideStatus.value = 'loading'
+
+    const id = naechsteId++
+    aktiverLauf = {
+      id,
+      onOutput,
+      resolve,
+      timer: setTimeout(() => abbrechen('timeout'), timeoutMs),
+    }
+
+    w.postMessage({ type: 'run', id, code, stdin, base: basisUrl() })
   })
 }
 
-export function loadPyodideOnce() {
-  if (!pyodidePromise) {
-    pyodideStatus.value = 'loading'
-    const base = import.meta.env.BASE_URL || '/'
-    pyodidePromise = loadPyodideScript(`${base}pyodide/pyodide.js`)
-      .then(() => globalThis.loadPyodide({ indexURL: `${base}pyodide/` }))
-      .then((py) => {
-        pyodideStatus.value = 'ready'
-        return py
-      })
-      .catch((err) => {
-        pyodideStatus.value = 'error'
-        pyodidePromise = null // allow a retry
-        throw err
-      })
-  }
-  return pyodidePromise
+/** Stopp-Knopf: bricht den laufenden Lauf ab. */
+export function stopRun() {
+  if (aktiverLauf) abbrechen('stopped')
 }
 
-// Serialise executions across all runners on the page.
+/** „Python neu starten“: frischer Interpreter, auch ohne laufendes Programm. */
+export function restartWorker() {
+  if (aktiverLauf) abbrechen('stopped')
+  else workerWegwerfen()
+}
+
+// Läufe aller Runner einer Seite serialisieren – wir haben nur einen Worker.
 let queue = Promise.resolve()
 export function runExclusive(task) {
   const result = queue.then(task)
