@@ -6,6 +6,7 @@
     "test:silent-teacher": "node scripts/verify-silent-teacher.mjs",
     "test:db-uebungen": "node scripts/verify-db-uebungen.mjs",
     "test:tools": "node scripts/verify-tools.mjs",
+    "test:pyrunner": "node scripts/verify-pyrunner-sandbox.mjs",
     "postinstall": "node scripts/vendor-pyodide.mjs || true",
     "docs:dev": "npm run vendor:pyodide && vitepress dev docs",
     "docs:build": "npm run vendor:pyodide && vitepress build docs",

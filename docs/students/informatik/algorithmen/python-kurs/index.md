@@ -22,15 +22,30 @@ print("Hallo", name)
 </PyRunner>
 
 - **▶ Ausführen** startet das Programm. Beim allerersten Mal lädt der Browser einmalig die
-  Python-Umgebung (ein paar Sekunden) – danach geht es sofort.
+  Python-Umgebung (ein paar Sekunden) – danach geht es sofort. Nach einem Abbruch lädt sie
+  einmal neu.
 - Du kannst den Code **direkt bearbeiten** und erneut ausführen. Tipp: `Strg`+`Enter` führt aus.
 - **↺ Zurücksetzen** stellt den ursprünglichen Code wieder her.
 - Braucht ein Programm eine Eingabe (`input()`), erscheint ein Feld **„Eingaben"**. Trag dort
   vorher ein, was das Programm nacheinander einlesen soll – eine Eingabe pro Zeile.
+- **■ Stoppen** erscheint, solange ein Programm läuft. Nach 10 Sekunden bricht es außerdem
+  von allein ab – meistens steckt dann eine Endlosschleife drin. Die Seite bleibt dabei
+  bedienbar, du musst den Tab nicht schließen.
+- Wer sehr viel ausgibt, bekommt den Hinweis „Ausgabe abgeschnitten". Das schützt nur die
+  Seite – dein Programm läuft normal weiter.
+- **↻ Python neu starten** setzt die Python-Umgebung zurück, falls sich ein Programm darin
+  verrannt hat.
 
 ::: info Deine Daten bleiben bei dir
 Python läuft komplett **in deinem Browser**. Dein Code wird nirgendwo hochgeladen und nicht
 gespeichert. Wenn du etwas behalten willst, kopiere es dir heraus.
+:::
+
+::: info Python läuft in einem eigenen Bereich
+Dein Programm läuft in einem abgeschotteten Rechenbereich des Browsers (einem **Web Worker**).
+Dort gibt es keine Webseite: Dein Code kann diese Seite nicht verändern, keine gespeicherten
+Fortschritte löschen, nichts aus dem Netz nachladen und den Tab nicht blockieren.
+Ausprobieren ist also ausdrücklich erlaubt – schlimmstenfalls bricht dein eigenes Programm ab.
 :::
 
 ## Silent Teacher: erst ausprobieren, dann lesen
