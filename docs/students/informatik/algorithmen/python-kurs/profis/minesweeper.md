@@ -12,7 +12,6 @@ outline: deep
 
 ::: tip Vorgehen
 Großes Projekt – wir bauen es in **fünf Etappen**. Führe jede Etappe aus, bevor du weiterliest.
-Nutze den [Problemlöseprozess](../grundlagen/problemloeseprozess).
 :::
 
 ## Etappe 1: Das Spielfeld

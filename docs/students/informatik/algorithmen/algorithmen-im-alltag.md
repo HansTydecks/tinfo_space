@@ -30,7 +30,7 @@ Immer öfter treffen Algorithmen **Entscheidungen über Menschen**:
 - **Wahlcomputer:** Werden Stimmen korrekt gezählt? Kann man das überprüfen?
 - **Bewerbungen, Kredite:** Wer kommt in die nächste Runde?
 
-Im Kern sind das oft **verknüpfte Bedingungen** (→ [PyTurtle Block 3](./pyturtle/block3)):
+Im Kern sind das oft **verknüpfte Bedingungen** (→ [Python-Kurs: Bedingungen kombinieren](./python-kurs/einsteiger/selektion)):
 
 ```python
 if hindernis_erkannt and geschwindigkeit > 30:

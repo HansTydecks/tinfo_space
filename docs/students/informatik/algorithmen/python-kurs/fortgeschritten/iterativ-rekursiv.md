@@ -94,7 +94,7 @@ print(fak_iterativ(6), fak_rekursiv(6))
 | Baum-/Teilprobleme | umständlich | oft die natürliche Lösung |
 
 Rekursion glänzt bei baumartigen Strukturen – z. B. beim Aufdecken im
-[Minesweeper-Projekt](../komplexe-aufgaben/minesweeper).
+[Minesweeper-Projekt](../profis/minesweeper).
 
 ## Aufgaben
 

@@ -13,7 +13,7 @@ description: "Eigene Bausteine schreiben: Funktionen mit Parametern und Rückgab
 ## Von „benutzen" zu „schreiben"
 
 `print()`, `len()`, `.upper()` hast du schon benutzt (siehe
-[Methoden](../grundlagen/methoden)). Jetzt schreibst du **eigene** Funktionen – für Code, den du
+[Methoden](./methoden)). Jetzt schreibst du **eigene** Funktionen – für Code, den du
 öfter brauchst.
 
 ## Definition und Aufruf

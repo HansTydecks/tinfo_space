@@ -160,78 +160,68 @@ const algorithmen: DefaultTheme.SidebarItem[] = [
     ]
   },
   {
-    text: 'Python mit Turtle · Klasse 10',
-    collapsed: true,
-    items: [
-      { text: 'Einführung in PyTurtle', link: `${A}/pyturtle/block0` },
-      { text: 'Block 1: Variablen', link: `${A}/pyturtle/block1` },
-      { text: 'Block 2: Datentypen & Verzweigungen', link: `${A}/pyturtle/block2` },
-      { text: 'Block 3: Verknüpfte Bedingungen & while', link: `${A}/pyturtle/block3` },
-      { text: 'Block 4: for-Schleifen', link: `${A}/pyturtle/block4` },
-      { text: 'Block 5: Bibliotheken & Funktionen', link: `${A}/pyturtle/block5` },
-      { text: 'Block 6: Komplexe Übungen', link: `${A}/pyturtle/block6` },
-      { text: 'Turtle-Wiki', link: `${A}/pyturtle/pyturtle_wiki` }
-    ]
-  },
-  {
-    text: 'Python-Kurs · Oberstufe',
+    text: 'Python-Kurs',
     collapsed: true,
     items: [
       { text: 'Kursübersicht', link: `${PK}/` },
       { text: '🤫 Silent Teacher', link: `${PK}/silent-teacher` },
+      { text: '📖 Wiki', link: `${PK}/wiki` },
       {
-        text: '1 · Grundlagen',
-        collapsed: true,
-        items: [
-          { text: 'Übersicht', link: `${PK}/grundlagen/` },
-          { text: 'Datentypen', link: `${PK}/grundlagen/datentypen` },
-          { text: 'Operatoren', link: `${PK}/grundlagen/operatoren` },
-          { text: 'Methoden', link: `${PK}/grundlagen/methoden` },
-          { text: 'Problemlöseprozess', link: `${PK}/grundlagen/problemloeseprozess` }
-        ]
-      },
-      {
-        text: '2 · Für Einsteiger',
+        text: '1 · Für Einsteiger',
         collapsed: true,
         items: [
           { text: 'Übersicht', link: `${PK}/einsteiger/` },
           { text: 'Erste Schritte', link: `${PK}/einsteiger/erste-schritte` },
+          { text: 'Datentypen', link: `${PK}/einsteiger/datentypen` },
           { text: 'Ausgabe mit print()', link: `${PK}/einsteiger/ausgabe` },
+          { text: 'Operatoren', link: `${PK}/einsteiger/operatoren` },
           { text: 'Selektion (if/elif/else)', link: `${PK}/einsteiger/selektion` },
           { text: 'while-Schleife', link: `${PK}/einsteiger/while-schleife` },
           { text: 'for-Schleife', link: `${PK}/einsteiger/for-schleife` },
           { text: 'Listen', link: `${PK}/einsteiger/listen` },
+          { text: 'Methoden', link: `${PK}/einsteiger/methoden` },
           { text: 'Funktionen', link: `${PK}/einsteiger/funktionen` },
           { text: 'Eingabe mit input()', link: `${PK}/einsteiger/eingabe` }
         ]
       },
       {
-        text: '3 · Für Fortgeschrittene',
+        text: '2 · Für Fortgeschrittene',
         collapsed: true,
         items: [
           { text: 'Übersicht', link: `${PK}/fortgeschritten/` },
-          { text: 'Schleifen steuern', link: `${PK}/fortgeschritten/schleifen-steuern` },
-          { text: 'do-while & try/except', link: `${PK}/fortgeschritten/do-while` },
-          { text: 'Iterativ & rekursiv', link: `${PK}/fortgeschritten/iterativ-rekursiv` },
-          { text: 'Komplexität & O-Notation', link: `${PK}/fortgeschritten/komplexitaet` },
-          { text: 'Lineare Suche, Max/Min, Mittelwert', link: `${PK}/fortgeschritten/lineare-suche` },
-          { text: 'Binäre Suche', link: `${PK}/fortgeschritten/binaere-suche` },
-          { text: 'Primzahlen & GGT', link: `${PK}/fortgeschritten/primzahlen-teiler` },
-          { text: 'Fibonacci', link: `${PK}/fortgeschritten/fibonacci` },
-          { text: 'Ziffern & Stellenwerte', link: `${PK}/fortgeschritten/ziffern` },
-          { text: 'Palindrome', link: `${PK}/fortgeschritten/palindrom` },
-          { text: 'Textanalyse', link: `${PK}/fortgeschritten/textanalyse` },
-          { text: 'Sortieren (Bubble & Selection)', link: `${PK}/fortgeschritten/sortieren` }
+          { text: '1 · Erweiterter Algorithmusbegriff', link: `${PK}/fortgeschritten/algorithmusbegriff` },
+          { text: '2 · Strukturierte Datentypen', link: `${PK}/fortgeschritten/strukturierte-datentypen` },
+          { text: '↳ Textanalyse', link: `${PK}/fortgeschritten/textanalyse` },
+          { text: '↳ Ziffern & Stellenwerte', link: `${PK}/fortgeschritten/ziffern` },
+          { text: '↳ Palindrome', link: `${PK}/fortgeschritten/palindrom` },
+          { text: '3 · Unterprogramme', link: `${PK}/fortgeschritten/unterprogramme` },
+          { text: '4 · Klassen & Objekte', link: `${PK}/fortgeschritten/klassen-objekte` },
+          { text: '5 · Vererbung & Polymorphie', link: `${PK}/fortgeschritten/vererbung` },
+          { text: '6 · OOP-Projekt: Mediathek', link: `${PK}/fortgeschritten/oop-projekt` },
+          { text: '7 · Iteration & Rekursion', link: `${PK}/fortgeschritten/iterativ-rekursiv` },
+          { text: '↳ Schleifen steuern', link: `${PK}/fortgeschritten/schleifen-steuern` },
+          { text: '↳ do-while & try/except', link: `${PK}/fortgeschritten/do-while` },
+          { text: '↳ Fibonacci', link: `${PK}/fortgeschritten/fibonacci` },
+          { text: '8 · Fraktale', link: `${PK}/fortgeschritten/fraktale` },
+          { text: '9 · Lineare Suche, Max/Min', link: `${PK}/fortgeschritten/lineare-suche` },
+          { text: '9 · Binäre Suche', link: `${PK}/fortgeschritten/binaere-suche` },
+          { text: '10 · Bubble-, Selection-, Insertion Sort', link: `${PK}/fortgeschritten/sortieren` },
+          { text: '10 · Quicksort & Mergesort', link: `${PK}/fortgeschritten/sortieren-schnell` },
+          { text: '11 · Effizienz & Komplexität', link: `${PK}/fortgeschritten/komplexitaet` }
         ]
       },
       {
-        text: '4 · Komplexe Aufgaben',
+        text: '3 · Profis',
         collapsed: true,
         items: [
-          { text: 'Übersicht', link: `${PK}/komplexe-aufgaben/` },
-          { text: 'Dezimal ↔ Binär', link: `${PK}/komplexe-aufgaben/dezimal-binaer` },
-          { text: 'Projekt: Ratespiel', link: `${PK}/komplexe-aufgaben/ratespiel` },
-          { text: 'Projekt: Minesweeper', link: `${PK}/komplexe-aufgaben/minesweeper` }
+          { text: 'Übersicht', link: `${PK}/profis/` },
+          { text: '12 · Schwere Probleme', link: `${PK}/profis/schwere-probleme` },
+          { text: '↳ Primzahlen, Primfaktoren & GGT', link: `${PK}/profis/primzahlen-teiler` },
+          { text: '13 · Grenzen der Berechenbarkeit', link: `${PK}/profis/grenzen-der-berechenbarkeit` },
+          { text: '14 · Komplexe Probleme lösen', link: `${PK}/profis/komplexe-probleme` },
+          { text: 'Projekt: Ratespiel', link: `${PK}/profis/ratespiel` },
+          { text: 'Projekt: Minesweeper', link: `${PK}/profis/minesweeper` },
+          { text: 'Vertiefung: Dezimal ↔ Binär', link: `${PK}/profis/dezimal-binaer` }
         ]
       }
     ]
