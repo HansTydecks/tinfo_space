@@ -61,4 +61,4 @@ Weitere Ideen: Herzschlag-Animation, Würfel beim Schütteln, Schrittzähler, ei
 
 ## Weiterlesen
 
-- Vom Block zum Text: [PyTurtle-Einführung](./pyturtle/block0) <Badge type="tip" text="Klasse 10" />
+- Vom Block zum Text: [Python-Kurs](./python-kurs/)

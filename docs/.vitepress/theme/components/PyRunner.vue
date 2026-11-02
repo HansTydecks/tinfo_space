@@ -236,6 +236,23 @@ function reset() {
   hasRun.value = false
 }
 
+// Open the current code in Python Tutor (pythontutor.com) for a step-by-step visualisation.
+// Preset input() lines are passed along via rawInputLstJSON.
+function openPythonTutor() {
+  const lines = stdinText.value.length ? stdinText.value.split('\n') : []
+  const params = [
+    'code=' + encodeURIComponent(code.value),
+    'cumulative=false',
+    'heapPrimitives=nevernest',
+    'mode=display',
+    'origin=opt-frontend.js',
+    'py=311',
+    'rawInputLstJSON=' + encodeURIComponent(JSON.stringify(lines)),
+    'textReferences=false',
+  ]
+  window.open('https://pythontutor.com/visualize.html#' + params.join('&'), '_blank', 'noopener')
+}
+
 async function run() {
   if (runDisabled.value) return
   output.value = []
@@ -299,6 +316,11 @@ function restart() {
         >▶&nbsp;Ausführen</button>
         <button v-if="running" class="py-runner__btn" @click="stop">■&nbsp;Stoppen</button>
         <button class="py-runner__btn" :disabled="running" @click="reset">↺&nbsp;Zurücksetzen</button>
+        <button
+          class="py-runner__btn"
+          title="Code Schritt für Schritt in Python Tutor ansehen (neuer Tab)"
+          @click="openPythonTutor"
+        >🔍&nbsp;Schritt für Schritt</button>
         <button
           v-if="hasRun"
           class="py-runner__btn"

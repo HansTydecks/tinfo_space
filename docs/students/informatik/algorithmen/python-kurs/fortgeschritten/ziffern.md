@@ -84,7 +84,7 @@ print(rueckwaerts(1234))   # 4321
 :::tip Brücke zu Dezimal ↔ Binär
 Genau dieses „letzte Ziffer abtrennen, Zahl verkleinern" steckt auch hinter der Umrechnung ins
 Binärsystem – nur mit `% 2` und `// 2` statt 10. Siehe
-[Dezimal ↔ Binär](../komplexe-aufgaben/dezimal-binaer).
+[Dezimal ↔ Binär](../profis/dezimal-binaer).
 :::
 
 ## Aufgaben

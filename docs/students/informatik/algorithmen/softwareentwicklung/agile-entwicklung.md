@@ -63,4 +63,3 @@ Wenn mehrere Personen am selben Code arbeiten, braucht man eine **Versionsverwal
 ## Weiterlesen
 
 - [Projektmanagement](./projektmanagement)
-- Systematisch programmieren: [Problemlöseprozess im Python-Kurs](../python-kurs/grundlagen/problemloeseprozess)

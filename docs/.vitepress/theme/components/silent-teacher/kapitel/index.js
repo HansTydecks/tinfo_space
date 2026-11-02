@@ -8,9 +8,9 @@ export const KURS_PFAD = `${PK}/`
 export const SILENT_TEACHER_PFAD = `${PK}/silent-teacher`
 
 export const ABSCHNITTE = [
-  { id: 'grundlagen', titel: 'Grundlagen' },
   { id: 'einsteiger', titel: 'Für Einsteiger' },
   { id: 'fortgeschritten', titel: 'Für Fortgeschrittene' },
+  { id: 'profis', titel: 'Profis' },
 ]
 
 const kapitel = (abschnitt, id, titel, level) => ({
@@ -22,36 +22,28 @@ const kapitel = (abschnitt, id, titel, level) => ({
 })
 
 export const KAPITEL = [
-  // Grundlagen
-  kapitel('grundlagen', 'datentypen', 'Datentypen', [
-    'Welcher Typ?',
-    'Umwandeln',
-    'Zeichen und Elemente',
-  ]),
-  kapitel('grundlagen', 'operatoren', 'Operatoren', [
-    'Punkt vor Strich',
-    'Teilen und Rest',
-    'Vergleichen und verknüpfen',
-    'Kurzschreibweisen',
-  ]),
-  kapitel('grundlagen', 'methoden', 'Methoden', [
-    'String-Methoden',
-    'Zerlegen mit split',
-    'Listen-Methoden',
-    'Zufall und Runden',
-  ]),
-
   // Für Einsteiger
   kapitel('einsteiger', 'erste-schritte', 'Erste Schritte', [
     'Mit Variablen rechnen',
     'Werte überschreiben',
     'Zwei Variablen',
   ]),
+  kapitel('einsteiger', 'datentypen', 'Datentypen', [
+    'Welcher Typ?',
+    'Umwandeln',
+    'Zeichen und Elemente',
+  ]),
   kapitel('einsteiger', 'ausgabe', 'Ausgabe mit print()', [
     'Mehrere Werte',
     'Plus bei Text',
     'f-Strings',
     'sep und end',
+  ]),
+  kapitel('einsteiger', 'operatoren', 'Operatoren', [
+    'Punkt vor Strich',
+    'Teilen und Rest',
+    'Vergleichen und verknüpfen',
+    'Kurzschreibweisen',
   ]),
   kapitel('einsteiger', 'selektion', 'Selektion', [
     'if ohne else',
@@ -76,6 +68,12 @@ export const KAPITEL = [
     'Listen auswerten',
     'Slicing',
   ]),
+  kapitel('einsteiger', 'methoden', 'Methoden', [
+    'String-Methoden',
+    'Zerlegen mit split',
+    'Listen-Methoden',
+    'Zufall und Runden',
+  ]),
   kapitel('einsteiger', 'funktionen', 'Funktionen', [
     'def und return',
     'Mehrere Parameter',
@@ -89,6 +87,22 @@ export const KAPITEL = [
   ]),
 
   // Für Fortgeschrittene
+  kapitel('fortgeschritten', 'textanalyse', 'Textanalyse', [
+    'Zerlegen',
+    'Dictionaries',
+    'Zählen',
+    'Das Häufigste',
+  ]),
+  kapitel('fortgeschritten', 'ziffern', 'Ziffern & Stellenwerte', [
+    'Letzte Ziffer',
+    'Quersumme',
+    'Rückwärts',
+  ]),
+  kapitel('fortgeschritten', 'palindrom', 'Palindrome', [
+    'Umkehren',
+    'Aufräumen',
+    'Mit einer Schleife',
+  ]),
   kapitel('fortgeschritten', 'schleifen-steuern', 'Schleifen steuern', [
     'break',
     'continue',
@@ -105,10 +119,10 @@ export const KAPITEL = [
     'Reihenfolge der Aufrufe',
     'Ohne Basisfall',
   ]),
-  kapitel('fortgeschritten', 'komplexitaet', 'Komplexität', [
-    'Schritte zählen',
-    'Verschachtelte Schleifen',
-    'Halbieren',
+  kapitel('fortgeschritten', 'fibonacci', 'Fibonacci', [
+    'Iterativ',
+    'Rekursiv',
+    'Aufrufe zählen',
   ]),
   kapitel('fortgeschritten', 'lineare-suche', 'Lineare Suche, Max/Min', [
     'Lineare Suche',
@@ -121,38 +135,24 @@ export const KAPITEL = [
     'Ein Schritt',
     'Schritte zählen',
   ]),
-  kapitel('fortgeschritten', 'primzahlen-teiler', 'Primzahlen & GGT', [
-    'Teilbarkeit',
-    'Teiler zählen',
-    'Primzahltest',
-    'Euklid',
-  ]),
-  kapitel('fortgeschritten', 'fibonacci', 'Fibonacci', [
-    'Iterativ',
-    'Rekursiv',
-    'Aufrufe zählen',
-  ]),
-  kapitel('fortgeschritten', 'ziffern', 'Ziffern & Stellenwerte', [
-    'Letzte Ziffer',
-    'Quersumme',
-    'Rückwärts',
-  ]),
-  kapitel('fortgeschritten', 'palindrom', 'Palindrome', [
-    'Umkehren',
-    'Aufräumen',
-    'Mit einer Schleife',
-  ]),
-  kapitel('fortgeschritten', 'textanalyse', 'Textanalyse', [
-    'Zerlegen',
-    'Dictionaries',
-    'Zählen',
-    'Das Häufigste',
-  ]),
   kapitel('fortgeschritten', 'sortieren', 'Sortieren', [
     'Tauschen',
     'Bubblesort',
     'Selectionsort',
     'Vertauschungen zählen',
+  ]),
+  kapitel('fortgeschritten', 'komplexitaet', 'Komplexität', [
+    'Schritte zählen',
+    'Verschachtelte Schleifen',
+    'Halbieren',
+  ]),
+
+  // Profis
+  kapitel('profis', 'primzahlen-teiler', 'Primzahlen, Primfaktoren & GGT', [
+    'Teilbarkeit',
+    'Teiler zählen',
+    'Primzahltest',
+    'Euklid',
   ]),
 ]
 

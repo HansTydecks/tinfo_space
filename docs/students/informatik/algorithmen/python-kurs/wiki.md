@@ -1,11 +1,11 @@
 ---
-title: "Python Turtle - Cheat Sheet & Wiki"
-description: "Schnelle Übersicht aller wichtigen Befehle, Regeln und Funktionen aus dem Kurs"
+title: "Python-Wiki – Cheat Sheet"
+description: "Schnelle Übersicht aller wichtigen Python-Befehle, Regeln und Funktionen aus dem Python-Kurs."
 ---
 
-# 🐢 Python Turtle - Cheat Sheet & Wiki
+# 📖 Python-Wiki – Cheat Sheet
 
-Eine schnelle Übersicht aller wichtigen Befehle und Regeln aus dem Python-Kurs.
+Eine schnelle Übersicht aller wichtigen Befehle und Regeln aus dem [Python-Kurs](./). Jedes Thema wird dort ausführlich erklärt – hier kannst du schnell nachschlagen.
 
 ## 📚 Algorithmus-Grundlagen
 
@@ -18,32 +18,6 @@ Ein Algorithmus ist eine Handlungsanweisung zum Lösen einer Aufgabe bzw. einer 
 - **Endlichkeit**: Der Algorithmus hat endliche Länge
 - **Wiederholbarkeit**: Bei gleichen Eingaben gleiche Ausgaben
 - **Eindeutigkeit**: Für jeden Schritt gibt es genau einen Folgeschritt
-
-## 🚀 Grundlagen - Immer zuerst!
-
-```python
-import turtle
-t = turtle.Turtle()
-t.speed(5)  # 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
-```
-
-## 🎨 Turtle-Befehle
-
-| Befehl | Was passiert | Beispiel |
-|--------|--------------|----------|
-| `t.forward(zahl)` | Tobi geht vorwärts | `t.forward(100)` |
-| `t.backward(zahl)` | Tobi geht rückwärts | `t.backward(50)` |
-| `t.right(grad)` | Tobi dreht sich rechts | `t.right(90)` |
-| `t.left(grad)` | Tobi dreht sich links | `t.left(45)` |
-| `t.circle(radius)` | Tobi zeichnet einen **Kreis** | `t.circle(30)` |
-| `t.circle(radius, grad)` | Tobi zeichnet einen **Halbkreis** | `t.circle(20, 180)` |
-| `t.goto(x, y)` | Tobi springt zur Position | `t.goto(100, 50)` |
-| `t.penup()` | Stift heben (nicht zeichnen) | `t.penup()` |
-| `t.pendown()` | Stift senken (zeichnen) | `t.pendown()` |
-| `t.color("farbe")` | Farbe ändern | `t.color("red")` |
-| `t.write("text")` | Text schreiben | `t.write("Hallo!")` |
-| `t.heading()` | Aktuelle Richtung abfragen (0-360°) | `if t.heading() == 90:` |
-| `t.pos()` | Aktuelle Position abfragen | `t.write(t.pos())`|
 
 ## 📊 Variablen & Behältermodell
 
@@ -114,18 +88,18 @@ nachricht = "Ich bin " + str(25) + " Jahre alt"
 # Einfache Bedingung
 if bedingung:
     # Wird ausgeführt wenn wahr
-    t.write("Wahr!")
+    print("Wahr!")
 else:
     # Wird ausgeführt wenn falsch
-    t.write("Falsch!")
+    print("Falsch!")
 
 # Mehrfache Bedingungen
 if x < 0:
-    t.write("Negativ")
+    print("Negativ")
 elif x == 0:
-    t.write("Null")
+    print("Null")
 else:
-    t.write("Positiv")
+    print("Positiv")
 ```
 
 ## 🔄 Schleifen
@@ -134,13 +108,13 @@ else:
 
 ```python
 for i in range(5):          # 0, 1, 2, 3, 4
-    t.forward(10)
+    print(i)
 
 for i in range(2, 8):       # 2, 3, 4, 5, 6, 7
-    t.write(i)
+    print(i)
 
 for i in range(0, 10, 2):   # 0, 2, 4, 6, 8 (Schrittweite 2)
-    t.circle(i)
+    print(i)
 ```
 
 :::details Range-Varianten
@@ -154,7 +128,7 @@ for i in range(0, 10, 2):   # 0, 2, 4, 6, 8 (Schrittweite 2)
 ```python
 x = 0
 while x < 5:
-    t.forward(x)
+    print(x)
     x = x + 1
 ```
 
@@ -189,8 +163,8 @@ alter = int(input("Alter: "))  # Integer!
 
 ```python
 def meine_funktion():
-    t.forward(50)
-    t.left(90)
+    print("Hallo!")
+    print("Ich bin eine Funktion.")
 
 # Aufrufen:
 meine_funktion()
@@ -199,27 +173,24 @@ meine_funktion()
 ### Funktion mit Parametern
 
 ```python
-def quadrat(groesse):
-    for i in range(4):
-        t.forward(groesse)
-        t.left(90)
+def begruessen(name):
+    for i in range(3):
+        print("Hallo", name)
 
 # Aufrufen:
-quadrat(50)
+begruessen("Max")
 ```
 
 ### Funktion mit mehreren Parametern
 
 ```python
-def rechteck(breite, hoehe):
-    for i in range(2):
-        t.forward(breite)
-        t.left(90)
-        t.forward(hoehe)
-        t.left(90)
+def rechteck_ausgeben(breite, hoehe):
+    print("Breite:", breite)
+    print("Höhe:", hoehe)
+    print("Fläche:", breite * hoehe)
 
 # Aufrufen:
-rechteck(80, 40)
+rechteck_ausgeben(80, 40)
 ```
 
 ### Funktion mit Rückgabe
@@ -231,7 +202,7 @@ def addieren(a, b):
 
 # Verwenden:
 summe = addieren(5, 3)
-t.write(summe)
+print(summe)
 ```
 
 ## 📚 Wichtige Bibliotheken
@@ -272,7 +243,7 @@ potenz = math.pow(2, 3)  # = 8.0
 | Fehler | Richtig | Falsch |
 |--------|---------|--------|
 | **Doppelpunkt vergessen** | `if x == 5:` | `if x == 5` |
-| **Einrückung vergessen** | `    t.forward(10)` | `t.forward(10)` |
+| **Einrückung vergessen** | `    print(x)` | `print(x)` |
 | **= statt ==** | `if x == 5:` | `if x = 5:` |
 | **String + Zahl** | `"Alter: " + str(15)` | `"Alter: " + 15` |
 | **Groß-/Kleinschreibung** | `True` | `true` |
@@ -285,7 +256,7 @@ potenz = math.pow(2, 3)  # = 8.0
 ```python
 name = "Max"
 alter = 15
-t.write(f"Hallo {name}, du bist {alter} Jahre alt!")
+print(f"Hallo {name}, du bist {alter} Jahre alt!")
 ```
 
 ### Listen
@@ -299,23 +270,7 @@ erste_zahl = zahlen[0]  # = 1
 
 # Durch Liste gehen:
 for farbe in farben:
-    t.color(farbe)
-    t.circle(20)
-```
-
-### Mehrere Turtle-Objekte
-
-```python
-import turtle
-
-tobi = turtle.Turtle()
-lisa = turtle.Turtle()
-
-tobi.color("red")
-lisa.color("blue")
-
-tobi.forward(100)
-lisa.backward(100)
+    print(farbe)
 ```
 
 ## 🔧 Debugging-Tipps
@@ -330,10 +285,10 @@ print(f"x hat den Wert: {x}")
 
 3. **Kommentare nutzen**: Erkläre schwierige Stellen
 ```python
-# Hier wird das Quadrat gezeichnet
-for i in range(4):
-    t.forward(50)
-    t.left(90)
+# Hier werden die Zahlen von 1 bis 10 aufsummiert
+summe = 0
+for i in range(1, 11):
+    summe = summe + i
 ```
 
 4. **Häufige Probleme**:
@@ -342,33 +297,6 @@ for i in range(4):
    - `=` statt `==`
    - Endlosschleifen bei while
 
-## 🎨 Geometrische Muster-Beispiele
-
-### Spirale
-```python
-for i in range(50):
-    t.forward(i * 2)
-    t.left(90)
-```
-
-### Stern (5-zackig)
-```python
-for i in range(5):
-    t.forward(100)
-    t.right(144)
-```
-
-### Konzentrische Kreise
-```python
-for i in range(1, 6):
-    t.circle(i * 20)
-    t.penup()
-    t.right(90)
-    t.forward(20)
-    t.left(90)
-    t.pendown()
-```
-
 ## 📋 Projekt-Planungstipps
 
 1. **Plane zuerst**: Überlege dir den Ablauf, bevor du codest
@@ -376,22 +304,6 @@ for i in range(1, 6):
 3. **Teste häufig**: Führe dein Programm regelmäßig aus
 4. **Kommentiere**: Erkläre schwierige Stellen im Code
 5. **Frage um Hilfe**: Bei Problemen nicht zu lange alleine kämpfen
-
-## 📝 Schnell-Vorlage
-
-```python
-import turtle
-import random
-import math
-
-t = turtle.Turtle()
-t.speed(5)
-
-# Dein Code hier
-
-# Fenster offen halten (am Ende):
-turtle.done()
-```
 
 ## 🏆 Bewertungskriterien
 

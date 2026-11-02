@@ -30,7 +30,7 @@ Strom an, Strom aus. Wahr, falsch. 1, 0. Mit nur zwei Werten lässt sich rechnen
 Bei n Eingängen hat eine Wahrheitstabelle **2ⁿ** Zeilen.
 
 ::: tip Kennst du schon
-In Python heißen die Operatoren `not`, `and`, `or` (→ [Python-Kurs: Operatoren](../algorithmen/python-kurs/grundlagen/operatoren)). Und die Subnetzmaske wird bitweise **UND**-verknüpft (→ [Subnetze](../netzwerke/subnetze)).
+In Python heißen die Operatoren `not`, `and`, `or` (→ [Python-Kurs: Operatoren](../algorithmen/python-kurs/einsteiger/operatoren)). Und die Subnetzmaske wird bitweise **UND**-verknüpft (→ [Subnetze](../netzwerke/subnetze)).
 :::
 
 ## Zusammengesetzte Ausdrücke

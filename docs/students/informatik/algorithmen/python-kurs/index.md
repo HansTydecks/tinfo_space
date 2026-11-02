@@ -1,11 +1,11 @@
 ---
-title: "Python-Kurs (Oberstufe)"
-description: "Interaktiver Python-Kurs für die Oberstufe – programmieren direkt im Browser, von den Grundlagen bis zu komplexen Projekten."
+title: "Python-Kurs"
+description: "Interaktiver Python-Kurs – programmieren direkt im Browser, vom ersten Programm bis zu komplexen Projekten."
 ---
 
 # Python-Kurs
 
-Willkommen im Python-Kurs für die Oberstufe. Du lernst hier Schritt für Schritt zu programmieren –
+Willkommen im Python-Kurs. Du lernst hier Schritt für Schritt zu programmieren –
 und zwar so, dass du jeden Codeschnipsel **sofort ausprobieren** kannst.
 
 ## So funktionieren die Code-Fenster
@@ -26,6 +26,9 @@ print("Hallo", name)
   einmal neu.
 - Du kannst den Code **direkt bearbeiten** und erneut ausführen. Tipp: `Strg`+`Enter` führt aus.
 - **↺ Zurücksetzen** stellt den ursprünglichen Code wieder her.
+- **🔍 Schritt für Schritt** öffnet den Code (so wie er gerade im Fenster steht) in einem neuen Tab
+  bei [Python Tutor](https://pythontutor.com/). Dort kannst du Zeile für Zeile durchklicken und
+  sehen, welche Werte in den Variablen stehen.
 - Braucht ein Programm eine Eingabe (`input()`), erscheint ein Feld **„Eingaben"**. Trag dort
   vorher ein, was das Programm nacheinander einlesen soll – eine Eingabe pro Zeile.
 - **■ Stoppen** erscheint, solange ein Programm läuft. Nach 10 Sekunden bricht es außerdem
@@ -60,31 +63,35 @@ die Regeln aus deinen Treffern und Fehlern. Richtige Antworten bringen einen Pun
 einen; mit **8 Punkten** ist ein Level geschafft. Die Zahlen sind jedes Mal neu – Auswendiglernen
 hilft also nicht, Verstehen schon.
 
-## Die vier Kapitel
+## Die drei Kapitel
 
-### 1 · [Grundlagen](./grundlagen/)
-Das Handwerkszeug: [Datentypen](./grundlagen/datentypen), [Operatoren](./grundlagen/operatoren),
-[Methoden](./grundlagen/methoden) und ein [systematisches Vorgehen](./grundlagen/problemloeseprozess)
-beim Programmieren.
+### 1 · [Für Einsteiger](./einsteiger/)
+Vom [ersten Programm](./einsteiger/erste-schritte) mit Variablen und [Datentypen](./einsteiger/datentypen)
+über [Operatoren](./einsteiger/operatoren), [Verzweigungen](./einsteiger/selektion) und
+[Schleifen](./einsteiger/while-schleife) bis zu [Methoden](./einsteiger/methoden) und
+[eigenen Funktionen](./einsteiger/funktionen). Ganz am Ende kommt die [Eingabe mit `input()`](./einsteiger/eingabe).
 
-### 2 · [Für Einsteiger](./einsteiger/)
-Vom [ersten Programm](./einsteiger/erste-schritte) über [Verzweigungen](./einsteiger/selektion) und
-[Schleifen](./einsteiger/while-schleife) bis zu [eigenen Funktionen](./einsteiger/funktionen).
-Ganz am Ende kommt die [Eingabe mit `input()`](./einsteiger/eingabe).
+### 2 · [Für Fortgeschrittene](./fortgeschritten/)
+[Algorithmusbegriff](./fortgeschritten/algorithmusbegriff),
+[strukturierte Datentypen](./fortgeschritten/strukturierte-datentypen),
+[Unterprogramme](./fortgeschritten/unterprogramme),
+[Objektorientierung](./fortgeschritten/klassen-objekte),
+[Rekursion](./fortgeschritten/iterativ-rekursiv) und [Fraktale](./fortgeschritten/fraktale),
+[Suchen](./fortgeschritten/lineare-suche), [Sortieren](./fortgeschritten/sortieren) und
+[Komplexität](./fortgeschritten/komplexitaet).
 
-### 3 · [Für Fortgeschrittene](./fortgeschritten/)
-[Rekursion](./fortgeschritten/iterativ-rekursiv), [Komplexität](./fortgeschritten/komplexitaet) und
-klassische Algorithmen: [Suchen](./fortgeschritten/lineare-suche),
-[Primzahlen & GGT](./fortgeschritten/primzahlen-teiler),
-[Fibonacci](./fortgeschritten/fibonacci), [Textanalyse](./fortgeschritten/textanalyse),
-[Sortieren](./fortgeschritten/sortieren).
+### 3 · [Profis](./profis/)
+[Schwere Probleme](./profis/schwere-probleme),
+[Grenzen der Berechenbarkeit](./profis/grenzen-der-berechenbarkeit),
+[komplexe Aufgaben im Prüfungsformat](./profis/komplexe-probleme) und die Projekte
+[Ratespiel](./profis/ratespiel) und [Minesweeper](./profis/minesweeper).
 
-### 4 · [Komplexe Aufgaben](./komplexe-aufgaben/)
-Größere Projekte: [Dezimal ↔ Binär](./komplexe-aufgaben/dezimal-binaer),
-ein [Ratespiel](./komplexe-aufgaben/ratespiel) und als Abschluss
-[Minesweeper](./komplexe-aufgaben/minesweeper).
+## Wiki zum Nachschlagen
+
+Im **[Python-Wiki](./wiki)** findest du alle wichtigen Befehle und Regeln auf einen Blick –
+von Variablen über Schleifen bis zu Funktionen und häufigen Fehlern.
 
 ::: tip Vorwissen
-Der Kurs setzt keine Programmiererfahrung voraus. Wenn du schon mit Scratch, Calliope mini oder
-Python-Turtle gearbeitet hast, wird dir vieles bekannt vorkommen.
+Der Kurs setzt keine Programmiererfahrung voraus. Wenn du schon mit Scratch oder dem Calliope mini
+gearbeitet hast, wird dir vieles bekannt vorkommen.
 :::
