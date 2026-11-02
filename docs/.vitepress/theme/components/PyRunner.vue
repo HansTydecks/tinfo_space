@@ -2,7 +2,9 @@
 import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue'
 import { useData } from 'vitepress'
 import {
-  loadPyodideOnce,
+  runInWorker,
+  stopRun,
+  restartWorker,
   pyodideStatus,
   pyodideBusy,
   runExclusive,
@@ -15,6 +17,10 @@ const props = defineProps({
   stdin: { type: String, default: '' },
   // optional label shown on the right of the toolbar
   title: { type: String, default: '' },
+  // hard limit per run in ms; the worker is terminated when it is reached.
+  // Every snippet in the course finishes in milliseconds, so 10 s only ever
+  // catches an endless loop. Raise it per block if a snippet really needs more.
+  timeout: { type: Number, default: 10000 },
 })
 
 const { isDark } = useData()
@@ -79,9 +85,22 @@ function cleanTraceback(message) {
   return kept.join('\n').replace(/\n{2,}/g, '\n').trim()
 }
 
+// Cap on the number of rendered segments. Each segment is one <span>, so an
+// unbounded list is how a print bomb used to blow up the DOM. The worker
+// already caps the total amount of text; this caps the node count without
+// throwing any of that text away.
+const MAX_SEGMENTE = 500
+
 function pushOutput(text, stream) {
-  // batched() strips the trailing newline — put it back so lines don't run together
-  output.value.push({ text: text.endsWith('\n') ? text : text + '\n', stream })
+  const letztes = output.value[output.value.length - 1]
+  // Append to the previous segment when the stream is unchanged — or once the
+  // cap is reached (past that point stdout/stderr share a colour, which is a
+  // fair trade for a page that stays responsive).
+  if (letztes && (letztes.stream === stream || output.value.length >= MAX_SEGMENTE)) {
+    letztes.text += text
+  } else {
+    output.value.push({ text, stream })
+  }
 }
 
 onMounted(async () => {
@@ -187,6 +206,10 @@ watch(isDark, (dark) => {
 
 onBeforeUnmount(() => {
   if (view) view.destroy()
+  // Der Worker überlebt die SPA-Navigation von VitePress. Ohne diesen Stopp
+  // läuft ein Programm nach dem Seitenwechsel weiter und `pyodideBusy` bleibt
+  // auf true hängen – das würde jeden Runner der nächsten Seite sperren.
+  if (running.value) stopRun()
 })
 
 function onTextareaKeydown(e) {
@@ -220,32 +243,46 @@ async function run() {
   running.value = true
   pyodideBusy.value = true
   try {
-    const py = await loadPyodideOnce()
     await runExclusive(async () => {
-      py.setStdout({ batched: (s) => pushOutput(s, 'out') })
-      py.setStderr({ batched: (s) => pushOutput(s, 'err') })
-
       const lines = stdinText.value.length ? stdinText.value.split('\n') : []
-      let i = 0
-      py.setStdin({ stdin: () => (i < lines.length ? lines[i++] : null) })
+      const ergebnis = await runInWorker({
+        code: code.value,
+        stdin: lines,
+        timeoutMs: props.timeout,
+        onOutput: pushOutput,
+      })
 
-      let ns
-      try {
-        ns = py.toPy({ __name__: '__main__' })
-        await py.runPythonAsync(code.value, { globals: ns })
-      } catch (err) {
-        pushOutput(cleanTraceback(err?.message || err), 'err')
-      } finally {
-        if (ns && ns.destroy) ns.destroy()
-        py.setStdin({ stdin: () => null })
+      if (ergebnis.status === 'error') {
+        pushOutput(cleanTraceback(ergebnis.message), 'err')
+      } else if (ergebnis.status === 'timeout') {
+        const sek = Math.round(props.timeout / 1000)
+        pushOutput(
+          `\n[Abgebrochen: Das Programm lief länger als ${sek} Sekunden. ` +
+            'Vermutlich eine Endlosschleife.]\n',
+          'err',
+        )
+      } else if (ergebnis.status === 'stopped') {
+        pushOutput('\n[Gestoppt.]\n', 'err')
+      } else if (ergebnis.status === 'load-error') {
+        pushOutput(ergebnis.message, 'err')
       }
     })
-  } catch (err) {
-    pushOutput('Python konnte nicht geladen werden: ' + (err?.message || err), 'err')
   } finally {
     running.value = false
     pyodideBusy.value = false
   }
+}
+
+// Hängendes Programm abbrechen. Möglich, weil Python im Worker sitzt.
+function stop() {
+  stopRun()
+}
+
+// Frischer Interpreter – hilft, wenn ein Snippet z. B. `print` überschrieben hat.
+function restart() {
+  restartWorker()
+  output.value = []
+  hasRun.value = false
 }
 </script>
 
@@ -260,7 +297,15 @@ async function run() {
           :disabled="runDisabled"
           @click="run"
         >▶&nbsp;Ausführen</button>
+        <button v-if="running" class="py-runner__btn" @click="stop">■&nbsp;Stoppen</button>
         <button class="py-runner__btn" :disabled="running" @click="reset">↺&nbsp;Zurücksetzen</button>
+        <button
+          v-if="hasRun"
+          class="py-runner__btn"
+          :disabled="running"
+          title="Startet Python neu – nötig, wenn ein Programm die Umgebung verändert hat."
+          @click="restart"
+        >↻&nbsp;Python neu starten</button>
         <span v-if="statusText" class="py-runner__status">{{ statusText }}</span>
         <span v-if="title" class="py-runner__title">{{ title }}</span>
       </div>
