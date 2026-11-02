@@ -1,12 +1,13 @@
 ---
-title: "Primzahlen & GGT"
-description: "Teilbarkeit mit dem Modulo-Operator: Primzahltest und der euklidische Algorithmus für den größten gemeinsamen Teiler."
+title: "Primzahlen, Primfaktoren & GGT"
+description: "Teilbarkeit mit dem Modulo-Operator: Primzahltest, Primfaktorzerlegung durch Probedivision und der euklidische Algorithmus für den größten gemeinsamen Teiler."
 ---
 
 ## Ziele
 - Teilbarkeit mit `%` prüfen
 - Einen Primzahltest schreiben und ihn beschleunigen
 - Den euklidischen Algorithmus (GGT) iterativ und rekursiv umsetzen
+- Eine Zahl mit der Probedivision in ihre Primfaktoren zerlegen
 
 <SilentTeacherButton kapitel="primzahlen-teiler" />
 
@@ -116,6 +117,49 @@ print(ggt(48, 18))
 
 </PyRunner>
 
+## Primfaktorzerlegung
+
+Jede ganze Zahl ≥ 2 lässt sich **eindeutig** als Produkt von Primzahlen schreiben, z. B.
+60 = 2 · 2 · 3 · 5. Die einfachste Methode ist die **Probedivision**: Teile `n` durch 2, solange es
+geht, dann durch 3, dann durch 4, … Jeden gefundenen Teiler merkst du dir und dividierst ihn heraus.
+
+<PyRunner>
+
+```python
+def primfaktoren(n):
+    faktoren = []
+    t = 2
+    while t * t <= n:
+        while n % t == 0:        # t so oft wie möglich abspalten
+            faktoren.append(t)
+            n = n // t
+        t += 1
+    if n > 1:                    # Rest ist selbst eine Primzahl
+        faktoren.append(n)
+    return faktoren
+
+print(primfaktoren(60))          # [2, 2, 3, 5]
+print(primfaktoren(97))          # [97]
+print(primfaktoren(1001))        # [7, 11, 13]
+print(primfaktoren(2 ** 10))
+```
+
+</PyRunner>
+
+:::details Erklärung
+- Die **innere** `while`-Schleife spaltet denselben Teiler mehrfach ab: 60 → 30 → 15 (zweimal die 2).
+- Es landen nur **Primzahlen** in der Liste: Wenn wir bei `t = 4` ankommen, sind alle Zweien schon
+  herausdividiert – 4 kann `n` also gar nicht mehr teilen.
+- Wie beim schnellen Primzahltest reicht es, bis √n zu testen. Was danach von `n` übrig bleibt
+  (und größer als 1 ist), muss selbst eine Primzahl sein: bei 97 bleibt die 97 übrig.
+:::
+
+::: tip Leicht hin, schwer zurück
+Primzahlen zu multiplizieren geht blitzschnell. Ein großes Produkt wieder zu **zerlegen** dauert
+dagegen sehr lange – darauf beruht die Verschlüsselung RSA. Mehr dazu unter
+[Schwere Probleme](./schwere-probleme).
+:::
+
 ## Aufgaben
 
 Löse die folgenden Aufgaben selbstständig oder mit einem Partner oder Partnerin.
@@ -175,3 +219,49 @@ print(kgv(4, 6))   # 12
 ```
 
 </PyRunner>
+
+### Aufgabe 4: Potenzschreibweise
+Schreibe `als_potenzen(n)`, das die Primfaktorzerlegung in Potenzschreibweise als Text liefert,
+z. B. `360` → `"2^3 · 3^2 · 5"`. Nutze `primfaktoren(n)` von oben.
+
+<PyRunner>
+
+```python
+def primfaktoren(n):
+    faktoren = []
+    t = 2
+    while t * t <= n:
+        while n % t == 0:
+            faktoren.append(t)
+            n = n // t
+        t += 1
+    if n > 1:
+        faktoren.append(n)
+    return faktoren
+
+def als_potenzen(n):
+    # für jeden verschiedenen Faktor zählen, wie oft er vorkommt
+    pass
+
+print(als_potenzen(360))   # 2^3 · 3^2 · 5
+```
+
+</PyRunner>
+
+:::details Tipp
+`set(faktoren)` liefert jeden Faktor nur einmal, `sorted(...)` bringt sie in die richtige
+Reihenfolge, und `faktoren.count(p)` zählt, wie oft `p` vorkommt. Die Teile kannst du mit
+`" · ".join(teile)` verbinden.
+:::
+
+:::details Lösung
+```python
+def als_potenzen(n):
+    faktoren = primfaktoren(n)
+    teile = []
+    for p in sorted(set(faktoren)):
+        k = faktoren.count(p)
+        teile.append(str(p) if k == 1 else f"{p}^{k}")
+    return " · ".join(teile)
+```
+:::

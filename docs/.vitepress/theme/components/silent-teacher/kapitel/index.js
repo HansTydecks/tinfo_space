@@ -148,7 +148,7 @@ export const KAPITEL = [
   ]),
 
   // Profis
-  kapitel('profis', 'primzahlen-teiler', 'Primzahlen & GGT', [
+  kapitel('profis', 'primzahlen-teiler', 'Primzahlen, Primfaktoren & GGT', [
     'Teilbarkeit',
     'Teiler zählen',
     'Primzahltest',
