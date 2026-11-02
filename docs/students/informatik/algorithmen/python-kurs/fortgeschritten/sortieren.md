@@ -1,18 +1,18 @@
 ---
-title: "Sortieren: Bubblesort & Selectionsort"
-description: "Zwei klassische Sortierverfahren verstehen, programmieren und vergleichen."
+title: "Sortieren: Bubblesort, Selectionsort & Insertion Sort"
+description: "Drei klassische Sortierverfahren verstehen, programmieren und vergleichen."
 ---
 
 ## Ziele
-- Bubblesort und Selectionsort nachvollziehen
-- Beide „in-place" programmieren
+- Bubblesort, Selectionsort und Insertion Sort nachvollziehen
+- Alle drei „in-place" programmieren
 - Vergleiche und Vertauschungen zählen
 
 <SilentTeacherButton kapitel="sortieren" />
 
 ## Worum geht es?
 
-**Sortieren** heißt: die Elemente einer Liste in eine Reihenfolge bringen (meist aufsteigend). Beide
+**Sortieren** heißt: die Elemente einer Liste in eine Reihenfolge bringen (meist aufsteigend). Alle
 Verfahren hier arbeiten **in-place** – sie ordnen die vorhandene Liste um, ohne eine zweite anzulegen.
 
 Grundbaustein ist das **Vertauschen** zweier Elemente:
@@ -86,15 +86,56 @@ print(selectionsort([5, 2, 9, 1, 7, 3]))
 <!-- ANIM: selectionsort -->
 :::
 
+## Insertion Sort
+
+Idee: So sortierst du Spielkarten auf der Hand. Der linke Teil der Liste ist schon sortiert. Nimm
+das nächste Element und **schiebe** es nach links, bis es an der richtigen Stelle steht. Größere
+Elemente rücken dabei um eins nach rechts.
+
+<PyRunner>
+
+```python
+def insertionsort(liste):
+    for i in range(1, len(liste)):
+        aktuell = liste[i]
+        j = i - 1
+        while j >= 0 and liste[j] > aktuell:
+            liste[j + 1] = liste[j]     # größeres Element nach rechts schieben
+            j -= 1
+        liste[j + 1] = aktuell          # in die Lücke einfügen
+    return liste
+
+print(insertionsort([5, 2, 9, 1, 7, 3]))
+```
+
+</PyRunner>
+
+:::details Erklärung
+Ablauf für `[5, 2, 9, 1, 7, 3]` (der sortierte Teil steht vor dem `|`):
+
+```text
+[5 | 2, 9, 1, 7, 3]    2 einfügen
+[2, 5 | 9, 1, 7, 3]    9 bleibt stehen
+[2, 5, 9 | 1, 7, 3]    1 wandert ganz nach vorn
+[1, 2, 5, 9 | 7, 3]    7 vor die 9
+[1, 2, 5, 7, 9 | 3]    3 hinter die 2
+[1, 2, 3, 5, 7, 9]
+```
+
+Die `while`-Schleife stoppt, sobald links ein Element steht, das **nicht größer** ist. Ist die Liste
+schon fast sortiert, stoppt sie fast sofort – dann ist Insertion Sort sehr schnell (`O(n)` im Best
+Case).
+:::
+
 ## Vergleich
 
-Beide sind `O(n²)` – bei doppelter Listenlänge etwa vierfache Laufzeit. Unterschied:
+Alle drei sind `O(n²)` – bei doppelter Listenlänge etwa vierfache Laufzeit. Unterschied:
 
-| | Bubblesort | Selectionsort |
-|---|---|---|
-| Vergleiche | ~n²/2 | ~n²/2 |
-| Vertauschungen | viele | höchstens `n-1` |
-| stabil? | ja | nein |
+| | Bubblesort | Selectionsort | Insertion Sort |
+|---|---|---|---|
+| Vergleiche | ~n²/2 | ~n²/2 | ~n²/4 im Durchschnitt, `n-1` bei sortierter Liste |
+| Vertauschungen / Verschiebungen | viele | höchstens `n-1` | viele |
+| stabil? | ja | nein | ja |
 
 <PyRunner>
 
@@ -113,6 +154,23 @@ def bubblesort_gezaehlt(liste):
 import random
 daten = [random.randint(1, 100) for _ in range(20)]
 print("Bubblesort:", bubblesort_gezaehlt(daten[:]))
+
+def insertionsort_gezaehlt(liste):
+    vergleiche = schiebe = 0
+    for i in range(1, len(liste)):
+        aktuell = liste[i]
+        j = i - 1
+        while j >= 0:
+            vergleiche += 1
+            if liste[j] <= aktuell:
+                break
+            liste[j + 1] = liste[j]
+            schiebe += 1
+            j -= 1
+        liste[j + 1] = aktuell
+    return vergleiche, schiebe
+
+print("Insertion Sort:", insertionsort_gezaehlt(daten[:]))
 ```
 
 </PyRunner>
@@ -174,4 +232,19 @@ daten = [random.randint(1, 100) for _ in range(20)]
 :::details Tipp
 Selectionsort tauscht pro `start` **genau einmal** – also höchstens `n-1` mal, egal wie
 durcheinander die Liste ist.
+:::
+
+### Aufgabe 4: Insertion Sort bei fast sortierten Listen
+Zähle mit `insertionsort_gezaehlt` die Vergleiche für eine **sortierte** Liste `list(range(20))`,
+für eine **umgekehrt** sortierte Liste `list(range(20, 0, -1))` und für eine zufällige Liste. Was
+fällt dir auf?
+
+:::details Tipp
+Bei der sortierten Liste bricht die `while`-Schleife jedes Mal sofort ab: nur `n-1 = 19` Vergleiche.
+Bei der umgekehrten Liste muss jedes Element ganz nach vorn: `n·(n-1)/2 = 190` Vergleiche.
+:::
+
+::: tip Weiterlesen
+Es geht auch viel schneller als `O(n²)`: In [Quicksort & Mergesort](./sortieren-schnell) lernst du
+zwei Verfahren mit `O(n log n)` kennen.
 :::
