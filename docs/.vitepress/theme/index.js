@@ -3,6 +3,8 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import PyRunner from './components/PyRunner.vue'
 import SilentTeacherButton from './components/silent-teacher/SilentTeacherButton.vue'
+import EnglishSilentTeacherButton from './components/silent-teacher-english/EnglishSilentTeacherButton.vue'
+import PrepositionPictures from './components/silent-teacher-english/PrepositionPictures.vue'
 import SortierAufgabe from './components/sortieren/SortierAufgabe.vue'
 import ToolOverview from './components/tools/ToolOverview.vue'
 import ToolInfo from './components/tools/ToolInfo.vue'
@@ -13,6 +15,8 @@ export default {
   enhanceApp({ app }) {
     app.component('PyRunner', PyRunner)
     app.component('SilentTeacherButton', SilentTeacherButton)
+    app.component('EnglishSilentTeacherButton', EnglishSilentTeacherButton)
+    app.component('PrepositionPictures', PrepositionPictures)
     app.component('SortierAufgabe', SortierAufgabe)
     app.component('ToolOverview', ToolOverview)
     app.component('ToolInfo', ToolInfo)
@@ -20,6 +24,10 @@ export default {
     app.component(
       'SilentTeacher',
       defineAsyncComponent(() => import('./components/silent-teacher/SilentTeacher.vue')),
+    )
+    app.component(
+      'EnglishSilentTeacher',
+      defineAsyncComponent(() => import('./components/silent-teacher-english/EnglishSilentTeacher.vue')),
     )
   }
 }

@@ -4,6 +4,7 @@
   "scripts": {
     "vendor:pyodide": "node scripts/vendor-pyodide.mjs",
     "test:silent-teacher": "node scripts/verify-silent-teacher.mjs",
+    "test:silent-teacher-english": "node scripts/verify-silent-teacher-english.mjs",
     "test:db-uebungen": "node scripts/verify-db-uebungen.mjs",
     "test:tools": "node scripts/verify-tools.mjs",
     "test:pyrunner": "node scripts/verify-pyrunner-sandbox.mjs",

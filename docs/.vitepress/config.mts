@@ -131,6 +131,29 @@ export default defineConfig({
         {
           text: 'English',
           items: [
+            {
+              text: 'Grammar',
+              link: '/students/english/grammar/',
+              collapsed: false,
+              items: [
+                {
+                  text: 'Prepositions',
+                  link: '/students/english/grammar/prepositions/',
+                  collapsed: true,
+                  items: [
+                    { text: '🤫 Silent Teacher', link: '/students/english/grammar/prepositions/silent-teacher' },
+                    { text: 'Time', link: '/students/english/grammar/prepositions/time' },
+                    { text: 'Place', link: '/students/english/grammar/prepositions/place' },
+                    { text: 'Movement', link: '/students/english/grammar/prepositions/movement' },
+                    { text: 'Manner', link: '/students/english/grammar/prepositions/manner' },
+                    { text: 'Agent & instrument', link: '/students/english/grammar/prepositions/agent-instrument' },
+                    { text: 'Measure', link: '/students/english/grammar/prepositions/measure' },
+                    { text: 'Source', link: '/students/english/grammar/prepositions/source' },
+                    { text: 'Possession', link: '/students/english/grammar/prepositions/possession' }
+                  ]
+                }
+              ]
+            },
             { text: 'Klasse 5', link: '/students/english/klasse_5/index' },
             { text: 'Klasse 6', link: '/students/english/klasse_6/index' },
             { text: 'Klasse 7', link: '/students/english/klasse_7/index' },
