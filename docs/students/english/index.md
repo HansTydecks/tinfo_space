@@ -17,6 +17,10 @@ Welcome to your English learning hub! Here you'll find resources, exercises, and
 - **Classes 9-10**: Advanced grammar, literature introduction, debate skills
 - **Classes 11-12**: Academic writing, literature analysis, exam preparation
 
+## Grammar
+
+- [**Prepositions**](/students/english/grammar/prepositions/) – *in, on, at, by, with, from …* with explanations for every type and a 🤫 [Silent Teacher](/students/english/grammar/prepositions/silent-teacher) for practice
+
 ## Key Learning Areas
 
 ### 📚 **Language Skills**
