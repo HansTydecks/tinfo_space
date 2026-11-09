@@ -36,6 +36,10 @@ export default {
       defineAsyncComponent(() => import('./components/reported-speech/drill/ReportedSpeechReporter.vue')),
     )
     app.component(
+      'NoseDive',
+      defineAsyncComponent(() => import('./components/nose-dive/NoseDive.vue')),
+    )
+    app.component(
       'EnglishSilentTeacher',
       defineAsyncComponent(() => import('./components/silent-teacher-english/EnglishSilentTeacher.vue')),
     )
