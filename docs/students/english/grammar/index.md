@@ -13,3 +13,4 @@ Here you can learn and practise English grammar step by step.
 | Topic | What you learn | Practice |
 |---|---|---|
 | [Prepositions](./prepositions/) | in, on, at, by, with, from … – the small words that show *when*, *where*, *how* | 🤫 [Silent Teacher](./prepositions/silent-teacher) |
+| [Reported speech](./reported-speech/) | *He said he was tired.* – backshift, pronouns, time and place words, questions and commands | 🎙️ [Reporter game](./reported-speech/reporter) |
