@@ -1,0 +1,74 @@
+/* Farben der Reported-Speech-Grafiken – überall gleich:
+   blau = Pronomen, pink = Zeitform (backshift), grün = Zeit-/Ortsangabe, orange = Satzbau */
+.rs-fig {
+  --rs-pron: #1c64d1; --rs-pron-bg: #e3edfd;
+  --rs-tense: #c2255c; --rs-tense-bg: #fde4ee;
+  --rs-time: #2b8a3e; --rs-time-bg: #e2f5e6;
+  --rs-order: #d9480f; --rs-order-bg: #ffead9;
+  --rs-tom: #0c8599; --rs-anna: #9c36b5; --rs-grau: #868e96;
+  --rs-sky: #e7f5ff; --rs-sand: #f3dfa6; --rs-sea: #74c0fc; --rs-sun: #fcc419;
+  --rs-wall: #f1ebe1; --rs-wood: #a9744a;
+}
+.dark .rs-fig {
+  --rs-pron: #7aa7ff; --rs-pron-bg: #1b2c4d;
+  --rs-tense: #ff7aa8; --rs-tense-bg: #4a1d31;
+  --rs-time: #69d17f; --rs-time-bg: #183823;
+  --rs-order: #ffa463; --rs-order-bg: #4a2a12;
+  --rs-tom: #3bc9db; --rs-anna: #da77f2; --rs-grau: #909296;
+  --rs-sky: #1b2a38; --rs-sand: #6b5a2e; --rs-sea: #1f5f8b; --rs-sun: #e8b10c;
+  --rs-wall: #34302a; --rs-wood: #7a5434;
+}
+
+.rs-fig .k-n     { --c: var(--vp-c-text-1); --bg: transparent; }
+.rs-fig .k-m     { --c: var(--vp-c-text-2); --bg: transparent; }
+.rs-fig .k-grau  { --c: var(--rs-grau); --bg: transparent; }
+.rs-fig .k-rep   { --c: var(--vp-c-text-1); --bg: var(--vp-c-default-soft); }
+.rs-fig .k-pron  { --c: var(--rs-pron); --bg: var(--rs-pron-bg); }
+.rs-fig .k-tense { --c: var(--rs-tense); --bg: var(--rs-tense-bg); }
+.rs-fig .k-time  { --c: var(--rs-time); --bg: var(--rs-time-bg); }
+.rs-fig .k-ok    { --c: var(--rs-time); --bg: var(--rs-time-bg); }
+.rs-fig .k-order { --c: var(--rs-order); --bg: var(--rs-order-bg); }
+.rs-fig .k-tom   { --c: var(--rs-tom); --bg: transparent; }
+.rs-fig .k-anna  { --c: var(--rs-anna); --bg: transparent; }
+
+.rs-fig svg text { font-family: var(--vp-font-family-base); fill: var(--vp-c-text-1); }
+
+/* Wort-Chips */
+.rs-chip rect { fill: var(--bg); stroke: var(--c); stroke-width: 1.5; }
+.rs-chip.k-n rect, .rs-chip.k-grau rect { stroke: none; }
+.rs-chip.k-m rect, .rs-chip.k-slot rect { stroke-dasharray: 4 3; }
+.rs-chip.k-slot { --c: var(--rs-grau); --bg: transparent; }
+.rs-fig .rs-chip text { fill: var(--c); font-size: 15px; font-weight: 600; }
+.rs-fig .rs-chip.k-n text { font-weight: 500; }
+.rs-fig .rs-chip.k-rep text { font-weight: 700; }
+.rs-strike-line { stroke: var(--rs-grau); stroke-width: 2; stroke-linecap: round; }
+.rs-fig .rs-chip.rs-strike text { opacity: 0.6; }
+.rs-fig text.rs-sub { fill: var(--c); font-size: 12px; font-weight: 700; }
+
+/* Pfeile */
+.rs-arrow path { fill: none; stroke: var(--c); stroke-width: 2.2; stroke-linecap: round; }
+.rs-arrow path.dash { stroke-dasharray: 5 4; }
+.rs-arrow polygon { fill: var(--c); }
+
+/* Personen, Sprechblasen, Kästen */
+.rs-person circle, .rs-person path { fill: var(--c); }
+.rs-person.k-grau circle, .rs-person.k-grau path { fill: var(--rs-grau); }
+.rs-fig text.rs-name { fill: var(--c); font-size: 12px; font-weight: 700; }
+.rs-person.k-grau text.rs-name { fill: var(--vp-c-text-2); }
+.rs-fig text.rs-name2 { fill: var(--vp-c-text-2); font-size: 11px; }
+.rs-bubble path { fill: var(--vp-c-bg); stroke: var(--vp-c-text-3); stroke-width: 1.5; stroke-linejoin: round; }
+.rs-fig text.rs-label { fill: var(--vp-c-text-2); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.rs-box rect { fill: var(--bg); stroke: var(--c); stroke-width: 1.6; }
+.rs-box.k-n rect { fill: var(--vp-c-bg); stroke: var(--vp-c-divider); }
+.rs-fig .rs-box text { font-size: 13.5px; }
+.rs-fig .rs-box text.rs-b1 { fill: var(--c); font-size: 14.5px; font-weight: 700; }
+
+/* Kleine Beschriftungen */
+.rs-fig text.rs-al { fill: var(--c); font-size: 12.5px; font-weight: 700; }
+.rs-fig text.rs-small { fill: var(--vp-c-text-2); font-size: 12px; }
+.rs-fig text.rs-title { fill: var(--vp-c-text-1); font-size: 13px; font-weight: 700; }
+.rs-fig text.rs-big { font-size: 22px; font-weight: 800; }
+.rs-fig .rs-v { fill: var(--rs-tense); font-weight: 700; }
+.rs-line { stroke: var(--vp-c-text-3); stroke-width: 1.5; fill: none; }
+.rs-dots { stroke: var(--vp-c-text-3); stroke-width: 1.5; stroke-dasharray: 2 4; stroke-linecap: round; fill: none; }
+.rs-band { fill: var(--vp-c-bg); stroke: var(--vp-c-divider); }

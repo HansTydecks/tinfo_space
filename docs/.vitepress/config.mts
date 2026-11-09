@@ -151,7 +151,8 @@ export default defineConfig({
                     { text: 'Source', link: '/students/english/grammar/prepositions/source' },
                     { text: 'Possession', link: '/students/english/grammar/prepositions/possession' }
                   ]
-                }
+                },
+                { text: 'Reported speech', link: '/students/english/grammar/reported-speech/' }
               ]
             },
             { text: 'Klasse 5', link: '/students/english/klasse_5/index' },

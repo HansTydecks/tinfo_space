@@ -5,6 +5,8 @@ import PyRunner from './components/PyRunner.vue'
 import SilentTeacherButton from './components/silent-teacher/SilentTeacherButton.vue'
 import EnglishSilentTeacherButton from './components/silent-teacher-english/EnglishSilentTeacherButton.vue'
 import PrepositionPictures from './components/silent-teacher-english/PrepositionPictures.vue'
+import ReportedSpeechGraphic from './components/reported-speech/ReportedSpeechGraphic.vue'
+import VideoBox from './components/VideoBox.vue'
 import SortierAufgabe from './components/sortieren/SortierAufgabe.vue'
 import ToolOverview from './components/tools/ToolOverview.vue'
 import ToolInfo from './components/tools/ToolInfo.vue'
@@ -17,6 +19,8 @@ export default {
     app.component('SilentTeacherButton', SilentTeacherButton)
     app.component('EnglishSilentTeacherButton', EnglishSilentTeacherButton)
     app.component('PrepositionPictures', PrepositionPictures)
+    app.component('ReportedSpeechGraphic', ReportedSpeechGraphic)
+    app.component('VideoBox', VideoBox)
     app.component('SortierAufgabe', SortierAufgabe)
     app.component('ToolOverview', ToolOverview)
     app.component('ToolInfo', ToolInfo)
