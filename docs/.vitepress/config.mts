@@ -152,7 +152,14 @@ export default defineConfig({
                     { text: 'Possession', link: '/students/english/grammar/prepositions/possession' }
                   ]
                 },
-                { text: 'Reported speech', link: '/students/english/grammar/reported-speech/' }
+                {
+                  text: 'Reported speech',
+                  link: '/students/english/grammar/reported-speech/',
+                  collapsed: true,
+                  items: [
+                    { text: '🎙️ Reporter game', link: '/students/english/grammar/reported-speech/reporter' }
+                  ]
+                }
               ]
             },
             { text: 'Klasse 5', link: '/students/english/klasse_5/index' },

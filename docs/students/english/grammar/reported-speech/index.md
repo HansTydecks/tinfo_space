@@ -16,7 +16,9 @@ description: "Reported speech at a glance: backshift of tenses, pronouns, time a
 
 <VideoBox title="Reported speech in 5 minutes" />
 
-## What changes? The big picture
+<ReporterButton />
+
+## What changes? The big picture {#big-picture}
 
 <ReportedSpeechGraphic
   name="overview"
@@ -39,7 +41,7 @@ The colours are the same in every picture on this page:
 4. **What kind** of sentence is it? statement · question · command → choose the right **pattern**
 :::
 
-## 1 · Backshift – one step back in time
+## 1 · Backshift – one step back in time {#backshift}
 
 If the reporting verb is in the **past** (*said, told, asked …*), the tense moves **one step back into the past**.
 *Steht das einleitende Verb in der Vergangenheit, rückt die Zeitform eine Stufe zurück.*
@@ -60,7 +62,7 @@ If the reporting verb is in the **past** (*said, told, asked …*), the tense mo
 | **going to**<br>“I **am going to** call.” | → | **was going to**<br>He said he **was going to** call. |
 | **past perfect**<br>“I **had** never **seen** it.” | → | **past perfect** (no change)<br>She said she **had** never **seen** it. |
 
-### Modal verbs
+### Modal verbs {#modal-verbs}
 
 | direct | → | reported | example |
 |---|:-:|---|---|
@@ -75,7 +77,7 @@ Look at the **first** verb of the sentence and put it **one step into the past**
 *am* working → *was* working · *have* worked → *had* worked · *will* work → *would* work · *worked* → *had* worked
 :::
 
-### When is there no backshift?
+### When is there no backshift? {#no-backshift}
 
 <ReportedSpeechGraphic
   name="backshift-check"
@@ -85,7 +87,7 @@ Look at the **first** verb of the sentence and put it **one step into the past**
 - **Reporting verb in the present**: *Tom **says** he **is** tired.* – nothing changes in the tense.
 - **Still true or a general fact**: *Our teacher said the Earth **goes** / **went** round the sun.*
 
-## 2 · Pronouns – who is speaking now?
+## 2 · Pronouns – who is speaking now? {#pronouns}
 
 Pronouns always depend on **who is speaking now** and **who is listening**.
 *Die Pronomen hängen davon ab, wer jetzt spricht – nicht davon, wer es ursprünglich gesagt hat.*
@@ -112,7 +114,7 @@ There is no fixed rule for **you**: ask yourself **who** is meant and who is spe
 *“You” wird zu I, he, she oder they – je nachdem, wer gemeint ist.*
 :::
 
-## 3 · Time and place words
+## 3 · Time and place words {#time-place}
 
 When you report something **later** or **somewhere else**, words like *today*, *tomorrow* or *here* do not fit any more.
 
@@ -146,7 +148,7 @@ When you report something **later** or **somewhere else**, words like *today*, *
 If Anna reports Tom’s words **on the same day**, *today* stays *today*. If you are still **in the same place**, *here* stays *here*.
 :::
 
-## 4 · say or tell? Reporting verbs and their prepositions
+## 4 · say or tell? Reporting verbs and their prepositions {#say-tell}
 
 <ReportedSpeechGraphic
   name="say-tell"
@@ -172,7 +174,7 @@ If Anna reports Tom’s words **on the same day**, *today* stays *today*. If you
 ✗ He **explained me** the rules. → ✓ He **explained** the rules **to me**.
 :::
 
-## 5 · Questions
+## 5 · Questions {#questions}
 
 Reported questions are **not real questions any more**:
 - **no** *do / does / did*
@@ -199,7 +201,7 @@ Reported questions are **not real questions any more**:
 ✗ He asked **was I** hungry. → ✓ He asked **if I was** hungry.
 :::
 
-## 6 · Commands and requests
+## 6 · Commands and requests {#commands}
 
 For commands and requests you **don’t** need backshift – you use **to + infinitive**.
 
@@ -216,7 +218,7 @@ For commands and requests you **don’t** need backshift – you use **to + infi
 | “**Don’t touch** it, Ben!” | I **told Ben not to touch** it. |
 | “**Could you open** the window, please?” | He **asked me to open** the window. |
 
-## Everything at a glance
+## Everything at a glance {#everything-at-a-glance}
 
 | | direct speech | reported speech |
 |---|---|---|
@@ -236,7 +238,7 @@ For commands and requests you **don’t** need backshift – you use **to + infi
 5. Questions: **if / whether**, normal word order · Commands: **(not) to** + verb
 :::
 
-## Check yourself
+## Check yourself {#check-yourself}
 
 Put the sentences into reported speech. Then open the solution.
 
@@ -255,5 +257,11 @@ Put the sentences into reported speech. Then open the solution.
 5. Emma asked me **if / whether I liked** cats.
 6. The teacher told us **not to talk**.
 :::
+
+## Practise with the Reporter game {#practise}
+
+9 levels from easy to hard: **who is speaking?** · **backshift** · **modal verbs** · **time and place** · **say and tell** · **questions** · **commands** · **everything mixed**.
+
+<ReporterButton />
 
 [← Grammar](../)
