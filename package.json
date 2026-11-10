@@ -6,6 +6,7 @@
     "test:silent-teacher": "node scripts/verify-silent-teacher.mjs",
     "test:silent-teacher-english": "node scripts/verify-silent-teacher-english.mjs",
     "test:reported-speech": "node scripts/verify-reported-speech-drill.mjs",
+    "test:nose-dive": "node scripts/verify-nose-dive.mjs",
     "test:db-uebungen": "node scripts/verify-db-uebungen.mjs",
     "test:tools": "node scripts/verify-tools.mjs",
     "test:pyrunner": "node scripts/verify-pyrunner-sandbox.mjs",

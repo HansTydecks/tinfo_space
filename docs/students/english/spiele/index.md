@@ -1,8 +1,11 @@
 # Spiele
 
-## Irregular Verbs Game
+## Nose Dive – Irregular Verbs
 
-[Hier klicken](/irr_verbs_game/endless_fall_prototype.html){target="_self"} um das Spiel zu starten.
+Du fällst durch den Himmel und lenkst in die Wolke mit der richtigen Verbform: *simple past* (2. Form) oder *past participle* (3. Form).
+Zehn Level, ein Endlos-Modus und am Ende eine Liste der Verben, die du noch üben solltest. Läuft auch auf dem Handy.
+
+[🪂 Zum Spiel](/students/english/spiele/nose-dive){target="_self"}
 
 ## Silent Teacher: Prepositions
 
