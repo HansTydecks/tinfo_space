@@ -27,6 +27,11 @@ export default {
     app.component('ToolOverview', ToolOverview)
     app.component('ToolInfo', ToolInfo)
     // Das Spiel samt aller Aufgaben wird nur auf der Silent-Teacher-Seite nachgeladen
+    // Modulo-Visualizer: Canvas-Animationen nur auf der Visualizer-Seite laden
+    app.component(
+      'ModuloVisualizer',
+      defineAsyncComponent(() => import('./components/modulo/ModuloVisualizer.vue')),
+    )
     app.component(
       'SilentTeacher',
       defineAsyncComponent(() => import('./components/silent-teacher/SilentTeacher.vue')),

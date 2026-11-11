@@ -61,6 +61,8 @@ nachricht = "Ich bin " + str(25) + " Jahre alt"
 | `%` | Rest (Modulo) | `10 % 3` | `1` |
 | `**` | Potenz | `2 ** 3` | `8` |
 
+💡 Alles zu `%` mit vielen Beispielen: [Modulo](./einsteiger/modulo) · [🌀 Modulo-Visualizer](./einsteiger/modulo-visualizer)
+
 ## ✅ Bedingungen & Verzweigungen
 
 ### Vergleichsoperatoren

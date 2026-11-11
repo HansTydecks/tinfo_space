@@ -34,6 +34,9 @@ print(2 ** 10)
 :::tip Merke
 `//` und `%` gehören zusammen: `17 = 3 * 5 + 2`. `%` ist enorm nützlich – z. B. ist eine Zahl
 gerade, wenn `zahl % 2 == 0`.
+
+Mehr dazu mit vielen Beispielen: [Modulo – der Rest der Division](./modulo) und der
+[🌀 Modulo-Visualizer](./modulo-visualizer).
 :::
 
 ## Vergleichsoperatoren

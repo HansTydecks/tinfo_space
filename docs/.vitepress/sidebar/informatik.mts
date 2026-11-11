@@ -175,6 +175,8 @@ const algorithmen: DefaultTheme.SidebarItem[] = [
           { text: 'Datentypen', link: `${PK}/einsteiger/datentypen` },
           { text: 'Ausgabe mit print()', link: `${PK}/einsteiger/ausgabe` },
           { text: 'Operatoren', link: `${PK}/einsteiger/operatoren` },
+          { text: '↳ Modulo', link: `${PK}/einsteiger/modulo` },
+          { text: '↳ 🌀 Modulo-Visualizer', link: `${PK}/einsteiger/modulo-visualizer` },
           { text: 'Selektion (if/elif/else)', link: `${PK}/einsteiger/selektion` },
           { text: 'while-Schleife', link: `${PK}/einsteiger/while-schleife` },
           { text: 'for-Schleife', link: `${PK}/einsteiger/for-schleife` },

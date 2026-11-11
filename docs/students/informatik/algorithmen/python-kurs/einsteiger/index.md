@@ -14,6 +14,7 @@ baut auf der vorigen auf.
 2. [Datentypen](./datentypen) – Zahlen, Text, Wahrheitswerte: was in einer Variablen stecken kann
 3. [Ausgabe mit `print()`](./ausgabe) – mehrere Werte, Rechnen, f-Strings
 4. [Operatoren](./operatoren) – rechnen, vergleichen, logisch verknüpfen
+   - [Modulo](./modulo) – der Rest der Division, mit vielen Beispielen und dem [🌀 Modulo-Visualizer](./modulo-visualizer)
 5. [Selektion](./selektion) – Entscheidungen mit `if` / `elif` / `else`
 6. [while-Schleife](./while-schleife) – wiederholen, solange eine Bedingung gilt
 7. [for-Schleife](./for-schleife) – jedes Element einer Folge abarbeiten
